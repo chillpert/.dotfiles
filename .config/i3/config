@@ -47,25 +47,25 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -nf '#FFFFFF
 bindsym $mod+g exec --no-startup-id ~/.scripts/controls/nextfind -nf '#FFFFFF' -sb '#af87ff' -sf '#FFFFFF' -nb '#262626' -i -fn 'VL PGothic-11.5' -l 10 -w 0 -p 'Jump to:'
 
 # quick way to edit configs
-bindsym $mod+Shift+d exec --no-startup-id ~/.scripts/dmenu/dmenu_edit_configs.sh
+bindsym $mod+Shift+d exec --no-startup-id ~/.scripts/dmenu/edit_configs.sh
 
 # todo list
-bindsym $mod+Shift+t exec --no-startup-id ~/.scripts/dmenu/dmenu_todo.sh
+bindsym $mod+Shift+t exec --no-startup-id ~/.scripts/dmenu/todo.sh
 
 # translate a word 
-bindsym $mod+Shift+s exec --no-startup-id ~/.scripts/dmenu/dmenu_translate.sh
+bindsym $mod+Shift+s exec --no-startup-id ~/.scripts/dmenu/translate.sh
 
 # shutdown computer
-bindsym $mod+Shift+q exec --no-startup-id ~/.scripts/dmenu/dmenu_confirm.sh "Shutdown?" "shutdown -h now"
+bindsym $mod+Shift+q exec --no-startup-id ~/.scripts/dmenu/confirm.sh "Shutdown?" "shutdown -h now"
 
 # toggle polybar
 bindsym $mod+Shift+p exec --no-startup-id ~/.scripts/bar/toggle_bar.sh
 
 # multiple search
-bindsym $mod+s exec --no-startup-id ~/.scripts/dmenu/dmenu_search.sh
+bindsym $mod+s exec --no-startup-id ~/.scripts/dmenu/search_web.sh
 
 # set a timer that plays audio when finished
-bindsym $mod+Shift+w exec --no-startup-id ~/.scripts/dmenu/dmenu_timer.sh
+bindsym $mod+Shift+w exec --no-startup-id ~/.scripts/dmenu/timer.sh
 
 #====================================================================================#
 # ==================================== Binds ========================================#
@@ -157,7 +157,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec --no-startup-id ~/.scripts/i3/dmenu/dmenu_confirm.sh "Logout?" "i3-msg exit"
+bindsym $mod+Shift+e exec --no-startup-id ~/.scripts/dmenu/confirm.sh "Logout?" "i3-msg exit"
 #"i3-nagbar -t warning -m 'Do you really want to exit i3?' -B '💔 Yes, I have no choice!' 'i3-msg exit'"
 
 # Toggle mute microphone
