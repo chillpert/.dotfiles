@@ -44,28 +44,28 @@ bindsym $mod+q kill
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -nf '#FFFFFF' -sb '#af87ff' -sf '#FFFFFF' -nb '#262626' -i -fn 'VL PGothic-11.5' -l 0 -m 0 -p 'Launch:'"
 
 # switch applications using dmenu
-bindsym $mod+g exec --no-startup-id ~/.scripts/nextfind -nf '#FFFFFF' -sb '#af87ff' -sf '#FFFFFF' -nb '#262626' -i -fn 'VL PGothic-11.5' -l 10 -w 0 -p 'Jump to:'
+bindsym $mod+g exec --no-startup-id ~/.scripts/controls/nextfind -nf '#FFFFFF' -sb '#af87ff' -sf '#FFFFFF' -nb '#262626' -i -fn 'VL PGothic-11.5' -l 10 -w 0 -p 'Jump to:'
 
 # quick way to edit configs
-bindsym $mod+Shift+d exec --no-startup-id ~/.scripts/dmenu_edit_configs.sh
+bindsym $mod+Shift+d exec --no-startup-id ~/.scripts/dmenu/dmenu_edit_configs.sh
 
 # todo list
-bindsym $mod+Shift+t exec --no-startup-id ~/.scripts/dmenu_todo.sh
+bindsym $mod+Shift+t exec --no-startup-id ~/.scripts/dmenu/dmenu_todo.sh
 
 # translate a word 
-bindsym $mod+Shift+s exec --no-startup-id ~/.scripts/dmenu_translate.sh
+bindsym $mod+Shift+s exec --no-startup-id ~/.scripts/dmenu/dmenu_translate.sh
 
 # shutdown computer
-bindsym $mod+Shift+q exec --no-startup-id ~/.scripts/dmenu_confirm.sh "Shutdown?" "shutdown -h now"
+bindsym $mod+Shift+q exec --no-startup-id ~/.scripts/dmenu/dmenu_confirm.sh "Shutdown?" "shutdown -h now"
 
 # toggle polybar
-bindsym $mod+Shift+p exec --no-startup-id ~/.scripts/toggle_bar.sh
+bindsym $mod+Shift+p exec --no-startup-id ~/.scripts/bar/toggle_bar.sh
 
 # multiple search
-bindsym $mod+s exec --no-startup-id ~/.scripts/dmenu_search.sh
+bindsym $mod+s exec --no-startup-id ~/.scripts/dmenu/dmenu_search.sh
 
 # set a timer that plays audio when finished
-bindsym $mod+Shift+w exec --no-startup-id ~/.scripts/dmenu_timer.sh
+bindsym $mod+Shift+w exec --no-startup-id ~/.scripts/dmenu/dmenu_timer.sh
 
 #====================================================================================#
 # ==================================== Binds ========================================#
@@ -78,21 +78,21 @@ bindsym $mod+Shift+w exec --no-startup-id ~/.scripts/dmenu_timer.sh
 bindsym $mod+Shift+b exec --no-startup-id ~/.scripts/bluetooth_toggle.sh
 
 # change focus
-bindsym $mod+h exec --no-startup-id "~/.scripts/window-tool focus left"
-bindsym $mod+j exec --no-startup-id "~/.scripts/window-tool focus down"
-bindsym $mod+k exec --no-startup-id "~/.scripts/window-tool focus up"
-bindsym $mod+l exec --no-startup-id "~/.scripts/window-tool focus right"
+bindsym $mod+h exec --no-startup-id "~/.scripts/i3/controls/window-tool focus left"
+bindsym $mod+j exec --no-startup-id "~/.scripts/i3/controls/window-tool focus down"
+bindsym $mod+k exec --no-startup-id "~/.scripts/i3/controls/window-tool focus up"
+bindsym $mod+l exec --no-startup-id "~/.scripts/i3/controls/window-tool focus right"
 
-bindsym $mod+Shift+h exec --no-startup-id "~/.scripts/window-tool move left 60"
-bindsym $mod+Shift+j exec --no-startup-id "~/.scripts/window-tool move down 60"
-bindsym $mod+Shift+k exec --no-startup-id "~/.scripts/window-tool move up 60"
-bindsym $mod+Shift+l exec --no-startup-id "~/.scripts/window-tool move right 60"
+bindsym $mod+Shift+h exec --no-startup-id "~/.scripts/i3/controls/window-tool move left 60"
+bindsym $mod+Shift+j exec --no-startup-id "~/.scripts/i3/controls/window-tool move down 60"
+bindsym $mod+Shift+k exec --no-startup-id "~/.scripts/i3/controls/window-tool move up 60"
+bindsym $mod+Shift+l exec --no-startup-id "~/.scripts/i3/controls/window-tool move right 60"
 
 # resize
-bindsym  $mod+minus       exec --no-startup-id "~/.scripts/resize-tool resize natural    -80"
-bindsym  $mod+equal       exec --no-startup-id "~/.scripts/resize-tool resize natural    +80"
-bindsym  $mod+Shift+minus exec --no-startup-id "~/.scripts/resize-tool resize orthogonal -80"
-bindsym  $mod+Shift+equal exec --no-startup-id "~/.scripts/resize-tool resize orthogonal +80"
+bindsym  $mod+minus       exec --no-startup-id "~/.scripts/i3/controls/resize-tool resize natural    -80"
+bindsym  $mod+equal       exec --no-startup-id "~/.scripts/i3/controls/resize-tool resize natural    +80"
+bindsym  $mod+Shift+minus exec --no-startup-id "~/.scripts/i3/controls/resize-tool resize orthogonal -80"
+bindsym  $mod+Shift+equal exec --no-startup-id "~/.scripts/i3/controls/resize-tool resize orthogonal +80"
 
 # toggle split
 bindsym $mod+t split toggle
@@ -157,11 +157,11 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec --no-startup-id ~/.scripts/dmenu_confirm.sh "Logout?" "i3-msg exit"
+bindsym $mod+Shift+e exec --no-startup-id ~/.scripts/i3/dmenu/dmenu_confirm.sh "Logout?" "i3-msg exit"
 #"i3-nagbar -t warning -m 'Do you really want to exit i3?' -B '💔 Yes, I have no choice!' 'i3-msg exit'"
 
 # Toggle mute microphone
-bindsym $mod+m exec --no-startup-id ~/./scripts/toggle_sources.sh
+bindsym $mod+m exec --no-startup-id ~/.scripts/toggle_sources.sh
 
 # Refresh monitors
 #bindsym $mod+Shift+m exec "nvidia-settings --assign CurrentMetaMode='HDMI-0: nvidia-auto-select +1920+0 {rotation=right}, DVI-D-0: nvidia-auto-select +0+420' &"
@@ -173,8 +173,8 @@ bindsym $mod+less exec --no-startup-id playerctl previous
 
 # Lock screen
 #bindsym $mod+x exec --no-startup-id i3lockmore --image-maximize .config/i3/default_pics/default.JPG -t -u --blur 0.8 --dpms 60
-bindsym $mod+x exec --no-startup-id ~/.scripts/auto_lock.sh
-exec_always xautolock -time 15 -locker ~/.scripts/auto_lock.sh &
+bindsym $mod+x exec --no-startup-id ~/.scripts/i3/auto_lock.sh
+exec_always xautolock -time 15 -locker ~/.scripts/i3/auto_lock.sh &
 
 # Scratchpads
 # Open ST
@@ -191,7 +191,7 @@ for_window [instance="pythonScratchpadProcess"] resize set 625 400
 for_window [instance="pythonScratchpadProcess"] move scratchpad
 for_window [instance="pythonScratchpadProcess"] floating enable
 
-bindsym $mod+c exec --no-startup-id ~/.scripts/python_scratchpad.sh; [instance="pythonScratchpadProcess"] scratchpad show; [instance="pythonScratchpadProcess"] move position center
+bindsym $mod+c exec --no-startup-id ~/.scripts/i3/scratchpads/python_scratchpad.sh; [instance="pythonScratchpadProcess"] scratchpad show; [instance="pythonScratchpadProcess"] move position center
 
 # Open ncspot
 for_window [instance="spotScratchpadProcess"] floating enable
@@ -199,7 +199,7 @@ for_window [instance="spotScratchpadProcess"] resize set 625 400
 for_window [instance="spotScratchpadProcess"] move scratchpad
 for_window [instance="spotScratchpadProcess"] floating enable
 
-bindsym $mod+n exec --no-startup-id ~/.scripts/ncspot_scratchpad.sh; [instance="spotScratchpadProcess"] scratchpad show; [instance="spotScratchpadProcess"] move position center
+bindsym $mod+n exec --no-startup-id ~/.scripts/i3/scratchpads/ncspot_scratchpad.sh; [instance="spotScratchpadProcess"] scratchpad show; [instance="spotScratchpadProcess"] move position center
 
 # Open ytfzf with subs
 for_window [instance="ytScratchpadProcess"] floating enable
@@ -207,7 +207,7 @@ for_window [instance="ytScratchpadProcess"] resize set 1200 800
 for_window [instance="ytScratchpadProcess"] move scratchpad
 for_window [instance="ytScratchpadProcess"] floating enable
 
-bindsym $mod+y exec --no-startup-id ~/.scripts/yt_scratchpad.sh; [instance="ytScratchpadProcess"] scratchpad show; [instance="ytScratchpadProcess"] move position center
+bindsym $mod+y exec --no-startup-id ~/.scripts/i3/scratchpads/yt_scratchpad.sh; [instance="ytScratchpadProcess"] scratchpad show; [instance="ytScratchpadProcess"] move position center
 
 # Open ST in current working project
 for_window [instance="workScratchpadProcess"] floating enable
@@ -215,7 +215,7 @@ for_window [instance="workScratchpadProcess"] resize set 1200 800
 for_window [instance="workScratchpadProcess"] move scratchpad
 for_window [instance="workScratchpadProcess"] floating enable
 
-bindsym $mod+w exec --no-startup-id ~/.scripts/work_scratchpad.sh; [instance="workScratchpadProcess"] scratchpad show; [instance="workScratchpadProcess"] move position center
+bindsym $mod+w exec --no-startup-id ~/.scripts/i3/scratchpads/work_scratchpad.sh; [instance="workScratchpadProcess"] scratchpad show; [instance="workScratchpadProcess"] move position center
 
 #====================================================================================#
 # ===================================== Bar =========================================#
