@@ -1,0 +1,13 @@
+*.alpha: 0
+
+*.font: 'MesloLGS NF:size=10'
+
+*.background: #232627
+
+Xcursor.size: 16
+Xcursor.theme: xcursor-breeze
+
+!! To have GTK 3 programs have a consistent cursor size 
+!! with X, set gtk-cursor-theme-size=n for n as in 
+!! Xcursor.size. 
+!! The setting can be found in .config/gtk-3.0/settings.ini
