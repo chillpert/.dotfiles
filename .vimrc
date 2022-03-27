@@ -46,6 +46,9 @@ let g:cpp_member_highlight=1
 " Show line numbers 
 set number
 
+" Center search results
+nnoremap n nzz
+
 " Hightlight cursor line for better visibility
 set cursorline
 
@@ -333,3 +336,4 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " Replace search term (when pressing *)
 "nnoremap <leader>r :%s///g<Left><Left>
 "nnoremap <leader>rc :%s///gc<Left><Left><Left>
+
