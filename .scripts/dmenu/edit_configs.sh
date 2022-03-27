@@ -17,7 +17,7 @@ pulse
 ranger
 scripts")
 
-choice=$(echo -e "${options[@]}" | dmenu -nf '#FFFFFF' -sb '#af87ff' -sf '#FFFFFF' -nb '#262626' -i -fn 'VL PGothic-11.5' -m 0 -w 0 -p 'Configs: ')
+choice=$(echo -e "${options[@]}" | dmenu -i -fn 'VL PGothic-11.5' -m 0 -w 0 -p 'Configs: ')
 
 case "$choice" in
 	quit)

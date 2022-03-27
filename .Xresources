@@ -1,11 +1,16 @@
-*.alpha: 0
-
-*.font: 'MesloLGS NF:size=10'
-
-*.background: #232627
+!! *.alpha: 0
+!! *.font: 'MesloLGS NF:size=10'
+!! *.background: #232627
 
 Xcursor.size: 16
 Xcursor.theme: xcursor-breeze
+
+!! dmenu
+dmenu.font: 'VL PGothic-10'
+dmenu.foreground: #FFFFFF
+dmenu.background: #262626
+dmenu.selbackground: #AF87FF
+dmenu.selforeground: #FFFFFF
 
 !! To have GTK 3 programs have a consistent cursor size 
 !! with X, set gtk-cursor-theme-size=n for n as in 
