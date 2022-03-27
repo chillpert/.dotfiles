@@ -39,7 +39,11 @@ alias gc='git commit'
 alias ga='git add'
 alias gl='git log -a --graph'
 alias gr='git reset'
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+config() {
+	/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME "$@"
+	pacman -Qq > .packages
+}
+
 gbd() {
 	git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative "$2".."$1"
 }
