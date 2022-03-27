@@ -30,7 +30,6 @@ alias df='df -h'
 alias updategrub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias mkdir='mkdir -pv'
 alias c='clear'
-alias mount='mount | column -t'
 alias clip='xclip -selection c'
 
 # Git commands aliases
@@ -55,11 +54,11 @@ alias paru-Q="paru -Qeq | fzf --multi --preview 'paru -Qi {1}'"
 # Application aliases
 alias vpnc='sudo protonvpn c -f'
 alias vpnd='sudo protonvpn d'
-alias chromium='/mnt/data/AppImages/ungoogled-chromium.AppImage'
 alias r='ranger'
 
 # Personal aliases
 alias guitar='ranger /mnt/data/user/Documents/Tabs'
+alias games='ranger /mnt/games/SteamLibrary/steamapps/common'
 
 # Make mounting in terminal fast!
 mntusb() {
