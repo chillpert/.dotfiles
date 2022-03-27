@@ -17,7 +17,7 @@ font pango:Monoid Nerd Font Mono 7
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -41,7 +41,9 @@ bindsym $mod+q kill
 
 # start dmenu
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -nf '#FFFFFF' -sb '#af87ff' -sf '#FFFFFF' -nb '#262626' -i -fn 'VL PGothic-11.5' -l 10 -w 0 -p 'Launch:'"
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -nf '#FFFFFF' -sb '#af87ff' -sf '#FFFFFF' -nb '#262626' -i -fn 'VL PGothic-11.5' -l 0 -m 0 -p 'Launch:'"
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -nf '#FFFFFF' -sb '#af87ff' -sf '#FFFFFF' -nb '#262626' -i -fn 'VL PGothic-11.5' -l 0 -m 0 -p 'Launch:'"
+
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'VL PGothic-11.5' -l 0 -m 0 -p 'Launch:'"
 
 # switch applications using dmenu
 bindsym $mod+g exec --no-startup-id ~/.scripts/controls/nextfind -nf '#FFFFFF' -sb '#af87ff' -sf '#FFFFFF' -nb '#262626' -i -fn 'VL PGothic-11.5' -l 10 -w 0 -p 'Jump to:'
@@ -172,19 +174,11 @@ bindsym $mod+greater exec --no-startup-id playerctl next
 bindsym $mod+less exec --no-startup-id playerctl previous
 
 # Lock screen
-#bindsym $mod+x exec --no-startup-id i3lockmore --image-maximize .config/i3/default_pics/default.JPG -t -u --blur 0.8 --dpms 60
-bindsym $mod+x exec --no-startup-id ~/.scripts/i3/auto_lock.sh
-exec_always xautolock -time 15 -locker ~/.scripts/i3/auto_lock.sh &
+bindsym $mod+x exec --no-startup-id xsecurelock
+exec_always xautolock -time 15 -locker xsecurelock
 
 # Scratchpads
-# Open ST
-# for_window [instance="stScratchpadProcess"] floating enable
-# for_window [instance="stScratchpadProcess"] resize set 625 400
-# for_window [instance="stScratchpadProcess"] move scratchpad
-# for_window [instance="stScratchpadProcess"] floating enable
-# 
-# bindsym $mod+s exec --no-startup-id ~/.scripts/st_scratchpad.sh; [instance="stScratchpadProcess"] scratchpad show; [instance="stScratchpadProcess"] move position center
- 
+
 # Open Python3
 for_window [instance="pythonScratchpadProcess"] floating enable
 for_window [instance="pythonScratchpadProcess"] resize set 625 400
@@ -193,21 +187,13 @@ for_window [instance="pythonScratchpadProcess"] floating enable
 
 bindsym $mod+c exec --no-startup-id ~/.scripts/i3/scratchpads/python_scratchpad.sh; [instance="pythonScratchpadProcess"] scratchpad show; [instance="pythonScratchpadProcess"] move position center
 
-# Open ncspot
-for_window [instance="spotScratchpadProcess"] floating enable
-for_window [instance="spotScratchpadProcess"] resize set 625 400
-for_window [instance="spotScratchpadProcess"] move scratchpad
-for_window [instance="spotScratchpadProcess"] floating enable
+# Open terminal scratchpad for music
+for_window [instance="musicScratchpadProcess"] floating enable
+for_window [instance="musicScratchpadProcess"] resize set 625 400
+for_window [instance="musicScratchpadProcess"] move scratchpad
+for_window [instance="musicScratchpadProcess"] floating enable
 
-bindsym $mod+n exec --no-startup-id ~/.scripts/i3/scratchpads/ncspot_scratchpad.sh; [instance="spotScratchpadProcess"] scratchpad show; [instance="spotScratchpadProcess"] move position center
-
-# Open ytfzf with subs
-for_window [instance="ytScratchpadProcess"] floating enable
-for_window [instance="ytScratchpadProcess"] resize set 1200 800
-for_window [instance="ytScratchpadProcess"] move scratchpad
-for_window [instance="ytScratchpadProcess"] floating enable
-
-bindsym $mod+y exec --no-startup-id ~/.scripts/i3/scratchpads/yt_scratchpad.sh; [instance="ytScratchpadProcess"] scratchpad show; [instance="ytScratchpadProcess"] move position center
+bindsym $mod+n exec --no-startup-id ~/.scripts/i3/scratchpads/music_scratchpad.sh; [instance="musicScratchpadProcess"] scratchpad show; [instance="musicScratchpadProcess"] move position center
 
 # Open ST in current working project
 for_window [instance="workScratchpadProcess"] floating enable
@@ -282,7 +268,7 @@ for_window [instance="origin.exe"] floating enable
 #exec --no-startup-id xrandr --output DP-1 --rotate right --pos 1920x0
 
 # Set background image (feh)
-exec_always --no-startup-id feh --bg-scale --auto-reload --no-xinerama --randomize /mnt/data/user/Pictures/wallpaper/Iceland
+exec_always --no-startup-id "feh --bg-scale --auto-reload --no-xinerama --randomize /mnt/data/user/Pictures/Wallpapers/Iceland
 
 # bar {
 # 	output HDMI-0
