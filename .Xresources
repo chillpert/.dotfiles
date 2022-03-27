@@ -1,8 +1,8 @@
 !! System-wide
 #define ACCENT_COLOR #AF87FF
+#define FOREGROUND_COLOR #FFFFFF
 #define BACKGROUND_COLOR #262626
 #define FONT 'VL PGothic-10'
-#define WHITE #FFFFFF
 
 !! Monokai theme
 #define base00 #272822
@@ -21,14 +21,6 @@
 #define base0D #66D9EF
 #define base0E #AE81FF
 #define base0F #CC6633
-
-!! *.foreground:   base05
-!! #ifdef background_opacity
-!! *.background:   [background_opacity]base00
-!! #else
-!! *.background:   base00
-!! #endif
-!! *.cursorColor:  base05
 
 *.color0: base00
 *.color1: base08
@@ -61,10 +53,15 @@ i3wm.border_inactive: #5F676A
 
 !! dmenu
 dmenu.font: FONT
-dmenu.foreground: WHITE
+dmenu.foreground: FOREGROUND_COLOR
 dmenu.background: BACKGROUND_COLOR
 dmenu.selbackground: ACCENT_COLOR
-dmenu.selforeground: WHITE
+dmenu.selforeground: FOREGROUND_COLOR
+
+!! polybar
+polybar.i3_focus_background: ACCENT_COLOR
+polybar.foreground: FOREGROUND_COLOR
+polybar.background: #AA262626
 
 !! To have GTK 3 programs have a consistent cursor size 
 !! with X, set gtk-cursor-theme-size=n for n as in 
