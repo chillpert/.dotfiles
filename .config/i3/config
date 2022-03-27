@@ -38,9 +38,6 @@ bindsym $mod+Shift+s exec --no-startup-id ~/.scripts/dmenu/translate.sh
 # Shutdown computer
 bindsym $mod+Shift+q exec --no-startup-id ~/.scripts/dmenu/confirm.sh "Shutdown?" "shutdown -h now"
 
-# Toggle polybar
-bindsym $mod+Shift+p exec --no-startup-id ~/.scripts/bar/toggle_bar.sh
-
 # Multiple search
 bindsym $mod+s exec --no-startup-id ~/.scripts/dmenu/search_web.sh
 
@@ -123,6 +120,18 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+# Map workspaces to monitors
+workspace 1 output DVI-D-0
+workspace 2 output DVI-D-0
+workspace 3 output DVI-D-0
+workspace 4 output DVI-D-0
+workspace 5 output DVI-D-0
+workspace 6 output HDMI-0
+workspace 7 output HDMI-0
+workspace 8 output HDMI-0
+workspace 9 output HDMI-0
+workspace 10 output HDMI-0
+
 # Reload the configuration file
 bindsym $mod+Shift+c reload
 
@@ -151,6 +160,7 @@ for_window [instance="pythonScratchpadProcess"] floating enable
 for_window [instance="pythonScratchpadProcess"] resize set 625 400
 for_window [instance="pythonScratchpadProcess"] move scratchpad
 for_window [instance="pythonScratchpadProcess"] floating enable
+for_window [instance="pythonScratchpadProcess"] sticky enable
 
 bindsym $mod+c exec --no-startup-id ~/.scripts/i3/scratchpads/python_scratchpad.sh; [instance="pythonScratchpadProcess"] scratchpad show; [instance="pythonScratchpadProcess"] move position center
 
@@ -159,6 +169,7 @@ for_window [instance="musicScratchpadProcess"] floating enable
 for_window [instance="musicScratchpadProcess"] resize set 625 400
 for_window [instance="musicScratchpadProcess"] move scratchpad
 for_window [instance="musicScratchpadProcess"] floating enable
+for_window [instance="musicScratchpadProcess"] sticky enable
 
 bindsym $mod+n exec --no-startup-id ~/.scripts/i3/scratchpads/music_scratchpad.sh; [instance="musicScratchpadProcess"] scratchpad show; [instance="musicScratchpadProcess"] move position center
 
@@ -167,6 +178,7 @@ for_window [instance="workScratchpadProcess"] floating enable
 for_window [instance="workScratchpadProcess"] resize set 1200 800
 for_window [instance="workScratchpadProcess"] move scratchpad
 for_window [instance="workScratchpadProcess"] floating enable
+for_window [instance="workScratchpadProcess"] sticky enable
 
 bindsym $mod+w exec --no-startup-id ~/.scripts/i3/scratchpads/work_scratchpad.sh; [instance="workScratchpadProcess"] scratchpad show; [instance="workScratchpadProcess"] move position center
 
@@ -185,12 +197,16 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 new_window pixel 3
 for_window [class=.*] border pixel 2pixel
 
-client.focused          #4c7899 #285577 #ffffff #af87ff #af87ff
-client.focused_inactive #333333 #5f676a #ffffff #5f676a #5f676a
-client.unfocused        #333333 #222222 #888888 #5f676a #5f676a
-client.urgent           #2f343a #900000 #ffffff #900000 #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
-client.background       #ffffff
+# Color configuration
+set_from_resource $border_active i3wm.border_active #ffffff
+set_from_resource $border_inactive i3wm.border_inactive #000000
+
+client.focused          $border_active   $border_active   $border_active   $border_active   $border_active
+client.focused_inactive $border_inactive $border_inactive $border_inactive $border_inactive $border_inactive
+client.unfocused        $border_inactive $border_inactive $border_inactive $border_inactive $border_inactive
+client.urgent           $border_inactive $border_inactive $border_inactive $border_inactive $border_inactive
+client.placeholder      $border_inactive $border_inactive $border_inactive $border_inactive $border_inactive
+client.background       $border_inactive
 
 # Don't jump to the opposite window when reaching a side
 focus_wrapping no
@@ -201,19 +217,8 @@ mouse_warping none
 # If you go to some workspace using key n, you can use key n to return to the original one
 workspace_auto_back_and_forth yes
 
-# @TODO: Not working
-focus_on_window_activation none
-
-workspace 1 output DVI-D-0
-workspace 2 output DVI-D-0
-workspace 3 output DVI-D-0
-workspace 4 output DVI-D-0
-workspace 5 output DVI-D-0
-workspace 6 output HDMI-0
-workspace 7 output HDMI-0
-workspace 8 output HDMI-0
-workspace 9 output HDMI-0
-workspace 10 output HDMI-0
+# Everything that floats by default and was not opened explicitely should never be focused
+no_focus [floating_from="auto"]
 
 #====================================================================================#
 # ================================== Commands =======================================#
@@ -224,3 +229,4 @@ for_window [instance="origin.exe"] floating enable
 
 # Set background image (feh)
 exec_always --no-startup-id "feh --bg-scale --auto-reload --no-xinerama --randomize /mnt/data/user/Pictures/Wallpapers/Iceland"
+
