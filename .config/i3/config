@@ -27,7 +27,7 @@ bindsym $mod+q kill
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'VL PGothic-11.5' -l 0 -m 0 -p 'Launch:'"
 
 # Switch applications using dmenu
-bindsym $mod+g exec --no-startup-id ~/.scripts/controls/nextfind -nf '#FFFFFF' -sb '#af87ff' -sf '#FFFFFF' -nb '#262626' -i -fn 'VL PGothic-11.5' -l 10 -w 0 -p 'Jump to:'
+bindsym $mod+g exec --no-startup-id ~/.scripts/i3/controls/nextfind -nf '#FFFFFF' -sb '#af87ff' -sf '#FFFFFF' -nb '#262626' -i -fn 'VL PGothic-11.5' -l 10 -w 0 -p 'Jump to:'
 
 # Todo list
 bindsym $mod+Shift+t exec --no-startup-id ~/.scripts/dmenu/todo.sh
