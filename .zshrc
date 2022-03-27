@@ -40,8 +40,8 @@ alias ga='git add'
 alias gl='git log -a --graph'
 alias gr='git reset'
 config() {
+	pacman -Qqe > .packages
 	/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME "$@"
-	pacman -Qq > .packages
 }
 
 gbd() {
