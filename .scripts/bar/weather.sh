@@ -44,8 +44,8 @@ get_icon() {
     echo $icon
 }
 
-KEY=$(cat /mnt/data/user/Documents/openweathermap_api_key.txt)
-CITY=$(cat /mnt/data/user/Documents/location.txt)
+KEY=$(cat /mnt/data/user/Documents/OpenWeather/openweathermap_api_key.txt)
+CITY=$(cat /mnt/data/user/Documents/OpenWeather/location.txt)
 UNITS="metric"
 SYMBOL="°"
 
