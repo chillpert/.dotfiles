@@ -48,9 +48,6 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'VL P
 # switch applications using dmenu
 bindsym $mod+g exec --no-startup-id ~/.scripts/controls/nextfind -nf '#FFFFFF' -sb '#af87ff' -sf '#FFFFFF' -nb '#262626' -i -fn 'VL PGothic-11.5' -l 10 -w 0 -p 'Jump to:'
 
-# quick way to edit configs
-bindsym $mod+Shift+d exec --no-startup-id ~/.scripts/dmenu/edit_configs.sh
-
 # todo list
 bindsym $mod+Shift+t exec --no-startup-id ~/.scripts/dmenu/todo.sh
 
