@@ -11,11 +11,6 @@ if [[ -o login ]] ; then
     return
 fi
 
-# Unreal Engine aliases
-alias marm='cd /mnt/data/UnrealProjects/Marmortal'
-alias ue4projects='cd /mnt/data/UnrealProjects'
-alias ue4engine='cd /mnt/data/UnrealEngine'
-
 # Youtube aliases
 alias yt='ytfzf --detach -s -S --subs=1 --sort -l --silent'
 alias ytt='ytfzf -t -S --subs=1 --sort -l --silent'
@@ -63,6 +58,46 @@ alias paru-Q="paru -Qeq | fzf --multi --preview 'paru -Qi {1}'"
 alias vpnc='sudo protonvpn c -f'
 alias vpnd='sudo protonvpn d'
 alias r='ranger'
+
+# Expand ue4cli
+ue4() {
+	ue4cli='/usr/bin/ue4'
+	projects_path='/mnt/data/UnrealProjects'
+	engine_path=$($ue4cli root)
+
+	if [[ "$1" == "engine" ]]; then
+		cd $engine_path
+	elif [[ "$1" == "projects" ]]; then
+		cd $projects_path
+		if [[ "$2" ]]; then
+			cd $2
+		fi
+	elif [[ "$1" == "main" ]]; then
+		cd $projects_path/Marmortal
+	elif [[ "$1" == "rebuild" ]]; then
+		$ue4cli clean
+		$ue4cli build 
+		if [[ "$2" == "run" ]]; then
+			$ue4cli run
+		fi
+	elif [[ "$1" == "gen" ]]; then
+		$ue4cli gen
+		project=${PWD##*/}
+		ln -s ".vscode/compileCommands_${project}.json" compile_commands.json	
+		# @TODO: Rewrite 'fixCompileCommands' in bash (I lost the source file)
+		$projects_path/fixCompileCommands .
+	elif [[ "$1" == "ctags" ]]; then
+		echo "Generating ctags database in current directory ..."
+		if [[ "$2" == "engine" ]]; then
+			ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ . $engine_path
+		else
+			ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ . 
+		fi
+		echo "Generation completed."
+	else
+		$ue4cli "$@"
+	fi
+}
 
 # Personal aliases
 alias guitar='ranger /mnt/data/user/Documents/Tabs'

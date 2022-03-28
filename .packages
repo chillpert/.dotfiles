@@ -16,6 +16,7 @@ cmake
 cmus
 code
 cowsay
+ctags
 cups
 dmenu
 dosbox
