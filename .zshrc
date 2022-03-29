@@ -13,7 +13,7 @@ fi
 
 # Youtube aliases
 alias yt='ytfzf --detach -s -S --subs=1 --sort -l --silent'
-alias ytt='ytfzf -t -S --subs=1 --sort -l --silent'
+alias ytt='ytfzf -t -s -S --detach --subs=1 --sort -l --silent'
 alias yt-mp3='yt-dlp --extract-audio --audio-format mp3'
 
 # Basic Unix commands aliases

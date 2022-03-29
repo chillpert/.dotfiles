@@ -13,8 +13,16 @@ font pango:Monoid Nerd Font Mono 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Xresource colors
+set_from_resource $border_active i3wm.border_active #ffffff
+set_from_resource $border_inactive i3wm.border_inactive #000000
+set_from_resource $background_color tabbed.normal_background #000000
+
 # Open a terminal
 bindsym $mod+Return exec st 
+
+# Open a terminal with suckless tabbed
+bindsym $mod+Shift+Return exec tabbed -r 2 -t '$border_active' -o '$background_color' st -w ''
 
 # Close focused window
 bindsym $mod+q kill
@@ -37,9 +45,6 @@ bindsym $mod+Shift+s exec --no-startup-id ~/.scripts/dmenu/translate.sh
 
 # Shutdown computer
 bindsym $mod+Shift+q exec --no-startup-id ~/.scripts/dmenu/confirm.sh "Shutdown?" "shutdown -h now"
-
-# Multiple search
-bindsym $mod+s exec --no-startup-id ~/.scripts/dmenu/search_web.sh
 
 # Set a timer that plays audio when finished
 bindsym $mod+Shift+w exec --no-startup-id ~/.scripts/dmenu/timer.sh
@@ -198,9 +203,6 @@ new_window pixel 3
 for_window [class=.*] border pixel 2pixel
 
 # Color configuration
-set_from_resource $border_active i3wm.border_active #ffffff
-set_from_resource $border_inactive i3wm.border_inactive #000000
-
 client.focused          $border_active   $border_active   $border_active   $border_active   $border_active
 client.focused_inactive $border_inactive $border_inactive $border_inactive $border_inactive $border_inactive
 client.unfocused        $border_inactive $border_inactive $border_inactive $border_inactive $border_inactive

@@ -51,6 +51,9 @@ Xcursor.theme: xcursor-breeze
 i3wm.border_active: ACCENT_COLOR
 i3wm.border_inactive: #5F676A
 
+!! Tabbed (only configured via i3 config for now)
+tabbed.normal_background: BACKGROUND_COLOR
+
 !! dmenu
 dmenu.font: FONT
 dmenu.foreground: FOREGROUND_COLOR
