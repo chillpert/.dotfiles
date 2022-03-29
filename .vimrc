@@ -14,7 +14,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy file search for all 
 Plug 'junegunn/fzf.vim' " Requires the_silver_searcher, ripgrep, fzf, git-delta, bat packages to work fully
 Plug 'bfrg/vim-cpp-modern' " More up-to-date syntax highlighting
 Plug 'tpope/vim-fugitive' " For git support 
-Plug 'chrisbra/Colorizer'
+"Plug 'chrisbra/Colorizer'
+Plug 'ap/vim-css-color'
 "Plug 'vim-airline/vim-airline'
 
 call plug#end()

@@ -175,7 +175,7 @@ bindsym $mod+n exec --no-startup-id ~/.scripts/i3/scratchpads/music_scratchpad.s
 
 # Open ST in current working project
 for_window [instance="workScratchpadProcess"] floating enable
-for_window [instance="workScratchpadProcess"] resize set 1200 800
+for_window [instance="workScratchpadProcess"] resize set 625 400
 for_window [instance="workScratchpadProcess"] move scratchpad
 for_window [instance="workScratchpadProcess"] floating enable
 for_window [instance="workScratchpadProcess"] sticky enable

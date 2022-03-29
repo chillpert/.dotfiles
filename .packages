@@ -47,7 +47,6 @@ grub
 gzip
 htop
 i3-wm
-i3status
 ibus-anthy
 jq
 lib32-giflib
@@ -114,10 +113,12 @@ scrot
 sed
 signal-desktop
 simplescreenrecorder
+slock
 spotify
 steam
 sudo
 supertuxkart
+surf
 teamspeak3
 texinfo
 the_silver_searcher
