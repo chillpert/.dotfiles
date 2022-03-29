@@ -80,6 +80,15 @@ ue4() {
 		if [[ "$2" == "run" ]]; then
 			$ue4cli run
 		fi
+	elif [[ "$1" == "build" ]]; then
+		if [[ "${@: -1}" == "run" ]]; then
+			length="$(($# - 2))" # Get length without last param because of 'run'
+			$ue4cli build ${@:2:$length}
+			$ue4cli run
+		else
+			shift 1
+			$ue4cli build "$@"
+		fi
 	elif [[ "$1" == "gen" ]]; then
 		$ue4cli gen
 		project=${PWD##*/}
