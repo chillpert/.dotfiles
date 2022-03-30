@@ -9,7 +9,7 @@
 #define FONT 'VL PGothic-10'
 
 !! Monokai theme
-#define base00 #272822
+#define base00 #262626
 #define base01 #383830
 #define base02 #49483E
 #define base03 #75715E
@@ -23,7 +23,7 @@
 #define base0B #A6E22E
 #define base0C #A1EFE4
 #define base0D #66D9EF
-#define base0E #AE81FF
+#define base0E #AF87FF
 #define base0F #CC6633
 
 *.color0: base00
