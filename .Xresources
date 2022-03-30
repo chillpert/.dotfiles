@@ -1,4 +1,8 @@
+!! Run $ xrdb ~/.Xresources to reload
+
 !! System-wide
+#define MONITOR_1 DVI-D-0
+#define MONITOR_2 HDMI-0
 #define ACCENT_COLOR #AF87FF
 #define FOREGROUND_COLOR #FFFFFF
 #define BACKGROUND_COLOR #262626
@@ -50,6 +54,8 @@ Xcursor.theme: xcursor-breeze
 !! i3
 i3wm.border_active: ACCENT_COLOR
 i3wm.border_inactive: #5F676A
+i3wm.display1: MONITOR_1
+i3wm.display2: MONITOR_2
 
 !! Tabbed (only configured via i3 config for now)
 tabbed.normal_background: BACKGROUND_COLOR
@@ -65,6 +71,10 @@ dmenu.selforeground: FOREGROUND_COLOR
 polybar.i3_focus_background: ACCENT_COLOR
 polybar.foreground: FOREGROUND_COLOR
 polybar.background: #AA262626
+polybar.display1: MONITOR_1
+polybar.display2: MONITOR_2
+polybar.is_bar1_bottom: false
+polybar.is_bar2_bottom: false
 
 !! To have GTK 3 programs have a consistent cursor size 
 !! with X, set gtk-cursor-theme-size=n for n as in 
