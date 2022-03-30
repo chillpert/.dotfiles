@@ -168,28 +168,27 @@ exec_always xautolock -time 15 -locker xsecurelock
 for_window [instance="pythonScratchpadProcess"] floating enable
 for_window [instance="pythonScratchpadProcess"] resize set 625 400
 for_window [instance="pythonScratchpadProcess"] move scratchpad
-for_window [instance="pythonScratchpadProcess"] floating enable
 for_window [instance="pythonScratchpadProcess"] sticky enable
 
-bindsym $mod+c exec --no-startup-id ~/.scripts/i3/scratchpads/python_scratchpad.sh; [instance="pythonScratchpadProcess"] scratchpad show; [instance="pythonScratchpadProcess"] move position center
+bindsym $mod+c exec --no-startup-id ~/.scripts/i3/scratchpads/python_scratchpad.sh; [instance="pythonScratchpadProcess"] scratchpad show, move position center
 
 # Open terminal scratchpad for music
 for_window [instance="musicScratchpadProcess"] floating enable
 for_window [instance="musicScratchpadProcess"] resize set 625 400
 for_window [instance="musicScratchpadProcess"] move scratchpad
-for_window [instance="musicScratchpadProcess"] floating enable
 for_window [instance="musicScratchpadProcess"] sticky enable
 
-bindsym $mod+n exec --no-startup-id ~/.scripts/i3/scratchpads/music_scratchpad.sh; [instance="musicScratchpadProcess"] scratchpad show; [instance="musicScratchpadProcess"] move position center
+bindsym $mod+n exec --no-startup-id ~/.scripts/i3/scratchpads/music_scratchpad.sh; [instance="musicScratchpadProcess"] scratchpad show, move position center
 
-# Open ST in current working project
-for_window [instance="workScratchpadProcess"] floating enable
-for_window [instance="workScratchpadProcess"] resize set 625 400
-for_window [instance="workScratchpadProcess"] move scratchpad
-for_window [instance="workScratchpadProcess"] floating enable
-for_window [instance="workScratchpadProcess"] sticky enable
+# Open ST 
+for_window [instance="stScratchpadProcess"] floating enable
+for_window [instance="stScratchpadProcess"] resize set 1200 800
+for_window [instance="stScratchpadProcess"] move scratchpad 
+for_window [instance="stScratchpadProcess"] move position center
+for_window [instance="stScratchpadProcess"] sticky enable
 
-bindsym $mod+w exec --no-startup-id ~/.scripts/i3/scratchpads/work_scratchpad.sh; [instance="workScratchpadProcess"] scratchpad show; [instance="workScratchpadProcess"] move position center
+# Workaround to get scratchpad to show only on primary output by setting coordinates manually
+bindsym $mod+w exec --no-startup-id ~/.scripts/i3/scratchpads/st_scratchpad.sh; [instance="stScratchpadProcess"] scratchpad show, move position 360px 580px
 
 #====================================================================================#
 # ===================================== Bar =========================================#
