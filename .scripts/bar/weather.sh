@@ -30,12 +30,7 @@ get_icon() {
 		output=$(ps ax)
 
         if [ "$icon" = "" ]; then
-	    	killall xsnow
-
-	    	# Only enable if compositor is running
-	        if [[ $output == *"picom"* ]]; then
-	    		xsnow -snowflakes 1000 -notrees &
-	        fi
+			xsnow -nomenu -snowflakes 1000 -notrees -blowsnow -nosanta & 
 	    else
 	    	killall xsnow
         fi
