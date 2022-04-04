@@ -27,10 +27,12 @@ get_icon() {
 	
 	# Launch xsnow when it's snowing outside
 	{
-		output=$(ps ax)
-
         if [ "$icon" = "" ]; then
-			xsnow -nomenu -snowflakes 1000 -notrees -blowsnow -nosanta & 
+			output=$(ps ax)
+			
+			if [[ $output != *"xsnow"* ]]; then
+				xsnow -nomenu -snowflakes 1000 -notrees -blowsnow -nosanta & 
+			fi
 	    else
 	    	killall xsnow
         fi

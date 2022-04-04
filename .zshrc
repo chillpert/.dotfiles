@@ -13,7 +13,6 @@ fi
 
 # Youtube aliases
 alias yt='ytfzf --detach -s -S --subs=1 --sort -l --silent'
-alias ytt='ytfzf -t -s -S --detach --subs=1 --sort -l --silent'
 alias yt-mp3='yt-dlp --extract-audio --audio-format mp3'
 
 # Basic Unix commands aliases
@@ -29,6 +28,7 @@ alias clip='xclip -selection c'
 
 # Git commands aliases
 alias gs='git status'
+alias gd='git diff'
 alias gf='git fetch'
 alias gc='git commit'
 alias ga='git add'
