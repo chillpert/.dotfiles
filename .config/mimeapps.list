@@ -1,2 +1,3 @@
 [Default Applications]
-inode/directory=ranger.desktop
+inode/directory=vifm.desktop
+application/uproject=com.epicgames.UnrealEngineEditor.desktop
