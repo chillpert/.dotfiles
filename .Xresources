@@ -6,7 +6,7 @@
 #define ACCENT_COLOR #AF87FF
 #define FOREGROUND_COLOR #FFFFFF
 #define BACKGROUND_COLOR #262626
-#define FONT 'VL PGothic-10'
+#define FONT 'VL PGothic'
 
 !! Monokai theme
 #define base00 #262626
@@ -70,11 +70,21 @@ dmenu.selforeground: FOREGROUND_COLOR
 !! polybar
 polybar.i3_focus_background: ACCENT_COLOR
 polybar.foreground: FOREGROUND_COLOR
-polybar.background: #AA262626
+polybar.background: #262626
 polybar.display1: MONITOR_1
 polybar.display2: MONITOR_2
 polybar.is_bar1_bottom: false
 polybar.is_bar2_bottom: false
+polybar.font: VL PGothic:size=11;3
+
+!! Original dpi was 101x101
+!!Xft.dpi: 120
+!!Xft.dpi: 101
+!!Xft.dpi: 93
+Xft.dpi: 96
+
+Sxiv.background: BACKGROUND_COLOR
+Sxiv.foreground: ACCENT_COLOR
 
 !! To have GTK 3 programs have a consistent cursor size 
 !! with X, set gtk-cursor-theme-size=n for n as in 

@@ -27,7 +27,7 @@ for it in $(jq -r '.[] | .date_unix' <<< "$content"); do
 done
 
 if (( $counter == 0 )); then
-  echo $name: SpaceX does not have any upcoming launches. In other words: the world is ending!
+  echo $name: Connection lost
 else
   days=$((($time - $my_day) / 86400))
   

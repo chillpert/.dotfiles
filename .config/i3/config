@@ -34,6 +34,10 @@ bindsym $mod+q kill
 # Start dmenu
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'VL PGothic-11.5' -l 0 -m 0 -p 'Launch:'"
 
+bindsym $mod+Shift+d exec st -c "fzf-menu" -e ~/fzf-menu.sh
+for_window [class="^fzf-menu$"] floating enable
+for_window [class="^fzf-menu$"] fullscreen enable
+
 # Switch applications using dmenu
 bindsym $mod+g exec --no-startup-id ~/.scripts/i3/controls/nextfind -nf '#FFFFFF' -sb '#af87ff' -sf '#FFFFFF' -nb '#262626' -i -fn 'VL PGothic-11.5' -l 10 -w 0 -p 'Jump to:'
 
@@ -159,8 +163,7 @@ bindsym $mod+greater exec --no-startup-id playerctl next
 bindsym $mod+less exec --no-startup-id playerctl previous
 
 # Lock screen
-bindsym $mod+x exec --no-startup-id xsecurelock
-exec_always xautolock -time 15 -locker xsecurelock
+bindsym --release $mod+x exec --no-startup-id slock
 
 # Scratchpads
 
@@ -233,5 +236,5 @@ no_focus [floating_from="auto"]
 for_window [instance="origin.exe"] floating enable
 
 # Set background image (feh)
-exec_always --no-startup-id "feh --bg-scale --auto-reload --no-xinerama --randomize /mnt/data/user/Pictures/Wallpapers/Iceland"
+exec_always --no-startup-id "feh --bg-scale --auto-reload --no-xinerama --randomize /mnt/data/backups/Pictures/Wallpapers/Iceland"
 

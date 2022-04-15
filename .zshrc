@@ -1,5 +1,8 @@
 # Author: github.com/chillpert
 
+# Vim mode
+bindkey -v
+
 # open at home
 cd ~/
 
@@ -28,6 +31,7 @@ alias clip='xclip -selection c'
 
 # Git commands aliases
 alias gs='git status'
+alias gb='git branch'
 alias gd='git diff'
 alias gf='git fetch'
 alias gc='git commit'
@@ -43,12 +47,24 @@ gbd() {
 	git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative "$2".."$1"
 }
 
+# FZF everything
+of() {
+	cd ~/
+	fzf | xargs xdg-open
+	cd -
+}
+
+alias fzf="fzf -m"
+alias fzfp="fzf --preview='less {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
+
+alias nv="nvim"
+
 # Package manager aliases
 alias pac-S="pacman -Slq | fzf --multi --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk \"{print \$2}\")' | xargs -ro sudo pacman -S"
 alias pac-R="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
 alias pac-Re="pacman -Qeq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
 alias pac-Q="pacman -Qeq | fzf --multi --preview 'pacman -Qi {1}'"
-alias pac-O="sudo pacman -Rns $(pacman -Qtdq)"
+alias pac-O="pacman -Rns $(pacman -Qtdq)"
 alias paru-S="paru -Slq | fzf --multi --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk \"{print \$2}\")' | xargs -ro paru -S"
 alias paru-R="paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rns"
 alias paru-Re="paru -Qeq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rns"
@@ -57,23 +73,15 @@ alias paru-Q="paru -Qeq | fzf --multi --preview 'paru -Qi {1}'"
 # Application aliases
 alias vpnc='sudo protonvpn c -f'
 alias vpnd='sudo protonvpn d'
-alias r='ranger'
 
 # Expand ue4cli
-ue4() {
-	ue4cli='/usr/bin/ue4'
-	projects_path='/mnt/data/UnrealProjects'
+ue() {
+	ue4cli=$HOME/.local/bin/ue4
+	projects_path=$HOME/Repos
 	engine_path=$($ue4cli root)
 
 	if [[ "$1" == "engine" ]]; then
 		cd $engine_path
-	elif [[ "$1" == "projects" ]]; then
-		cd $projects_path
-		if [[ "$2" ]]; then
-			cd $2
-		fi
-	elif [[ "$1" == "main" ]]; then
-		cd $projects_path/Marmortal
 	elif [[ "$1" == "rebuild" ]]; then
 		$ue4cli clean
 		$ue4cli build 
@@ -94,30 +102,29 @@ ue4() {
 		project=${PWD##*/}
 		ln -s ".vscode/compileCommands_${project}.json" compile_commands.json	
 		# @TODO: Rewrite 'fixCompileCommands' in bash (I lost the source file)
-		$projects_path/fixCompileCommands .
+	    $projects_path/fixCompileCommands .
 	elif [[ "$1" == "ctags" ]]; then
 		echo "Generating ctags database in current directory ..."
-		if [[ "$2" == "engine" ]]; then
-			ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ . $engine_path
-		else
-			ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ . 
-		fi
+		ctags -R .
 		echo "Generation completed."
 	else
 		$ue4cli "$@"
 	fi
 }
 
+alias ue4='echo Please use ue instead.'
+alias ue5='echo Please use ue instead.'
+
 # Personal aliases
-alias guitar='ranger /mnt/data/user/Documents/Tabs'
-alias games='ranger /mnt/games/SteamLibrary/steamapps/common'
+alias guitar='vifm /mnt/data/backups/Documents/Tabs'
+alias games='vifm /mnt/data/SteamLibrary/steamapps/common'
 
 # Make mounting in terminal fast!
 mntusb() {
 	cd ~/
 	mkdir usb
 	sudo mount /dev/sdb1 usb
-	ranger ~/usb
+	vifm ~/usb
 	echo "Do not forget to run umntusb afterwards!"
 }
 
@@ -131,7 +138,7 @@ mntphone() {
 	cd ~/
 	mkdir phone
 	go-mtpfs phone &
-	ranger ~/phone
+	vifm ~/phone
 	echo "Do not forget to run umntphone afterwards!"
 }
 
@@ -219,17 +226,20 @@ ZLE_RPROMPT_INDENT=0
 # Unreal Engine loading time fix
 export GLIBC_TUNABLES=glibc.rtld.dynamic_sort=2
 
+# Executables in home
+export PATH=$PATH:~/.local/bin
+
 # Add cargo bins to path
 export PATH=$PATH:~/.cargo/bin
+
+export GOPATH=~/.local/.go
+export GOROOT=~/.local/.go
 
 # Set VIM as default editor
 export EDITOR=vim
 
 # Default browser
 export BROWSER=firefox
-
-# Set color for file previews in ranger
-export HIGHLIGHT_STYLE=monokai
 
 # XDG directories
 export XDG_DATA_HOME=~/.local/share
@@ -292,4 +302,3 @@ source /usr/share/fzf/completion.zsh
 
 # Disable filthy caps lock! (requires xorg-setxkbmap)
 setxkbmap -option ctrl:nocaps
-
