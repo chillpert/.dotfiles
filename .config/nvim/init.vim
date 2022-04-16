@@ -15,6 +15,8 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'onsails/lspkind-nvim'
 
+Plug 'mfussenegger/nvim-dap'
+
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -142,5 +144,3 @@ nnoremap <Leader>gf  :FzfGFiles!<CR>
 nnoremap <Leader>gs  :FzfGFiles!?<CR>
 nnoremap <Leader>c   :FzfCommands!?<CR>
 
-lua <<EOF
-EOF

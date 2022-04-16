@@ -2,6 +2,19 @@
 local cmp = require('cmp')
 local lspkind = require('lspkind')
 
+-- local dap = require('dap')
+-- dap.adapters.cppdbg = {
+--   id = 'cppdbg',
+--   type = 'executable',
+--   command = '/mnt/data/unrealengine/Engine/Extras/VisualStudioDebugging/Unreal.natvis'
+-- }
+-- 
+-- require('dap').toggle_breakpoint()
+-- require('dap').continue()
+-- require('dap').step_into()
+-- require('dap').step_over()
+
+
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
@@ -74,8 +87,8 @@ cmp.setup({
 
   -- mapping
   mapping = cmp.mapping.preset.insert({
-    -- ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-    -- ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-h>'] = cmp.mapping.abort(),
     ['<C-l>'] = cmp.mapping.confirm({ select = true }), 
@@ -112,6 +125,7 @@ cmp.setup({
 
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
 
 -- Setup all given servers
 local servers = { 'clangd' }
