@@ -302,3 +302,6 @@ source /usr/share/fzf/completion.zsh
 
 # Disable filthy caps lock! (requires xorg-setxkbmap)
 setxkbmap -option ctrl:nocaps
+
+# Fix for ICU UE5 mismatch
+export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
