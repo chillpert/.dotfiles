@@ -137,10 +137,10 @@ nnoremap <Leader>l   :FzfBLines!<CR>
 nnoremap <Leader>m   :FzfMarks!<CR>
 nnoremap <Leader>w   :FzfWindows!<CR>
 nnoremap <Leader>h   :FzfHistory:!<CR>
-nnoremap <Leader>s   :FzfSnippets!<CR>
+" nnoremap <Leader>s   :FzfSnippets!<CR>
 nnoremap <Leader>gc  :FzfCommits!<CR>
 nnoremap <Leader>gbc :FzfBCommits!<CR>
 nnoremap <Leader>gf  :FzfGFiles!<CR>
 nnoremap <Leader>gs  :FzfGFiles!?<CR>
-nnoremap <Leader>c   :FzfCommands!?<CR>
+" nnoremap <Leader>c   :FzfCommands!?<CR>
 
