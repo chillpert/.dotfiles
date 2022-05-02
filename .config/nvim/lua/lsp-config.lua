@@ -2,6 +2,8 @@
 local cmp = require('cmp')
 local lspkind = require('lspkind')
 
+local fzf_lsp = require('fzf_lsp').setup()
+
 -- local dap = require('dap')
 -- dap.adapters.cppdbg = {
 --   id = 'cppdbg',
@@ -37,6 +39,8 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>s', '<cmd>lua vim.lsp.buf.document_symbol()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ws', '<cmd>lua vim.lsp.buf.workspace_symbol()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
@@ -117,11 +121,20 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'vsnip' },
+    -- { name = 'nvim_lsp_document_symbol' },
+    { name = 'nvim_lsp_signature_help' },
     { name = 'buffer', keyword_length = 5, max_item_count = 5 }, -- only display buffer sources after 5 characters
     { name = 'path' },
-    { name = 'nvim_lsp_signature_help' },
   })
 })
+
+-- require 'cmp'.setup.cmdline('/', {
+--   sources = cmp.config.sources({
+--     { name = 'nvim_lsp_document_symbol' },
+--   }, {
+--     { name = 'buffer' }
+--   })
+-- })
 
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -133,6 +146,10 @@ for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
     capabilities = capabilities,
+    cmd = { 
+        "clangd",
+        "--clang-tidy",
+    },
     flags = {
       -- This will be the default in neovim 0.7+
       debounce_text_changes = 150,

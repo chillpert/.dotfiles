@@ -25,6 +25,8 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
+" Plug 'hrsh7th/cmp-nvim-lsp-document-symbol'
+Plug 'gfanto/fzf-lsp.nvim'
 
 call plug#end()
 
@@ -34,6 +36,9 @@ lua require('lsp-config')
 
 set termguicolors
 lua require('colorizer').setup()
+
+" Allow mouse clicking in normal mode
+set mouse=n
 
 " Enable (relative) line numbers
 set number
