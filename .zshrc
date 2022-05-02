@@ -36,7 +36,7 @@ alias gd='git diff'
 alias gf='git fetch'
 alias gc='git commit'
 alias ga='git add'
-alias gl='git log -a --graph'
+alias gl='git log -a --graph --decorate --oneline'
 alias gr='git reset'
 config() {
 	pacman -Qqe > .packages
@@ -105,7 +105,7 @@ ue() {
 	    $projects_path/fixCompileCommands .
 	elif [[ "$1" == "ctags" ]]; then
 		echo "Generating ctags database in current directory ..."
-		ctags -R .
+		ctags -R Source
 		echo "Generation completed."
 	else
 		$ue4cli "$@"
