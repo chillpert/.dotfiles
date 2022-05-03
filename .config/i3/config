@@ -18,6 +18,9 @@ set_from_resource $border_active i3wm.border_active #ffffff
 set_from_resource $border_inactive i3wm.border_inactive #000000
 set_from_resource $background_color tabbed.normal_background #000000
 
+# Map wacom pen to left screen
+exec_always xsetwacom --set "Wacom One by Wacom M Pen stylus" MapToOutput HEAD-0
+
 # Open a terminal
 bindsym $mod+Return exec st 
 

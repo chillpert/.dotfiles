@@ -13,6 +13,7 @@ bluez-utils
 breeze-gtk
 ccls
 clang
+cloc
 cmake
 cmus
 cowsay
@@ -71,6 +72,7 @@ lostfiles
 m4
 make
 man-db
+mangohud
 mon2cam-git
 mpg123
 mpv
@@ -85,6 +87,7 @@ ntfs-3g
 nvidia
 nvidia-dkms
 nvidia-settings
+obs-studio
 ocl-icd
 openal
 pacman
@@ -96,6 +99,7 @@ polybar-git
 protontricks
 protonvpn-cli-ng
 pulseaudio-alsa
+pulseaudio-bluetooth
 pulsemixer
 python
 python-bluepy
@@ -104,7 +108,7 @@ python-psutil
 python-wheel
 python-yaml
 python-zipp
-ripgrep
+ranger
 rustup
 samba
 scrot
@@ -120,6 +124,8 @@ sxiv
 texinfo
 the_silver_searcher
 thunderbird
+time
+timeshift
 ttf-dejavu
 ttf-font-icons
 ttf-meslo-nerd-font-powerlevel10k
