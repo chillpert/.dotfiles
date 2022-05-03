@@ -133,19 +133,19 @@ command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', 'nvimpager {}']}, <bang>0)
 
 " All fzf bindings
-nnoremap <Leader>ff  :FzfFiles!<CR>
-nnoremap <Leader>fh  :FzfHistory!<CR>
+nnoremap <Leader>o   :FzfFiles!<CR>
+nnoremap <Leader>h   :FzfHistory!<CR>
 nnoremap <Leader>a   :FzfAg!<CR>
-nnoremap <Leader>r   :FzfRg!<CR>
+"nnoremap <Leader>r   :FzfRg!<CR>
 nnoremap <Leader>b   :FzfBuffers!<CR>
 nnoremap <Leader>l   :FzfBLines!<CR>
 nnoremap <Leader>m   :FzfMarks!<CR>
 nnoremap <Leader>w   :FzfWindows!<CR>
-nnoremap <Leader>h   :FzfHistory:!<CR>
+" nnoremap <Leader>h   :FzfHistory:!<CR>
 " nnoremap <Leader>s   :FzfSnippets!<CR>
-nnoremap <Leader>gc  :FzfCommits!<CR>
-nnoremap <Leader>gbc :FzfBCommits!<CR>
-nnoremap <Leader>gf  :FzfGFiles!<CR>
+nnoremap <Leader>gh  :FzfCommits!<CR>
+nnoremap <Leader>gc  :FzfBCommits!<CR>
 nnoremap <Leader>gs  :FzfGFiles!?<CR>
+" nnoremap <Leader>gf  :FzfGFiles!<CR>
 " nnoremap <Leader>c   :FzfCommands!?<CR>
 
