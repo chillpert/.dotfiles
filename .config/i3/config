@@ -231,6 +231,9 @@ workspace_auto_back_and_forth yes
 # Everything that floats by default and was not opened explicitely should never be focused
 no_focus [floating_from="auto"]
 
+# On start up, load noisetorch
+exec --no-startup-id noisetorch -i alsa_input.usb-Samson_Technologies_Samson_GoMic-00.analog-stereo
+
 #====================================================================================#
 # ================================== Commands =======================================#
 #====================================================================================#
