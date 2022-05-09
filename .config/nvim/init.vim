@@ -27,6 +27,7 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 " Plug 'hrsh7th/cmp-nvim-lsp-document-symbol'
 Plug 'gfanto/fzf-lsp.nvim'
+Plug 'p00f/clangd_extensions.nvim'
 
 call plug#end()
 
@@ -62,7 +63,7 @@ let mapleader = " "
 
 " Center search results
 nnoremap n nzz
-nnoremap N nzz
+nnoremap N Nzz
 
 " Undo breakpoints
 inoremap , ,<c-g>u
@@ -148,4 +149,5 @@ nnoremap <Leader>gc  :FzfBCommits!<CR>
 nnoremap <Leader>gs  :FzfGFiles!?<CR>
 " nnoremap <Leader>gf  :FzfGFiles!<CR>
 " nnoremap <Leader>c   :FzfCommands!?<CR>
+
 
