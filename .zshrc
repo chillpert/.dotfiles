@@ -38,13 +38,11 @@ alias gc='git commit'
 alias ga='git add'
 alias gl='git log -a --graph --decorate --oneline'
 alias gr='git reset'
+
+# For dotfiles
 config() {
 	pacman -Qqe > .packages
 	/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME "$@"
-}
-
-gbd() {
-	git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative "$2".."$1"
 }
 
 # FZF everything
@@ -54,21 +52,18 @@ of() {
 	cd -
 }
 
+# Allow multi-select by default
 alias fzf="fzf -m"
 alias fzfp="fzf --preview='less {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
 
 alias nv="nvim"
 
 # Package manager aliases
-alias pac-S="pacman -Slq | fzf --multi --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk \"{print \$2}\")' | xargs -ro sudo pacman -S"
-alias pac-R="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
-alias pac-Re="pacman -Qeq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
-alias pac-Q="pacman -Qeq | fzf --multi --preview 'pacman -Qi {1}'"
-alias pac-O="pacman -Rns $(pacman -Qtdq)"
 alias paru-S="paru -Slq | fzf --multi --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk \"{print \$2}\")' | xargs -ro paru -S"
 alias paru-R="paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rns"
 alias paru-Re="paru -Qeq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rns"
 alias paru-Q="paru -Qeq | fzf --multi --preview 'paru -Qi {1}'"
+alias paru-O="paru -Rns $(paru -Qtdq)"
 
 # Application aliases
 alias vpnc='sudo protonvpn c -f'
@@ -116,15 +111,15 @@ alias ue4='echo Please use ue instead.'
 alias ue5='echo Please use ue instead.'
 
 # Personal aliases
-alias guitar='vifm /mnt/data/backups/Documents/Tabs'
-alias games='vifm /mnt/data/SteamLibrary/steamapps/common'
+alias guitar='ranger /mnt/data/backups/Documents/Tabs'
+alias games='ranger /mnt/data/SteamLibrary/steamapps/common'
 
 # Make mounting in terminal fast!
 mntusb() {
 	cd ~/
 	mkdir usb
 	sudo mount /dev/sdb1 usb
-	vifm ~/usb
+	ranger ~/usb
 	echo "Do not forget to run umntusb afterwards!"
 }
 
@@ -138,7 +133,7 @@ mntphone() {
 	cd ~/
 	mkdir phone
 	go-mtpfs phone &
-	vifm ~/phone
+	ranger ~/phone
 	echo "Do not forget to run umntphone afterwards!"
 }
 
@@ -274,9 +269,6 @@ source ~/.zsh_theme
 
 # Autocompletion with an arrow-key driven interface
 zstyle ':completion:*' menu select
-
-# Autocompletion of command line switches for aliases
-setopt COMPLETE_ALIASES
 
 # Plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
