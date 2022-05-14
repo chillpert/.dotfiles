@@ -52,6 +52,7 @@ i3-wm
 ibus-anthy
 j4-dmenu-desktop
 jq
+keepassxc
 lib32-giflib
 lib32-gst-plugins-base-libs
 lib32-gtk3
@@ -85,7 +86,6 @@ nodejs
 noisetorch-bin
 npm
 ntfs-3g
-nvidia
 nvidia-dkms
 nvidia-settings
 obs-studio
@@ -134,7 +134,7 @@ ttf-vlgothic
 ueberzug
 ufw
 valgrind
-vifm
+vim
 visual-studio-code-bin
 vulkan-extra-layers
 vulkan-extra-tools
@@ -150,6 +150,7 @@ wireless_tools
 xclip
 xcursor-breeze-neutral-git
 xdg-user-dirs
+xdotool
 xf86-input-wacom
 xorg-server
 xorg-xdpyinfo
