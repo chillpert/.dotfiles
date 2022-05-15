@@ -1,0 +1,29 @@
+# Basic Settings
+set ignorecase true
+set icons true
+set shell zsh
+set shellopts -i
+
+# Basic Functions
+# map DD delete
+# map p paste
+# map x cut
+# map y copy
+# map <enter> open
+# map R reload
+# map mf mkfile
+# map md mkdir
+# map bg setwallpaper
+# map C clear
+
+# Movement
+# map gd cd ~/Documents
+# map gD cd ~/Downloads
+# map gp cd ~/Pictures
+# map gr cd ~/Repos
+# map gv cd ~/Videos/recordings
+# map gc cd ~/.config
+# map gs cd ~/.local/bin
+map gg cd /mnt/data/SteamLibrary/steamapps/common/
+map gb cd -
+

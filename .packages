@@ -53,6 +53,7 @@ ibus-anthy
 j4-dmenu-desktop
 jq
 keepassxc
+lf
 lib32-giflib
 lib32-gst-plugins-base-libs
 lib32-gtk3
@@ -109,7 +110,6 @@ python-psutil
 python-wheel
 python-yaml
 python-zipp
-ranger
 rustup
 samba
 scrot
@@ -122,6 +122,7 @@ steam
 sudo
 surf
 sxiv
+teamspeak
 texinfo
 the_silver_searcher
 thunderbird

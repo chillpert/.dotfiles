@@ -110,16 +110,18 @@ ue() {
 alias ue4='echo Please use ue instead.'
 alias ue5='echo Please use ue instead.'
 
+file_manager=lf
+
 # Personal aliases
-alias guitar='ranger /mnt/data/backups/Documents/Tabs'
-alias games='ranger /mnt/data/SteamLibrary/steamapps/common'
+alias guitar='$file_manager /mnt/data/backups/Documents/Tabs'
+alias games='$file_manager /mnt/data/SteamLibrary/steamapps/common'
 
 # Make mounting in terminal fast!
 mntusb() {
 	cd ~/
 	mkdir usb
 	sudo mount /dev/sdb1 usb
-	ranger ~/usb
+	$file_manager ~/usb
 	echo "Do not forget to run umntusb afterwards!"
 }
 
@@ -133,7 +135,7 @@ mntphone() {
 	cd ~/
 	mkdir phone
 	go-mtpfs phone &
-	ranger ~/phone
+	$file_manager ~/phone
 	echo "Do not forget to run umntphone afterwards!"
 }
 
@@ -214,6 +216,8 @@ function extract {
 
 IFS=$SAVEIFS
 
+alias unpack='extract $1'
+
 
 # Reduce prompt padding on right side
 ZLE_RPROMPT_INDENT=0
@@ -227,14 +231,8 @@ export PATH=$PATH:~/.local/bin
 # Add cargo bins to path
 export PATH=$PATH:~/.cargo/bin
 
-export GOPATH=~/.local/.go
-export GOROOT=~/.local/.go
-
 # Set VIM as default editor
 export EDITOR=vim
-
-# Default browser
-export BROWSER=firefox
 
 # XDG directories
 export XDG_DATA_HOME=~/.local/share
