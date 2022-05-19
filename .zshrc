@@ -216,9 +216,6 @@ function extract {
 
 IFS=$SAVEIFS
 
-alias unpack='extract $1'
-
-
 # Reduce prompt padding on right side
 ZLE_RPROMPT_INDENT=0
 
@@ -232,7 +229,7 @@ export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/.cargo/bin
 
 # Set VIM as default editor
-export EDITOR=vim
+export EDITOR=nvim
 
 # XDG directories
 export XDG_DATA_HOME=~/.local/share
