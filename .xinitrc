@@ -1,6 +1,6 @@
 # Set up monitors
 nvidia-settings --load-config-only &
-nvidia-settings --assign CurrentMetaMode="HDMI-0: nvidia-auto-select +1920+0 {rotation=right}, DVI-D-0: nvidia-auto-select +0+420"
+nvidia-settings --assign CurrentMetaMode="HDMI-0: nvidia-auto-select +1920+0 {rotation=right, ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}, DVI-D-0: nvidia-auto-select +0+420 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}"
 
 # Consistent cursor size
 xrandr --dpi 96

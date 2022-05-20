@@ -95,13 +95,12 @@ openal
 pacman
 paru
 patch
+pipewire-pulse
 pkgconf
 playerctl
 polybar-git
 protontricks
 protonvpn-cli-ng
-pulseaudio-alsa
-pulseaudio-bluetooth
 pulsemixer
 python
 python-bluepy
