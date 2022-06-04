@@ -85,6 +85,7 @@ neovim
 nerd-fonts-monoid
 networkmanager
 nodejs
+noise-suppression-for-voice
 npm
 ntfs-3g
 nvidia-dkms
@@ -121,7 +122,7 @@ steam
 sudo
 surf
 sxiv
-teamspeak
+teamspeak3
 texinfo
 the_silver_searcher
 thunderbird

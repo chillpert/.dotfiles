@@ -57,6 +57,7 @@ alias fzf="fzf -m"
 alias fzfp="fzf --preview='less {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
 
 alias nv="nvim"
+alias vim="nvim"
 
 # Package manager aliases
 alias paru-S="paru -Slq | fzf --multi --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk \"{print \$2}\")' | xargs -ro paru -S"
@@ -68,6 +69,7 @@ alias paru-O="paru -Rns $(paru -Qtdq)"
 # Application aliases
 alias vpnc='sudo protonvpn c -f'
 alias vpnd='sudo protonvpn d'
+alias pm='pulsemixer'
 
 # Expand ue4cli
 ue() {
