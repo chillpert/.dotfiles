@@ -248,7 +248,6 @@ export XDG_VIDEOS_DIR=~/Videos
 
 # Misc
 export HOSTNAME=arch
-export TERMINAL=st
 
 # Fix left and right arrow keys
 bindkey "^[[1;5C" forward-word

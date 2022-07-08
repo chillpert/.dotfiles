@@ -22,10 +22,10 @@ set_from_resource $background_color tabbed.normal_background #000000
 exec_always xsetwacom --set "Wacom One by Wacom M Pen stylus" MapToOutput HEAD-0
 
 # Open a terminal
-bindsym $mod+Return exec st 
+bindsym $mod+Return exec alacritty
 
 # Open a terminal with suckless tabbed
-bindsym $mod+Shift+Return exec tabbed -r 2 -t '$border_active' -o '$background_color' st -w ''
+bindsym $mod+Shift+Return exec tabbed -r 2 -t '$border_active' -o '$background_color' alacritty --embed ''
 
 # Close focused window
 bindsym $mod+q kill
@@ -37,7 +37,7 @@ bindsym $mod+q kill
 # Start dmenu
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'VL PGothic-11.5' -l 0 -m 0 -p 'Launch:'"
 
-bindsym $mod+Shift+d exec st -c "fzf-menu" -e ~/fzf-menu.sh
+bindsym $mod+Shift+d exec alacritty -c "fzf-menu" -e ~/fzf-menu.sh
 for_window [class="^fzf-menu$"] floating enable
 for_window [class="^fzf-menu$"] fullscreen enable
 
@@ -186,15 +186,15 @@ for_window [instance="musicScratchpadProcess"] sticky enable
 
 bindsym $mod+n exec --no-startup-id ~/.scripts/i3/scratchpads/music_scratchpad.sh; [instance="musicScratchpadProcess"] scratchpad show, move position center
 
-# Open ST 
-for_window [instance="stScratchpadProcess"] floating enable
-for_window [instance="stScratchpadProcess"] resize set 1200 800
-for_window [instance="stScratchpadProcess"] move scratchpad 
-for_window [instance="stScratchpadProcess"] move position center
-for_window [instance="stScratchpadProcess"] sticky enable
+# Open terminal scratchpad 
+for_window [instance="terminalScratchpadProcess"] floating enable
+for_window [instance="terminalScratchpadProcess"] resize set 1200 800
+for_window [instance="terminalScratchpadProcess"] move scratchpad 
+for_window [instance="terminalScratchpadProcess"] move position center
+for_window [instance="terminalScratchpadProcess"] sticky enable
 
 # Workaround to get scratchpad to show only on primary output by setting coordinates manually
-bindsym $mod+w exec --no-startup-id ~/.scripts/i3/scratchpads/st_scratchpad.sh; [instance="stScratchpadProcess"] scratchpad show, move position 360px 580px
+bindsym $mod+w exec --no-startup-id ~/.scripts/i3/scratchpads/terminal_scratchpad.sh; [instance="terminalScratchpadProcess"] scratchpad show, move position 360px 580px
 
 #====================================================================================#
 # ===================================== Bar =========================================#
