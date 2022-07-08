@@ -3,48 +3,28 @@
 ! System-wide
 #define MONITOR_1 DVI-D-0
 #define MONITOR_2 HDMI-0
-! #define ACCENT_COLOR #8ec07c
 #define ACCENT_COLOR #AF87FF
 #define FOREGROUND_COLOR #FFFFFF
-#define BACKGROUND_COLOR #262626
+#define BACKGROUND_COLOR #26292c
 #define FONT 'VL PGothic'
 
 ! Monokai theme
-! #define base00 #262626
-! #define base01 #383830
-! #define base02 #49483E
-! #define base03 #75715E
-! #define base04 #A59F85
-! #define base05 #F8F8F2
-! #define base06 #F5F4F1
-! #define base07 #F9F8F5
-! #define base08 #F92672
-! #define base09 #FD971F
-! #define base0A #F4BF75
-! #define base0B #A6E22E
-! #define base0C #A1EFE4
-! #define base0D #66D9EF
-! #define base0E #AF87FF
-! #define base0F #CC6633
-
-! Gruvbox theme
-#define base00 #262626
-#define base01 #3c3836
-#define base02 #504945
-#define base03 #665c54
-#define base04 #bdae93
-#define base05 #d5c4a1
-#define base06 #ebdbb2
-#define base07 #fbf1c7
-#define base08 #fb4934
-#define base09 #fe8019
-#define base0A #fabd2f
-#define base0B #b8bb26
-#define base0C #8ec07c
-#define base0D #83a598
-#define base0E #d3869b
-#define base0F #d65d0e
-
+#define base00 #26292c
+#define base01 #383830
+#define base02 #49483E
+#define base03 #75715E
+#define base04 #A59F85
+#define base05 #F8F8F2
+#define base06 #F5F4F1
+#define base07 #F9F8F5
+#define base08 #F92672
+#define base09 #FD971F
+#define base0A #F4BF75
+#define base0B #A6E22E
+#define base0C #A1EFE4
+#define base0D #66D9EF
+#define base0E #AF87FF
+#define base0F #CC6633
 
 *.color0: base00
 *.color1: base08
@@ -90,7 +70,7 @@ dmenu.selforeground: FOREGROUND_COLOR
 ! polybar
 polybar.i3_focus_background: ACCENT_COLOR
 polybar.foreground: FOREGROUND_COLOR
-polybar.background: #262626
+polybar.background: BACKGROUND_COLOR
 polybar.display1: MONITOR_1
 polybar.display2: MONITOR_2
 polybar.is_bar1_bottom: false

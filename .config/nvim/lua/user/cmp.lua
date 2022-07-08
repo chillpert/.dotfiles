@@ -8,6 +8,26 @@ if not lspkind_status_ok then
     return
 end
 
+local autopairs_status_ok, cmp_autopairs = pcall(require, "nvim-autopairs.completion.cmp")
+if not autopairs_status_ok then
+    return
+end
+cmp.event:on(
+    'confirm_done',
+    cmp_autopairs.on_confirm_done()
+)
+
+-- Required for moving with vsnip
+local has_words_before = function()
+    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+    return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match('%s') == nil
+end
+
+-- Required for moving with vsnip
+local feedkey = function(key, mode)
+    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
+end
+
 cmp.setup({
     -- formatting
     formatting = {
@@ -180,3 +200,6 @@ require 'clangd_extensions'.setup {
         },
     }
 }
+
+-- Format on buffer save
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]

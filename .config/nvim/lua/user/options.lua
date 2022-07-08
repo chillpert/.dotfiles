@@ -1,4 +1,3 @@
--- Author: github.com/chillpert
 local options = {
     completeopt = { "menu", "menuone", "noselect" },
     mouse = "n",
