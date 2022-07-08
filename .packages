@@ -1,7 +1,9 @@
+alacritty
 amd-ucode
 android-tools
 ani-cli
 anki-official-binary-bundle
+arkenfox-user.js
 autoconf
 automake
 barrier
@@ -13,6 +15,7 @@ bluez
 bluez-utils
 breeze-gtk
 ccls
+cht.sh-git
 clang
 cloc
 cmake
@@ -73,6 +76,8 @@ linux-xanmod
 linux-xanmod-headers
 llvm
 lostfiles
+lua-language-server
+lutris
 m4
 make
 man-db
@@ -107,6 +112,7 @@ python
 python-bluepy
 python-pip
 python-psutil
+python-pynvim
 python-wheel
 python-yaml
 python-zipp
@@ -117,7 +123,6 @@ sed
 signal-desktop
 simplescreenrecorder
 slock
-st-chillpert
 steam
 sudo
 surf
@@ -125,7 +130,7 @@ sxiv
 teamspeak3
 texinfo
 the_silver_searcher
-thunderbird
+thunderbird-bin
 time
 timeshift
 ttf-dejavu
