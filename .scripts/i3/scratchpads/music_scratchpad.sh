@@ -5,5 +5,9 @@ output=$(ps ax)
 name=musicScratchpadProcess
 
 if [[ $output != *"$name"* ]]; then
-	alacritty --class $name
+    if [ ! $(pgrep "spotifyd") ]; then
+        spotifyd
+    fi
+
+	alacritty --class $name -e spt
 fi

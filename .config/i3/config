@@ -180,11 +180,12 @@ bindsym $mod+c exec --no-startup-id ~/.scripts/i3/scratchpads/python_scratchpad.
 
 # Open terminal scratchpad for music
 for_window [instance="musicScratchpadProcess"] floating enable
-for_window [instance="musicScratchpadProcess"] resize set 625 400
+for_window [instance="musicScratchpadProcess"] resize set 1200 800
 for_window [instance="musicScratchpadProcess"] move scratchpad
+for_window [instance="musicScratchpadProcess"] move position center
 for_window [instance="musicScratchpadProcess"] sticky enable
 
-bindsym $mod+n exec --no-startup-id ~/.scripts/i3/scratchpads/music_scratchpad.sh; [instance="musicScratchpadProcess"] scratchpad show, move position center
+bindsym $mod+n exec --no-startup-id ~/.scripts/i3/scratchpads/music_scratchpad.sh; [instance="musicScratchpadProcess"] scratchpad show, move position 360px 580px
 
 # Open terminal scratchpad 
 for_window [instance="terminalScratchpadProcess"] floating enable

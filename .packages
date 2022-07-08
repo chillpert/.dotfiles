@@ -123,6 +123,8 @@ sed
 signal-desktop
 simplescreenrecorder
 slock
+spotify-tui
+spotifyd-full-git
 steam
 sudo
 surf
