@@ -4,7 +4,7 @@
 #define MONITOR_1 DVI-D-0
 #define MONITOR_2 HDMI-0
 #define ACCENT_COLOR #AF87FF
-#define FOREGROUND_COLOR #FFFFFF
+#define FOREGROUND_COLOR #f8f8f0
 #define BACKGROUND_COLOR #26292c
 #define FONT 'VL PGothic'
 
