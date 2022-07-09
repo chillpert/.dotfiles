@@ -4,7 +4,7 @@ local Plug = vim.fn["plug#"]
 vim.call("plug#begin")
 
 -- colors and theming
-Plug 'tanvirtin/monokai.nvim'
+Plug 'tanvirtin/monokai.nvim' -- @NOTE: Consider using this one instead: https://github.com/RRethy/nvim-base16
 Plug 'norcalli/nvim-colorizer.lua'
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = vim.fn[':TSUpdate'] })
 

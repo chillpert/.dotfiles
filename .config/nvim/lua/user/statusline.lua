@@ -90,8 +90,9 @@ local function vcs()
         changed,
         removed,
         " ",
-        "%#StatusLine# ",
+        "%#HighlightGitAdd# ",
         git_info.head,
+        "%#StatusLine#",
     }
 end
 
