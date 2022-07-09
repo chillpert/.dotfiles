@@ -17,8 +17,12 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'windwp/nvim-autopairs'
 
 -- lsp
-Plug 'mfussenegger/nvim-dap'
 Plug 'neovim/nvim-lspconfig'
+
+-- debugging
+Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'puremourning/vimspector'
 
 -- cmp
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -41,3 +45,5 @@ vim.call("plug#end")
 require 'colorizer'.setup()
 require 'Comment'.setup()
 require 'nvim-autopairs'.setup {}
+
+vim.g.vimspector_enable_mappings = "HUMAN";
