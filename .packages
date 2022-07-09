@@ -8,6 +8,7 @@ autoconf
 automake
 barrier
 base
+bash-language-server
 bat
 binutils
 bison
