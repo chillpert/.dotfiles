@@ -6,6 +6,7 @@
 --     return
 -- end
 
+--[[
 require 'monokai'.setup {
     palette = {
         name = 'monokai',
@@ -34,7 +35,7 @@ require 'monokai'.setup {
         diff_text = '#23324d',
     },
     custom_hlgroups = {},
-}
+} ]]
 
 -- Override status line to improve visibility for horizontal splits
 -- vim.cmd [[hi StatusLine guifg=white guibg=#444444 gui=bold ctermfg=59 ctermbg=black cterm=bold]]

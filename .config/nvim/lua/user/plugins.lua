@@ -10,12 +10,13 @@ Plug('nvim-treesitter/nvim-treesitter', { ['do'] = vim.fn[':TSUpdate'] })
 
 -- navigation
 Plug('ibhagwan/fzf-lua', { ['branch'] = 'main' })
+Plug 'folke/which-key.nvim'
+Plug 'phaazon/hop.nvim'
 
 -- coding
 Plug 'numToStr/Comment.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'windwp/nvim-autopairs'
-Plug 'folke/which-key.nvim'
 
 -- lsp
 Plug 'neovim/nvim-lspconfig'
@@ -43,9 +44,11 @@ Plug 'hrsh7th/vim-vsnip'
 vim.call("plug#end")
 
 -- All plugins that don't require any configuration may be set up here
+require 'monokai'.setup {}
 require 'colorizer'.setup()
 require 'Comment'.setup()
 require 'nvim-autopairs'.setup {}
 require 'which-key'.setup {}
+require 'hop'.setup {} -- needs to be set up after monokai theme
 
 vim.g.vimspector_enable_mappings = "HUMAN";
