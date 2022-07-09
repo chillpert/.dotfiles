@@ -15,6 +15,7 @@ Plug('ibhagwan/fzf-lua', { ['branch'] = 'main' })
 Plug 'numToStr/Comment.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'windwp/nvim-autopairs'
+Plug 'folke/which-key.nvim'
 
 -- lsp
 Plug 'neovim/nvim-lspconfig'
@@ -45,5 +46,6 @@ vim.call("plug#end")
 require 'colorizer'.setup()
 require 'Comment'.setup()
 require 'nvim-autopairs'.setup {}
+require 'which-key'.setup {}
 
 vim.g.vimspector_enable_mappings = "HUMAN";
