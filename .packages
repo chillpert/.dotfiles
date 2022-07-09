@@ -16,12 +16,10 @@ bluez
 bluez-utils
 breeze-gtk
 ccls
-cht.sh-git
 clang
 cloc
 cmake
 cmus
-cowsay
 ctags
 cups
 dmenu
@@ -29,7 +27,6 @@ dosbox
 dotnet-sdk
 downgrade
 doxygen
-element-desktop
 exodus
 fakeroot
 feh
@@ -37,7 +34,6 @@ file
 findutils
 firefox
 flex
-fortune-mod
 fzf
 gamemode
 gawk
@@ -128,7 +124,6 @@ spotify-tui
 spotifyd-full-git
 steam
 sudo
-surf
 sxiv
 teamspeak3
 texinfo
@@ -155,7 +150,6 @@ wget
 which
 wine-staging
 winetricks
-wireless_tools
 xclip
 xcursor-breeze-neutral-git
 xdg-user-dirs
