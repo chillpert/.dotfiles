@@ -82,6 +82,7 @@ mangohud
 mon2cam-git
 mpg123
 mpv
+ncspot-bin
 neofetch
 neovim
 nerd-fonts-monoid
@@ -120,8 +121,7 @@ sed
 signal-desktop
 simplescreenrecorder
 slock
-spotify-tui
-spotifyd-full-git
+spotify
 steam
 sudo
 sxiv
