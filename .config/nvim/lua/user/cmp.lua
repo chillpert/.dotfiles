@@ -12,6 +12,7 @@ local autopairs_status_ok, cmp_autopairs = pcall(require, "nvim-autopairs.comple
 if not autopairs_status_ok then
     return
 end
+
 cmp.event:on(
     'confirm_done',
     cmp_autopairs.on_confirm_done()
@@ -133,7 +134,7 @@ require 'clangd_extensions'.setup {
         flags = {
             -- This will be the default in neovim 0.7+
             debounce_text_changes = 150,
-        }
+        },
     },
     extensions = {
         -- defaults:
@@ -204,5 +205,9 @@ require 'clangd_extensions'.setup {
     }
 }
 
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+    border = "rounded",
+})
+
 -- Format on buffer save
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+-- vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
