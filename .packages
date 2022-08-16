@@ -1,7 +1,8 @@
+adobe-source-han-sans-jp-fonts
+adobe-source-han-serif-jp-fonts
 alacritty
 amd-ucode
 android-tools
-anki-official-binary-bundle
 arkenfox-user.js
 autoconf
 automake
@@ -29,6 +30,11 @@ doxygen
 element-desktop
 exodus
 fakeroot
+fcitx5
+fcitx5-configtool
+fcitx5-gtk
+fcitx5-mozc
+fcitx5-qt
 feh
 file
 findutils
@@ -50,7 +56,6 @@ grub
 gzip
 htop
 i3-wm
-ibus-anthy
 j4-dmenu-desktop
 jq
 keepassxc
@@ -114,7 +119,7 @@ python-pynvim
 python-wheel
 python-yaml
 python-zipp
-rustup
+rust
 samba
 scrot
 sed
@@ -122,6 +127,7 @@ signal-desktop
 simplescreenrecorder
 slock
 spotify
+st-chillpert
 steam
 sudo
 sxiv
@@ -162,7 +168,9 @@ xorg-xinput
 xorg-xkill
 xorg-xsetroot
 xournalpp
+xrandr-invert-colors
 xsnow
+yarn
 yt-dlp
 ytfzf
 zip

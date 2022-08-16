@@ -233,6 +233,12 @@ export PATH=$PATH:~/.cargo/bin
 # Set VIM as default editor
 export EDITOR=nvim
 
+# Fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export SDL_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
 # XDG directories
 export XDG_DATA_HOME=~/.local/share
 export XDG_STATE_HOME=~/.local/state
@@ -278,11 +284,6 @@ bindkey '^[[B' history-substring-search-down
 SAVEHIST=2000  
 HISTSIZE=2000
 HISTFILE=~/.zsh_history
-
-# IBus
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
 
 # FZF
 source /usr/share/fzf/key-bindings.zsh
