@@ -41,6 +41,10 @@ Plug 'p00f/clangd_extensions.nvim'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
+-- markdown
+Plug('iamcco/markdown-preview.nvim', { ['do'] = vim.fn['mkdp#util#install'] })
+-- If it doesn't work run: :call mkdp#util#install()
+
 vim.call("plug#end")
 
 -- All plugins that don't require any configuration may be set up here
@@ -52,3 +56,9 @@ require 'which-key'.setup {}
 require 'hop'.setup {} -- needs to be set up after monokai theme
 
 vim.g.vimspector_enable_mappings = "HUMAN";
+
+-- Markdown preview settings
+vim.g.mkdp_browser = 'firefox';
+vim.g.mkdp_auto_start = 1;
+vim.g.mkdp_auto_open = 1;
+vim.g.mkdp_auto_close = 1;
