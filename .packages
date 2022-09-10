@@ -48,6 +48,7 @@ gdb
 gettext
 git
 git-lfs
+github-desktop-bin
 go-mtpfs-git
 gparted
 grep
@@ -122,6 +123,7 @@ python-yaml
 python-zipp
 rust
 samba
+screenkey
 scrot
 sed
 signal-desktop
@@ -136,7 +138,7 @@ tabbed-git
 teamspeak3
 texinfo
 the_silver_searcher
-thunderbird-bin
+thunderbird
 time
 timeshift
 ttf-dejavu

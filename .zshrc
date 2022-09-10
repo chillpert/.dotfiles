@@ -35,8 +35,9 @@ alias gb='git branch'
 alias gd='git diff'
 alias gf='git fetch'
 alias gc='git commit'
+alias gch='git checkout'
 alias ga='git add'
-alias gl='git log -a --graph --decorate --oneline'
+alias gl='git log -20 -a --graph --decorate --oneline'
 alias gr='git reset'
 
 # For dotfiles
