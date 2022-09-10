@@ -21,6 +21,8 @@ set_from_resource $background_color tabbed.normal_background #000000
 # Map wacom pen to left screen
 exec_always xsetwacom --set "Wacom One by Wacom M Pen stylus" MapToOutput HEAD-0
 
+exec_always --no-startup-id picom &
+
 exec --no-startup-id fcitx5 -d &
 
 # Open a terminal
@@ -236,6 +238,8 @@ no_focus [floating_from="auto"]
 
 # On start up, load noisetorch (@NOTE: Noisetorch has been compromised)
 # exec --no-startup-id noisetorch -i alsa_input.usb-Samson_Technologies_Samson_GoMic-00.analog-stereo
+
+gaps inner 8
 
 #====================================================================================#
 # ================================== Commands =======================================#
