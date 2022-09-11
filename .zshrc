@@ -36,6 +36,7 @@ alias gd='git diff'
 alias gf='git fetch'
 alias gc='git commit'
 alias gch='git checkout'
+alias gcp='git cherry-pick'
 alias ga='git add'
 alias gl='git log -20 -a --graph --decorate --oneline'
 alias gr='git reset'
@@ -75,17 +76,19 @@ alias pm='pulsemixer'
 # Expand ue4cli
 ue() {
 	ue4cli=$HOME/.local/bin/ue4
-	projects_path=$HOME/Repos
 	engine_path=$($ue4cli root)
 
+    # cd to ue location
 	if [[ "$1" == "engine" ]]; then
 		cd $engine_path
+    # combine clean and build in one command
 	elif [[ "$1" == "rebuild" ]]; then
 		$ue4cli clean
 		$ue4cli build 
 		if [[ "$2" == "run" ]]; then
 			$ue4cli run
 		fi
+    # build and optionally run while respecting build flags
 	elif [[ "$1" == "build" ]]; then
 		if [[ "${@: -1}" == "run" ]]; then
 			length="$(($# - 2))" # Get length without last param because of 'run'
@@ -95,16 +98,19 @@ ue() {
 			shift 1
 			$ue4cli build "$@"
 		fi
+    # Run project files generation, create a symlink for the compile database and fix-up the compile database
 	elif [[ "$1" == "gen" ]]; then
 		$ue4cli gen
 		project=${PWD##*/}
 		ln -s ".vscode/compileCommands_${project}.json" compile_commands.json	
-		# @TODO: Rewrite 'fixCompileCommands' in bash (I lost the source file)
-	    $projects_path/fixCompileCommands .
+        replace_string="clang++ @'$(pwd)/clang-flags.txt'"
+        sed -ie "s,$engine_path\(.*\)clang++,$replace_string,g" compile_commands.json
+    # Generate ctags for project
 	elif [[ "$1" == "ctags" ]]; then
 		echo "Generating ctags database in current directory ..."
 		ctags -R Source
 		echo "Generation completed."
+    # Pass through all other commands to ue4
 	else
 		$ue4cli "$@"
 	fi
