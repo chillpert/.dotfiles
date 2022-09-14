@@ -239,7 +239,8 @@ no_focus [floating_from="auto"]
 # On start up, load noisetorch (@NOTE: Noisetorch has been compromised)
 # exec --no-startup-id noisetorch -i alsa_input.usb-Samson_Technologies_Samson_GoMic-00.analog-stereo
 
-gaps inner 8
+gaps inner 4
+gaps outer 12
 
 #====================================================================================#
 # ================================== Commands =======================================#
