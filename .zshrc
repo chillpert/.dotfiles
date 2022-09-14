@@ -104,12 +104,12 @@ ue() {
 		project=${PWD##*/}
 		ln -s ".vscode/compileCommands_${project}.json" compile_commands.json	
         replace_string="clang++ @'$(pwd)/clang-flags.txt'"
-        sed -ie "s,$engine_path\(.*\)clang++,$replace_string,g" compile_commands.json
+        sed -i -e "s,$engine_path\(.*\)clang++,$replace_string,g" compile_commands.json
     # Generate ctags for project
 	elif [[ "$1" == "ctags" ]]; then
-		echo "Generating ctags database in current directory ..."
-		ctags -R Source
-		echo "Generation completed."
+        echo "Generating ctags database for unreal engine and this project"
+        ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --languages=C++ "$engine_path/Engine/Source" Source
+        echo "Generation completed."
     # Pass through all other commands to ue4
 	else
 		$ue4cli "$@"
