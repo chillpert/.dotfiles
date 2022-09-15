@@ -42,7 +42,7 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
 -- markdown
-Plug('iamcco/markdown-preview.nvim', { ['do'] = vim.fn['mkdp#util#install'] })
+Plug('iamcco/markdown-preview.nvim', { ['do'] = vim.fn[':call mkdp#util#install'] })
 -- If it doesn't work run: :call mkdp#util#install()
 
 vim.call("plug#end")
