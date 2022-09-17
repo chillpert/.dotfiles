@@ -1,9 +1,12 @@
 # Basic Settings
-set icons true
-
 set shell zsh
 set shellopts '-eu'
 set ifs "\n"
+
+set icons true
+#set number
+#set relativenumber
+#set drawbox
 
 cmd extract ${{
     set -f
@@ -12,6 +15,8 @@ cmd extract ${{
         *.tar.gz|*.tgz) tar xzvf $f;;
         *.tar.xz|*.txz) tar xJvf $f;;
         *.zip) unzip $f;;
+        *.rar) unrar x $f;;
+        *.7z) 7z x $f;;
     esac
 }}
 
@@ -19,7 +24,7 @@ cmd extract ${{
 # Set wallpaper
 cmd setbg ${{
     if (( $# != 1 )); then
-        echo "Using fill mode. Alternatively, you may specify tile, center, max, or scale."
+        printf "Using fill mode. Alternatively, you may specify tile, center, max, or scale.\n"
         mode="fill"
     else
         mode="$1"
@@ -29,7 +34,34 @@ cmd setbg ${{
 
 cmd mkdir %mkdir "$@"
 
-cmd emptytrash %rm -rf ~/.trash/*
+cmd mkdir ${{
+    printf "Directory name: "
+    read ans
+    printf "\n"
+    mkdir $ans
+}}
+
+cmd mkexec ${{
+    for f in "$fx"
+        do chmod +x "$f"
+    done
+}}
+
+cmd mkfile ${{
+    printf "File name: "
+    read ans
+    printf "\n"
+    touch $ans
+    $EDITOR $ans
+}}
+
+cmd openterm ${{
+    $TERMINAL &
+}}
+
+cmd emptytrash ${{
+    rm -rf ~/.trash/*
+}}
 
 # Credit: Luke Smith
 cmd open ${{
@@ -67,20 +99,90 @@ cmd fzf_jump ${{
     lf -remote "send $id $cmd \"$res\""
 }}
 
+cmd trash ${{
+    mv $fx ~/.trash
+}}
+
 cmd yank-dirname $dirname -- "$f" | head -c-1 | xclip -i -selection clipboard
 cmd yank-path $printf '%s' "$fx" | xclip -i -selection clipboard
 
+# compress current file or selected files with tar and gunzip
+cmd tar ${{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    tar czf $1.tar.gz $1
+    rm -rf $1
+}}
+
+# compress current file or selected files with zip
+cmd zip ${{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    zip -r $1.zip $1
+    rm -rf $1
+}}
+
+# Remove some default bindings
+map m
+map n
+map "'"
+map '"'
+map d
+map c
+map e
+
+# Jump to directory with alt-c using fzf_jump
 map <a-c> fzf_jump
-map DD %mv $fx ~/.trash
-map DR $rm -rf -I $fx
+
+map e extract
+map r rename
+
+map c clear
+map d cut
+# move to trash
+map DD trash
+# delete entirely
+map Dd delete
+map <delete> delete
+
+# Also allow backspace for updir
+map <backspace2> updir
 
 map H top
 map L bottom
 
 map gt cd ~/.trash
 map gd cd ~/Downloads
+map gD cd ~/Documents
+map gv cd ~/Videos
 map gr cd ~/Repos
+map gc. cd ~/.config
+map gci cd ~/.config/i3
+map gcn cd ~/.config/nvim
+map gca cd ~/.config/alacritty
+map gcp cd ~/.config/picom
 map gm cd /mnt
 map gs cd /mnt/data/SteamLibrary/steamapps/common
 map gb cd /mnt/data/backups
 
+map md mkdir
+map mx mkexec
+map mf mkfile
+map bg setbg
+
+map ot openterm
+
+map <esc> quit
+map <enter> open
+map y copy
+
+# e.g. for selecting only file types by entering "*.txt"
+map sg push :glob-select<space>
+# the same but for unselecting
+map usg push :glob-select<space>
+
+# Copy dirname or path to clipboard
+map Yd yank-dirname
+map Yp yank-path
