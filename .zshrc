@@ -237,8 +237,11 @@ export PATH=$PATH:~/.local/bin
 # Add cargo bins to path
 export PATH=$PATH:~/.cargo/bin
 
-# Set VIM as default editor
+# Set default editor
 export EDITOR=nvim
+
+# Set default terminal emulator
+export TERMINAL=alacritty
 
 # Fcitx
 export GTK_IM_MODULE=fcitx
