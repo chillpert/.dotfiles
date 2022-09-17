@@ -1,7 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Author: github.com/chillpert
-# Print the next SpaceX launch
-# Warning: Time zone is hardcoded (we don't do location tracking in this house!)
 
 content=$(curl -sf 'https://api.spacexdata.com/v4/launches/upcoming')
 
@@ -29,16 +27,13 @@ done
 if (( $counter == 0 )); then
   echo $name: Connection lost
 else
-  days=$((($time - $my_day) / 86400))
-  
-  # Precise time (hours and minutes)
-  if (( $days == 0 )); then
-    echo $name: $(TZ=Europe/Berlin date -d "@$time" '+%R')
-  # Check validity
-  elif (( $days < 0 )); then
-    # This will probably never be the case anymore
-    echo $name: tbd
+  remaining_seconds=$(($time - $(date +%s)))
+  remaining_hours=$(($remaining_seconds / 3600))
+  remaining_days=$(($remaining_hours / 24))
+
+  if (( $remaining_days < 1 )); then
+    echo $name: in $remaining_hours hours
   else
-    echo $name in $days days
+    echo $name: in $remaining_days days
   fi
 fi
