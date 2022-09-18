@@ -38,7 +38,7 @@ alias gc='git commit'
 alias gch='git checkout'
 alias gcp='git cherry-pick'
 alias ga='git add'
-alias gl='git log -20 -a --graph --decorate --oneline'
+alias gl='git log -30 -a --graph --decorate --oneline'
 alias gr='git reset'
 
 # For dotfiles
@@ -58,8 +58,10 @@ of() {
 alias fzf="fzf -m"
 alias fzfp="fzf --preview='less {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
 
-alias nv="nvim"
 alias vim="nvim"
+alias nv="nvim"
+alias nvc="cd ~/.config/nvim/ && nvim"
+alias nvimc="cd ~/.config/nvim/ && nvim"
 
 # Package manager aliases
 alias paru-S="paru -Slq | fzf --multi --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk \"{print \$2}\")' | xargs -ro paru -S"
