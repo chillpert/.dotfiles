@@ -19,6 +19,7 @@ ccls
 clang
 cloc
 cmake
+cmake-language-server
 cmus
 ctags
 cups
@@ -49,6 +50,7 @@ gettext
 git
 git-lfs
 github-desktop-bin
+glew
 go-mtpfs-git
 gparted
 grep
@@ -91,6 +93,7 @@ mpv
 ncspot-bin
 neofetch
 neovim
+neovim-web-devicons-git
 nerd-fonts-monoid
 networkmanager
 nodejs
@@ -122,10 +125,12 @@ python-pynvim
 python-wheel
 python-yaml
 python-zipp
+ripgrep
 rust
 samba
 screenkey
 scrot
+sdl2_image
 sed
 signal-desktop
 simplescreenrecorder
