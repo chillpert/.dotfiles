@@ -1,12 +1,3 @@
--- local colorscheme = "monokai"
---
--- local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
--- if not status_ok then
---     vim.notify("colorscheme " .. colorscheme .. " not found!")
---     return
--- end
-
---[[
 require 'monokai'.setup {
     palette = {
         name = 'monokai',
@@ -35,8 +26,31 @@ require 'monokai'.setup {
         diff_text = '#23324d',
     },
     custom_hlgroups = {},
-} ]]
+}
+
+local colorscheme = "monokai"
+
+local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+if not status_ok then
+    vim.notify("colorscheme " .. colorscheme .. " not found!")
+    return
+end
 
 -- Override status line to improve visibility for horizontal splits
 -- vim.cmd [[hi StatusLine guifg=white guibg=#444444 gui=bold ctermfg=59 ctermbg=black cterm=bold]]
 -- vim.cmd [[hi StatusLineNC guifg=#8a8a8a guibg=#444444 gui=bold ctermfg=59 ctermbg=black cterm=bold]]
+
+-- Adjust background color for treesitter-context
+vim.cmd [[hi TreesitterContext guibg=#2e323c]]
+
+-- Attempting to improve readability of tabs with monokai theme
+vim.cmd [[hi TabLineSel guibg=#272a30]]
+vim.cmd [[hi Title guibg=#2e323c]]
+vim.cmd [[hi TabLine guibg=#2e323c]]
+vim.cmd [[hi TabLineFill guibg=#2e323c]]
+
+-- Fix visibility for popup windows
+vim.cmd [[hi NormalFloat guibg=#4d5154]]
+
+-- Gitsigns to match monokai
+vim.cmd [[hi GitSignsChange guifg=#ae81ff guibg=#262626 gui=bold ctermfg=59 ctermbg=black cterm=bold]]

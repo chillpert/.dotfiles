@@ -30,6 +30,15 @@ local feedkey = function(key, mode)
 end
 
 cmp.setup({
+    --[[ window = {
+        completion = { -- rounded border; thin-style scrollbar
+            border = 'border',
+        },
+        documentation = { -- no border; native-style scrollbar
+            border = 'border',
+        },
+    }, ]]
+
     -- formatting
     formatting = {
         format = lspkind.cmp_format({
@@ -98,7 +107,7 @@ cmp.setup({
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = 'vsnip' },
-        -- { name = 'nvim_lsp_document_symbol' },
+        -- { name = 'nvim_lsp_document_symbol' }, -- Obsoleted by <leader>s
         { name = 'nvim_lsp_signature_help' },
         { name = 'buffer', keyword_length = 5, max_item_count = 5 }, -- only display buffer sources after 5 characters
         { name = 'path' },
@@ -205,10 +214,17 @@ require 'clangd_extensions'.setup {
     }
 }
 
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-    border = "rounded",
-})
+-- CMake
+require 'lspconfig'.cmake.setup {}
 
--- @TODO: Broken!
+-- Borders around hover windows
+-- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+--     border = "rounded",
+-- })
+--
+-- vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+--     border = "rounded",
+-- })
+
 -- Format on buffer save
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
