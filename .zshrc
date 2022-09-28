@@ -40,6 +40,7 @@ alias gcp='git cherry-pick'
 alias ga='git add'
 alias gl='git log -30 -a --graph --decorate --oneline'
 alias gr='git reset'
+alias gp='git pull'
 
 # For dotfiles
 config() {
@@ -104,6 +105,7 @@ ue() {
 	elif [[ "$1" == "gen" ]]; then
 		$ue4cli gen
 		project=${PWD##*/}
+        rm -f compile_commands.json
 		ln -s ".vscode/compileCommands_${project}.json" compile_commands.json	
         replace_string="clang++ @'$(pwd)/clang-flags.txt'"
         sed -i -e "s,$engine_path\(.*\)clang++,$replace_string,g" compile_commands.json
