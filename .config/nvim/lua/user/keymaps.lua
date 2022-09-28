@@ -109,5 +109,8 @@ keymap("n", "<Leader>rg", "<cmd>lua require('spectre').open()<cr>", opts)
 keymap("n", "<Leader>rl", "<cmd>lua require('spectre').open_file_search()<cr>", opts)
 
 -- gitsigns
-keymap("n", "<Leader>gsh", "<cmd>Gitsigns preview_hunk<cr>", opts)
-keymap("n", "<Leader>gsb", "<cmd>Gitsigns blame_line<cr>", opts)
+keymap("n", "<Leader>ghs", "<cmd>Gitsigns preview_hunk<cr>", opts)
+keymap("n", "<Leader>ghr", "<cmd>Gitsigns preview_hunk<cr>", opts)
+keymap("n", "<Leader>ghb", "<cmd>Gitsigns blame_line<cr>", opts)
+
+keymap("n", "<Leader>kl", "<cmd>lua vim.lsp.stop_client(vim.lsp.get_active_clients())<CR>", opts)

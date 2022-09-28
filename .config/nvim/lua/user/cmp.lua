@@ -139,6 +139,12 @@ require 'clangd_extensions'.setup {
             "clangd",
             "--clang-tidy",
             "--cross-file-rename",
+            "-j=2",
+            -- "--background-index=false",
+            -- "-log=verbose",
+            -- "--header-insertions=iwyu",
+            -- "--malloc-trim",
+            -- "--pch-storage=disk",
         },
         flags = {
             -- This will be the default in neovim 0.7+
