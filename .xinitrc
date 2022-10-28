@@ -11,12 +11,12 @@ Xcursor.size: 64
 xinput --set-prop 'Kingsis Peripherals ZOWIE Gaming mouse' 'libinput Accel Profile Enabled' 0
 
 # IBus fix
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
+# export GTK_IM_MODULE=ibus
+# export XMODIFIERS=@im=ibus
+# export QT_IM_MODULE=ibus
 
 # Enable IBus
-ibus-daemon &
+# ibus-daemon &
 
 # WM
 exec i3
