@@ -24,6 +24,8 @@ cmake-language-server
 cmus
 ctags
 cups
+deadd-notification-center-bin
+discord
 dmenu
 dosbox
 dotnet-sdk
@@ -60,6 +62,7 @@ grub
 gzip
 htop
 i3-gaps
+imagemagick
 j4-dmenu-desktop
 jq
 keepassxc
@@ -78,8 +81,8 @@ libtool
 linux
 linux-firmware
 linux-headers
-linux-xanmod
-linux-xanmod-headers
+linux-xanmod-bin
+linux-xanmod-headers-bin
 llvm
 lostfiles
 lua-language-server
@@ -96,9 +99,11 @@ neofetch
 neovim
 neovim-web-devicons-git
 nerd-fonts-monoid
+network-manager-applet
 networkmanager
 nodejs
 noise-suppression-for-voice
+noto-fonts-emoji
 npm
 ntfs-3g
 nvidia-dkms
@@ -181,6 +186,7 @@ xorg-xsetroot
 xournalpp
 xrandr-invert-colors
 xsnow
+yad
 yarn
 yt-dlp
 ytfzf
