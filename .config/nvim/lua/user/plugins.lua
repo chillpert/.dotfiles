@@ -20,6 +20,7 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'RRethy/vim-illuminate'
 Plug 'nvim-lua/plenary.nvim'
+-- Plug 'rhysd/vim-clang-format'
 Plug 'windwp/nvim-spectre'
 
 -- lsp
@@ -72,3 +73,6 @@ vim.g.mkdp_browser = 'firefox';
 vim.g.mkdp_auto_start = 1;
 vim.g.mkdp_auto_open = 1;
 vim.g.mkdp_auto_close = 1;
+
+-- Since the custom write command causes lsp to reattach and lsp.buf.formatting is broken, we are using another plugin instead.
+-- vim.g["clang_format#auto_format"] = 1;

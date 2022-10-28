@@ -140,9 +140,10 @@ require 'clangd_extensions'.setup {
             "--clang-tidy",
             "--cross-file-rename",
             "-j=2",
+            "--header-insertion=iwyu",
+            "--header-insertion-decorators",
             -- "--background-index=false",
             -- "-log=verbose",
-            -- "--header-insertions=iwyu",
             -- "--malloc-trim",
             -- "--pch-storage=disk",
         },
@@ -233,4 +234,4 @@ require 'lspconfig'.cmake.setup {}
 -- })
 
 -- Format on buffer save
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]

@@ -18,6 +18,7 @@ local options = {
     smartindent = true,
     splitbelow = true,
     spell = true,
+    -- autoread = true,
     -- undodir = "~/.vim/undo-dir",
     -- undofile = true,
     signcolumn = "yes", -- add extra column for linting and other output
