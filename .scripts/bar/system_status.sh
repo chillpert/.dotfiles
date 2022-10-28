@@ -15,14 +15,6 @@ if (($isMute == 1)); then
 	mic_msg=""
 fi
 
-# Bluetooth status
-status=$(bluetoothctl show | sed '5q;d')
-status=${status: -2}
-
-if [ "$status" = "no" ]; then
-	bt_msg=""
-fi
-
 # Internet connection status
 {
 	if ping -q -c 1 -W 1 8.8.8.8 >/dev/null; then
@@ -32,6 +24,6 @@ fi
 	fi
 } 2> /dev/null
 
-echo $mic_msg $bt_msg $lan_msg
+echo $mic_msg $lan_msg
 
 unset IFS
