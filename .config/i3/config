@@ -25,6 +25,10 @@ exec_always --no-startup-id picom &
 
 exec --no-startup-id fcitx5 -d &
 
+exec --no-startup-id deadd-notification-center &
+
+exec --no-startup-id nm-applet &
+
 # Open a terminal
 bindsym $mod+Return exec alacritty
 
@@ -250,6 +254,8 @@ gaps outer 12
 for_window [instance="origin.exe"] floating enable
 
 # Set background image (feh)
-exec_always --no-startup-id "feh --bg-scale --auto-reload --no-xinerama --randomize /mnt/data/backups/Pictures/Wallpapers/Iceland"
+exec_always --no-startup-id "feh --bg-scale --auto-reload --no-xinerama --randomize ~/Pictures/Wallpapers"
 
 assign [class="UnrealEditor"] $ws1
+
+for_window [class="Yad" title="yad-calendar"] floating enable move left 756px, move up 440px
