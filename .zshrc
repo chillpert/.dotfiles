@@ -15,7 +15,7 @@ if [[ -o login ]] ; then
 fi
 
 # Youtube aliases
-alias yt='ytfzf --detach -s -S --subs=1 --sort -l --silent'
+alias yt='ytfzf --detach --subs=1 --sort -l -c youtube-subscriptions'
 alias yt-mp3='yt-dlp --extract-audio --audio-format mp3'
 
 # Basic Unix commands aliases
@@ -41,6 +41,22 @@ alias ga='git add'
 alias gl='git log -30 -a --graph --decorate --oneline'
 alias gr='git reset'
 alias gp='git pull'
+alias gwr='git worktree remove'
+alias gwl='git worktree list'
+alias gwp='git worktree prune'
+
+alias stats='~/.scripts/bar/drive_status.sh && ~/.scripts/bar/cpu_monitor.sh && ~/.scripts/bar/gpu_monitor.sh'
+
+# Automated worktree creation and initialization for UE projects
+gwa() {
+    git worktree add $1 $2
+    cp ~/Documents/clang-flags.txt $1
+    cd $1
+    git submodule update --init --recursive
+    ue gen
+    ue build
+    cd -
+}
 
 # For dotfiles
 config() {
@@ -70,6 +86,7 @@ alias paru-R="paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -
 alias paru-Re="paru -Qeq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rns"
 alias paru-Q="paru -Qeq | fzf --multi --preview 'paru -Qi {1}'"
 alias paru-O="paru -Rns $(paru -Qtdq)"
+alias cu='checkupdates'
 
 # Application aliases
 alias vpnc='sudo protonvpn c -f'
@@ -106,7 +123,7 @@ ue() {
 		$ue4cli gen
 		project=${PWD##*/}
         rm -f compile_commands.json
-		ln -s ".vscode/compileCommands_${project}.json" compile_commands.json	
+		ln -s ".vscode/compileCommands_Default.json" compile_commands.json	
         replace_string="clang++ @'$(pwd)/clang-flags.txt'"
         sed -i -e "s,$engine_path\(.*\)clang++,$replace_string,g" compile_commands.json
     # Generate ctags for project
