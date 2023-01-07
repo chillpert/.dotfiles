@@ -61,7 +61,7 @@ gwa() {
 # For dotfiles
 config() {
 	pacman -Qqe > .packages
-	/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME "$@"
+	/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME "$@"
 }
 
 # FZF everything
@@ -331,3 +331,6 @@ setxkbmap -option ctrl:nocaps
 
 # Fix for ICU UE5 mismatch
 export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
+
+# Icons for LF
+export LF_ICONS="`cat $HOME/.config/lf/LF_ICONS`"
