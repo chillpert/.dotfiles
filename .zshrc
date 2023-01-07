@@ -124,8 +124,14 @@ ue() {
 		project=${PWD##*/}
         rm -f compile_commands.json
 		ln -s ".vscode/compileCommands_Default.json" compile_commands.json	
-        replace_string="clang++ @'$(pwd)/clang-flags.txt'"
-        sed -i -e "s,$engine_path\(.*\)clang++,$replace_string,g" compile_commands.json
+
+        # For UE 5.1
+        replace_string="clang++\"\,\n\t\t\t\"@$(pwd)/clang-flags.txt\"\,"
+        sed -i -e "s,$engine_path\(.*\)clang++\"\,,$replace_string,g" compile_commands.json
+        
+        # For UE 4/5.0.3
+        # replace_string="clang++ @'$(pwd)/clang-flags.txt'"
+        # sed -i -e "s,$engine_path\(.*\)clang++,$replace_string,g" compile_commands.json
     # Generate ctags for project
 	elif [[ "$1" == "ctags" ]]; then
         echo "Generating ctags database for unreal engine and this project"

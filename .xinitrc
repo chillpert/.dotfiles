@@ -9,6 +9,7 @@ Xcursor.size: 64
 
 # Disable mouse acceleration (because this desktop is not for soy gamers)
 xinput --set-prop 'Kingsis Peripherals ZOWIE Gaming mouse' 'libinput Accel Profile Enabled' 0
+xinput --set-prop 'Kingsis Peripherals ZOWIE Gaming mouse' 'libinput Accel Speed' -0.5
 
 # IBus fix
 # export GTK_IM_MODULE=ibus

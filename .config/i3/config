@@ -25,7 +25,7 @@ exec_always --no-startup-id picom &
 
 exec --no-startup-id fcitx5 -d &
 
-exec --no-startup-id deadd-notification-center &
+# exec --no-startup-id deadd-notification-center &
 
 exec --no-startup-id nm-applet &
 
@@ -243,8 +243,8 @@ workspace_auto_back_and_forth yes
 # On start up, load noisetorch (@NOTE: Noisetorch has been compromised)
 # exec --no-startup-id noisetorch -i alsa_input.usb-Samson_Technologies_Samson_GoMic-00.analog-stereo
 
-gaps inner 4
-gaps outer 12
+# gaps inner 4
+# gaps outer 12
 
 #====================================================================================#
 # ================================== Commands =======================================#
