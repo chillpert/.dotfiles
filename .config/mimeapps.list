@@ -40,9 +40,9 @@ video/x-matroska=mpv.desktop
 image/gif=mpv.desktop
 image/png=sxiv.desktop
 image/jpeg=sxiv.desktop
-x-scheme-handler/mailto=userapp-Thunderbird-Q5CES1.desktop
-message/rfc822=userapp-Thunderbird-Q5CES1.desktop
-x-scheme-handler/mid=userapp-Thunderbird-Q5CES1.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-I5D6X1.desktop
+message/rfc822=userapp-Thunderbird-I5D6X1.desktop
+x-scheme-handler/mid=userapp-Thunderbird-I5D6X1.desktop
 x-scheme-handler/news=userapp-Thunderbird-MRDCS1.desktop
 x-scheme-handler/snews=userapp-Thunderbird-MRDCS1.desktop
 x-scheme-handler/nntp=userapp-Thunderbird-MRDCS1.desktop
@@ -56,8 +56,8 @@ x-scheme-handler/webcals=userapp-Thunderbird-VEGDS1.desktop
 x-scheme-handler/discord-668477264995811338=nuclear.desktop
 
 [Added Associations]
-x-scheme-handler/mailto=userapp-Thunderbird-C2KVO1.desktop;userapp-Thunderbird-Q5CES1.desktop;
-x-scheme-handler/mid=userapp-Thunderbird-C2KVO1.desktop;userapp-Thunderbird-Q5CES1.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-C2KVO1.desktop;userapp-Thunderbird-Q5CES1.desktop;userapp-Thunderbird-I5D6X1.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-C2KVO1.desktop;userapp-Thunderbird-Q5CES1.desktop;userapp-Thunderbird-I5D6X1.desktop;
 x-scheme-handler/news=userapp-Thunderbird-7QB3O1.desktop;userapp-Thunderbird-MRDCS1.desktop;
 x-scheme-handler/snews=userapp-Thunderbird-7QB3O1.desktop;userapp-Thunderbird-MRDCS1.desktop;
 x-scheme-handler/nntp=userapp-Thunderbird-7QB3O1.desktop;userapp-Thunderbird-MRDCS1.desktop;

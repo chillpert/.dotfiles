@@ -89,8 +89,8 @@ alias paru-O="paru -Rns $(paru -Qtdq)"
 alias cu='checkupdates'
 
 # Application aliases
-alias vpnc='sudo protonvpn c -f'
-alias vpnd='sudo protonvpn d'
+alias vpnc='protonvpn-cli c -f'
+alias vpnd='protonvpn-cli d'
 alias pm='pulsemixer'
 
 # Expand ue4cli
@@ -204,6 +204,14 @@ up () {
 # Extract common file formats (by Derek Taylor)
 SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
+
+function compress {
+    if [ -z "$2" ]; then
+        echo "Usage: compress <path/file_name> <path/out_file_name>"
+    else
+        ffmpeg -i "$1" -vcodec libx264 -crf 28 "$2"
+    fi
+}
 
 function extract {
 	if [ -z "$1" ]; then
