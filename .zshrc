@@ -9,6 +9,8 @@ cd ~/
 # Fix for delete key
 tput smkx
 
+alias sx='startx'
+
 # Leave TTY as vanilla as possible
 if [[ -o login ]] ; then
     return
@@ -101,23 +103,6 @@ ue() {
     # cd to ue location
 	if [[ "$1" == "engine" ]]; then
 		cd $engine_path
-    # combine clean and build in one command
-	elif [[ "$1" == "rebuild" ]]; then
-		$ue4cli clean
-		$ue4cli build 
-		if [[ "$2" == "run" ]]; then
-			$ue4cli run
-		fi
-    # build and optionally run while respecting build flags
-	elif [[ "$1" == "build" ]]; then
-		if [[ "${@: -1}" == "run" ]]; then
-			length="$(($# - 2))" # Get length without last param because of 'run'
-			$ue4cli build ${@:2:$length}
-			$ue4cli run
-		else
-			shift 1
-			$ue4cli build "$@"
-		fi
     # Run project files generation, create a symlink for the compile database and fix-up the compile database
 	elif [[ "$1" == "gen" ]]; then
 		$ue4cli gen
@@ -142,6 +127,10 @@ ue() {
 		$ue4cli "$@"
 	fi
 }
+
+# Even faster UE commands
+alias ucr='ue clean && ue build'
+alias ur='ue build && ue run'
 
 alias ue4='echo Please use ue instead.'
 alias ue5='echo Please use ue instead.'
