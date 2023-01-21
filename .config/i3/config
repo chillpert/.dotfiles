@@ -25,6 +25,8 @@ exec_always --no-startup-id picom &
 
 exec --no-startup-id fcitx5 -d &
 
+exec --no-startup-id syncthing &
+
 # exec --no-startup-id deadd-notification-center &
 
 exec --no-startup-id nm-applet &

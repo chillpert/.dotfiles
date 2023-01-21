@@ -61,7 +61,6 @@ linux
 linux-firmware
 linux-headers
 lua-language-server
-lutris
 lxappearance
 m4
 make
@@ -74,7 +73,6 @@ ncspot
 neofetch
 neovim
 neovim-web-devicons-git
-nerd-fonts-monoid
 network-manager-applet
 networkmanager
 nodejs
@@ -108,6 +106,7 @@ st-chillpert
 steam
 sudo
 sxiv
+syncthing
 tabbed-git
 teamspeak3
 texinfo
@@ -116,6 +115,7 @@ thunderbird
 ttf-dejavu
 ttf-font-icons
 ttf-meslo-nerd-font-powerlevel10k
+ttf-monoid-nerd
 ttf-vlgothic
 valgrind
 visual-studio-code-bin
