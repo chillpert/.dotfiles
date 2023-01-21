@@ -66,17 +66,6 @@ config() {
 	/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME "$@"
 }
 
-# FZF everything
-of() {
-	cd ~/
-	fzf | xargs xdg-open
-	cd -
-}
-
-# Allow multi-select by default
-alias fzf="fzf -m"
-alias fzfp="fzf --preview='less {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
-
 alias vim="nvim"
 alias nv="nvim"
 alias nvc="cd ~/.config/nvim/ && nvim"
@@ -102,7 +91,7 @@ ue() {
 
     # cd to ue location
 	if [[ "$1" == "engine" ]]; then
-		cd $engine_path
+		cd $engine_path/Engine/Source
     # Run project files generation, create a symlink for the compile database and fix-up the compile database
 	elif [[ "$1" == "gen" ]]; then
 		$ue4cli gen
@@ -322,6 +311,27 @@ HISTFILE=~/.zsh_history
 # FZF
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+
+# Use silver_searcher by default
+if type ag &> /dev/null; then
+    export FZF_DEFAULT_COMMAND='ag -p ~/.gitignore -g ""'
+fi
+
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# Use rg by default
+export FZF_ALT_C_COMMAND="rg --files --null | xargs -0 dirname | uniq | awk '!a[$0]++'"
+
+# FZF everything
+of() {
+	cd ~/
+	fzf | xargs xdg-open
+	cd -
+}
+
+# Allow multi-select by default
+# alias fzf="fzf -m"
+# alias fzfp="fzf --preview='less {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
 
 # Disable filthy caps lock! (requires xorg-setxkbmap)
 setxkbmap -option ctrl:nocaps
