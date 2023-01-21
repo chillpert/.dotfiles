@@ -320,7 +320,8 @@ fi
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Use rg by default
-export FZF_ALT_C_COMMAND="rg --files --null | xargs -0 dirname | uniq | awk '!a[$0]++'"
+# export FZF_ALT_C_COMMAND="rg --files --null | xargs -0 dirname | uniq | awk '!a[$0]++'"
+export FZF_ALT_C_COMMAND="rg --files --null | xargs -0 dirname | uniq | sort -u"
 
 # FZF everything
 of() {
