@@ -1,5 +1,5 @@
 local opts = { noremap = true, silent = true }
-local term_opts = { silent = true }
+-- local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -38,6 +38,7 @@ keymap("n", "<Leader>gc", "<cmd>lua require('fzf-lua').git_bcommits()<CR>", opts
 keymap("n", "<Leader>gl", "<cmd>lua require('fzf-lua').git_commits()<CR>", opts)
 keymap("n", "<Leader>gd", "<cmd>lua require('fzf-lua').git_status()<CR>", opts)
 keymap("n", "<Leader>gb", "<cmd>lua require('fzf-lua').git_branches()<CR>", opts)
+keymap("n", "<Leader>gs", ":Ouroboros<CR>", opts)
 keymap("n", "<Leader>a", "<cmd>lua require('fzf-lua').live_grep()<CR>", opts)
 keymap("n", "<Leader>t", "<cmd>lua require('fzf-lua').tags_grep_cword()<CR>", opts)
 keymap("n", "gr", "<cmd>lua require('fzf-lua').lsp_references()<CR>", opts)
