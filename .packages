@@ -60,6 +60,7 @@ libtool
 linux
 linux-firmware
 linux-headers
+lldb
 lua-language-server
 lxappearance
 m4
@@ -78,6 +79,7 @@ networkmanager
 nodejs
 noise-suppression-for-voice
 noto-fonts-emoji
+npm
 ntfs-3g
 nvidia
 nvidia-settings

@@ -83,6 +83,7 @@ alias cu='checkupdates'
 alias vpnc='protonvpn-cli c -f'
 alias vpnd='protonvpn-cli d'
 alias pm='pulsemixer'
+alias nf='neofetch'
 
 # Expand ue4cli
 ue() {
