@@ -9,10 +9,6 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Center search results
-keymap("n", "n", "nzz", opts)
-keymap("n", "N", "Nzz", opts)
-
 -- Add undo breakpoints
 keymap("i", ",", ",<c-g>u", opts)
 keymap("i", ".", ".<c-g>u", opts)
@@ -27,12 +23,25 @@ keymap("n", "<Leader>nl", ":Lexplore<CR>", opts)
 keymap("n", "<Leader>ns", ":Sexplore<CR>", opts)
 vim.g.netrw_bufsettings = "noma"
 
+-- Move selection up or down
+keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
+
+-- Keep cursor centered when using C-d and C-u
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
+
+-- Center search results
+keymap("n", "n", "nzz", opts)
+keymap("n", "N", "Nzz", opts)
+
 -- Ranger-like tab spawn
 keymap("n", "gn", ":tabnew<CR>", opts)
 
 -- fzf keymaps
 keymap("n", "<Leader>b", "<cmd>lua require('fzf-lua').buffers()<CR>", opts)
-keymap("n", "<Leader>o", "<cmd>lua require('fzf-lua').files()<CR>", opts)
+keymap("n", "<C-p>", "<cmd>lua require('fzf-lua').files()<CR>", opts)
+keymap("n", "<Leader>o", "<cmd>lua require('fzf-lua').git_files()<CR>", opts)
 keymap("n", "<Leader>hf", "<cmd>lua require('fzf-lua').oldfiles()<CR>", opts)
 keymap("n", "<Leader>gc", "<cmd>lua require('fzf-lua').git_bcommits()<CR>", opts)
 keymap("n", "<Leader>gl", "<cmd>lua require('fzf-lua').git_commits()<CR>", opts)
@@ -47,7 +56,7 @@ keymap("n", "gD", "<cmd>lua require('fzf-lua').lsp_declarations()<CR>", opts)
 keymap("n", "gi", "<cmd>lua require('fzf-lua').lsp_implementations()<CR>", opts)
 keymap("n", "<Leader>s", "<cmd>lua require('fzf-lua').lsp_document_symbols()<CR>", opts)
 keymap("n", "<Leader>ca", "<cmd>lua require('fzf-lua').lsp_code_actions()<CR>", opts)
-keymap("n", "<Leader>c", "<cmd>lua require('fzf-lua').commands()<CR>", opts)
+keymap("n", "<Leader>co", "<cmd>lua require('fzf-lua').commands()<CR>", opts)
 keymap("n", "<Leader>hc", "<cmd>lua require('fzf-lua').command_history()<CR>", opts)
 keymap("n", "<Leader>hs", "<cmd>lua require('fzf-lua').search_history()<CR>", opts)
 keymap("n", "<Leader>m", "<cmd>lua require('fzf-lua').marks()<CR>", opts)

@@ -80,6 +80,11 @@ _G.packer_plugins = {
     path = "/home/n30/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  LuaSnip = {
+    loaded = true,
+    path = "/home/n30/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["clangd_extensions.nvim"] = {
     loaded = true,
     path = "/home/n30/.local/share/nvim/site/pack/packer/start/clangd_extensions.nvim",
@@ -110,8 +115,18 @@ _G.packer_plugins = {
     path = "/home/n30/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/n30/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/n30/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
   ["fzf-lua"] = {
-    config = { "\27LJ\2\ný\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0005\4\a\0=\4\b\3=\3\t\2B\0\2\1K\0\1\0\fwinopts\fpreview\1\0\2\rvertical\rdown:40%\vlayout\rvertical\1\0\1\15fullscreen\2\25file_ignore_patterns\1\0\0\1\n\0\0\v%.png$\v%.exe$\v%.tex$\14%.uasset$\v%.eps$\v%.pdf$\v%.sty$\19Documentation/\rContent/\nsetup\ffzf-lua\frequire\0" },
+    config = { "\27LJ\2\ný\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0005\4\a\0=\4\b\3=\3\t\2B\0\2\1K\0\1\0\fwinopts\fpreview\1\0\2\vlayout\rvertical\rvertical\rdown:40%\1\0\1\15fullscreen\2\25file_ignore_patterns\1\0\0\1\n\0\0\v%.png$\v%.exe$\v%.tex$\14%.uasset$\v%.eps$\v%.pdf$\v%.sty$\19Documentation/\rContent/\nsetup\ffzf-lua\frequire\0" },
     loaded = true,
     path = "/home/n30/.local/share/nvim/site/pack/packer/start/fzf-lua",
     url = "https://github.com/ibhagwan/fzf-lua"
@@ -235,18 +250,26 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-spectre
-time([[Config for nvim-spectre]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\fspectre\frequire\0", "config", "nvim-spectre")
-time([[Config for nvim-spectre]], false)
+-- Config for: markdown-preview.nvim
+time([[Config for markdown-preview.nvim]], true)
+try_loadstring("\27LJ\2\n•\1\0\0\2\0\a\0\0176\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0006\0\0\0009\0\1\0)\1\1\0=\1\5\0006\0\0\0009\0\1\0)\1\1\0=\1\6\0K\0\1\0\20mkdp_auto_close\19mkdp_auto_open\20mkdp_auto_start\ffirefox\17mkdp_browser\6g\bvim\0", "config", "markdown-preview.nvim")
+time([[Config for markdown-preview.nvim]], false)
+-- Config for: nvim-colorizer.lua
+time([[Config for nvim-colorizer.lua]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
+time([[Config for nvim-colorizer.lua]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
+-- Config for: nvim-spectre
+time([[Config for nvim-spectre]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\fspectre\frequire\0", "config", "nvim-spectre")
+time([[Config for nvim-spectre]], false)
+-- Config for: fzf-lua
+time([[Config for fzf-lua]], true)
+try_loadstring("\27LJ\2\ný\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0005\4\a\0=\4\b\3=\3\t\2B\0\2\1K\0\1\0\fwinopts\fpreview\1\0\2\vlayout\rvertical\rvertical\rdown:40%\1\0\1\15fullscreen\2\25file_ignore_patterns\1\0\0\1\n\0\0\v%.png$\v%.exe$\v%.tex$\14%.uasset$\v%.eps$\v%.pdf$\v%.sty$\19Documentation/\rContent/\nsetup\ffzf-lua\frequire\0", "config", "fzf-lua")
+time([[Config for fzf-lua]], false)
 -- Config for: vim-illuminate
 time([[Config for vim-illuminate]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\14configure\15illuminate\frequire\0", "config", "vim-illuminate")
@@ -255,18 +278,10 @@ time([[Config for vim-illuminate]], false)
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
--- Config for: fzf-lua
-time([[Config for fzf-lua]], true)
-try_loadstring("\27LJ\2\ný\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0005\4\a\0=\4\b\3=\3\t\2B\0\2\1K\0\1\0\fwinopts\fpreview\1\0\2\rvertical\rdown:40%\vlayout\rvertical\1\0\1\15fullscreen\2\25file_ignore_patterns\1\0\0\1\n\0\0\v%.png$\v%.exe$\v%.tex$\14%.uasset$\v%.eps$\v%.pdf$\v%.sty$\19Documentation/\rContent/\nsetup\ffzf-lua\frequire\0", "config", "fzf-lua")
-time([[Config for fzf-lua]], false)
--- Config for: nvim-colorizer.lua
-time([[Config for nvim-colorizer.lua]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
-time([[Config for nvim-colorizer.lua]], false)
--- Config for: markdown-preview.nvim
-time([[Config for markdown-preview.nvim]], true)
-try_loadstring("\27LJ\2\n•\1\0\0\2\0\a\0\0176\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0006\0\0\0009\0\1\0)\1\1\0=\1\5\0006\0\0\0009\0\1\0)\1\1\0=\1\6\0K\0\1\0\20mkdp_auto_close\19mkdp_auto_open\20mkdp_auto_start\ffirefox\17mkdp_browser\6g\bvim\0", "config", "markdown-preview.nvim")
-time([[Config for markdown-preview.nvim]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

@@ -18,6 +18,7 @@ local options = {
     smartindent = true,
     splitbelow = true,
     spell = true,
+    scrolloff = 8,
     -- autoread = true,
     -- undodir = "~/.vim/undo-dir",
     -- undofile = true,
