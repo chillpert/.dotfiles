@@ -35,6 +35,7 @@ feh
 firefox
 flex
 fzf
+fzf-tab-git
 gamemode
 gcc
 gdb
@@ -48,6 +49,7 @@ go-mtpfs-git
 gparted
 groff
 grub
+gsimplecal
 htop
 i3-wm
 imagemagick
@@ -56,6 +58,7 @@ jq
 keepassxc
 krita
 lf
+libreoffice-fresh
 libtool
 linux
 linux-firmware
@@ -135,7 +138,6 @@ xorg-xsetroot
 xournalpp
 xrandr-invert-colors
 xterm
-yad
 yarn
 yt-dlp
 zip
