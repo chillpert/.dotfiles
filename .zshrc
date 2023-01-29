@@ -300,6 +300,7 @@ zstyle ':completion:*' menu select
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
@@ -317,8 +318,6 @@ source /usr/share/fzf/completion.zsh
 if type ag &> /dev/null; then
     export FZF_DEFAULT_COMMAND='ag -p ~/.gitignore -g ""'
 fi
-
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Use rg by default
 # export FZF_ALT_C_COMMAND="rg --files --null | xargs -0 dirname | uniq | awk '!a[$0]++'"
