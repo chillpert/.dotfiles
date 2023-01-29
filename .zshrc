@@ -343,3 +343,6 @@ export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
 
 # Icons for LF
 export LF_ICONS="`cat $HOME/.config/lf/LF_ICONS`"
+
+# Use neovim as my pager
+export PAGER=nvimpager
