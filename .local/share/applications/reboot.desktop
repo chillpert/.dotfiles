@@ -2,4 +2,4 @@
 Type=Application
 Name=Reboot
 Terminal=false
-Exec=reboot
+Exec=~/.scripts/dmenu/confirm.sh "Reboot?" "reboot"
