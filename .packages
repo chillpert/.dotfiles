@@ -145,5 +145,6 @@ zip
 zsh
 zsh-autosuggestions
 zsh-completions
+zsh-git-prompt
 zsh-history-substring-search
 zsh-syntax-highlighting
