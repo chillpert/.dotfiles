@@ -190,22 +190,20 @@ bindsym $mod+c exec --no-startup-id ~/.scripts/i3/scratchpads/python_scratchpad.
 
 # Open terminal scratchpad for music
 for_window [instance="musicScratchpadProcess"] floating enable
-for_window [instance="musicScratchpadProcess"] resize set 1200 800
+for_window [instance="musicScratchpadProcess"] resize set 1800 1000
 for_window [instance="musicScratchpadProcess"] move scratchpad
-for_window [instance="musicScratchpadProcess"] move position center
 for_window [instance="musicScratchpadProcess"] sticky enable
 
-bindsym $mod+n exec --no-startup-id ~/.scripts/i3/scratchpads/music_scratchpad.sh; [instance="musicScratchpadProcess"] scratchpad show, move position 360px 580px
+bindsym $mod+n exec --no-startup-id ~/.scripts/i3/scratchpads/music_scratchpad.sh; [instance="musicScratchpadProcess"] scratchpad show, move position 60px 460px
 
 # Open terminal scratchpad 
 for_window [instance="terminalScratchpadProcess"] floating enable
-for_window [instance="terminalScratchpadProcess"] resize set 1200 800
+for_window [instance="terminalScratchpadProcess"] resize set 1800 1000
 for_window [instance="terminalScratchpadProcess"] move scratchpad 
-for_window [instance="terminalScratchpadProcess"] move position center
 for_window [instance="terminalScratchpadProcess"] sticky enable
 
 # Workaround to get scratchpad to show only on primary output by setting coordinates manually
-bindsym $mod+w exec --no-startup-id ~/.scripts/i3/scratchpads/terminal_scratchpad.sh; [instance="terminalScratchpadProcess"] scratchpad show, move position 360px 580px
+bindsym $mod+w exec --no-startup-id ~/.scripts/i3/scratchpads/terminal_scratchpad.sh; [instance="terminalScratchpadProcess"] scratchpad show, move position 60px 460px
 
 #====================================================================================#
 # ===================================== Bar =========================================#
