@@ -45,12 +45,10 @@ git
 git-lfs
 github-cli
 github-desktop-bin
-gnome-keyring
 go-mtpfs-git
 gparted
 groff
 grub
-gsimplecal
 htop
 i3-wm
 imagemagick
@@ -87,7 +85,6 @@ npm
 ntfs-3g
 nvidia
 nvidia-settings
-nvimpager
 obs-studio
 os-prober
 pacman-contrib

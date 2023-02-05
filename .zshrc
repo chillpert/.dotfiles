@@ -68,6 +68,7 @@ config() {
 
 alias vim="nvim"
 alias nv="nvim"
+alias n='nvim'
 alias nvc="cd ~/.config/nvim/ && nvim"
 alias nvimc="cd ~/.config/nvim/ && nvim"
 
@@ -321,7 +322,6 @@ if type ag &> /dev/null; then
 fi
 
 # Use rg by default
-# export FZF_ALT_C_COMMAND="rg --files --null | xargs -0 dirname | uniq | awk '!a[$0]++'"
 export FZF_ALT_C_COMMAND="rg --files --null | xargs -0 dirname | uniq | sort -u"
 
 # FZF everything
@@ -330,10 +330,6 @@ of() {
 	fzf | xargs xdg-open
 	cd -
 }
-
-# Allow multi-select by default
-# alias fzf="fzf -m"
-# alias fzfp="fzf --preview='less {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
 
 # Disable filthy caps lock! (requires xorg-setxkbmap)
 setxkbmap -option ctrl:nocaps
@@ -344,5 +340,15 @@ export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
 # Icons for LF
 export LF_ICONS="`cat $HOME/.config/lf/LF_ICONS`"
 
-# Use neovim as my pager
-export PAGER=nvimpager
+# Suspend process toggle (https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fancy-ctrl-z)
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+    zle accept-line -w
+  else
+    zle push-input -w
+    zle clear-screen -w
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
