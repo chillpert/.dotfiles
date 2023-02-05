@@ -111,8 +111,8 @@ keymap("n", "<Leader>gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
 -- keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 
 -- Hop keymaps
-keymap("n", "<Leader>hw", "<cmd>lua require'hop'.hint_char1()<cr>", opts)
-keymap("n", "<Leader>j", "<cmd>lua require'hop'.hint_words()<cr>", opts)
+-- keymap("n", "<Leader>hw", "<cmd>lua require'hop'.hint_char1()<cr>", opts)
+-- keymap("n", "<Leader>j", "<cmd>lua require'hop'.hint_words()<cr>", opts)
 
 -- Spectre keymaps
 keymap("n", "<Leader>rg", "<cmd>lua require('spectre').open()<cr>", opts)
