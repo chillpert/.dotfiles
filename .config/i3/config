@@ -180,30 +180,10 @@ bindsym --release $mod+x exec --no-startup-id slock
 
 # Scratchpads
 
-# Open Python3
-for_window [instance="pythonScratchpadProcess"] floating enable
-for_window [instance="pythonScratchpadProcess"] resize set 625 400
-for_window [instance="pythonScratchpadProcess"] move scratchpad
-for_window [instance="pythonScratchpadProcess"] sticky enable
-
-bindsym $mod+c exec --no-startup-id ~/.scripts/i3/scratchpads/python_scratchpad.sh; [instance="pythonScratchpadProcess"] scratchpad show, move position center
-
-# Open terminal scratchpad for music
-for_window [instance="musicScratchpadProcess"] floating enable
-for_window [instance="musicScratchpadProcess"] resize set 1800 1000
-for_window [instance="musicScratchpadProcess"] move scratchpad
-for_window [instance="musicScratchpadProcess"] sticky enable
-
-bindsym $mod+n exec --no-startup-id ~/.scripts/i3/scratchpads/music_scratchpad.sh; [instance="musicScratchpadProcess"] scratchpad show, move position 60px 460px
-
-# Open terminal scratchpad 
-for_window [instance="terminalScratchpadProcess"] floating enable
-for_window [instance="terminalScratchpadProcess"] resize set 1800 1000
-for_window [instance="terminalScratchpadProcess"] move scratchpad 
-for_window [instance="terminalScratchpadProcess"] sticky enable
-
-# Workaround to get scratchpad to show only on primary output by setting coordinates manually
-bindsym $mod+w exec --no-startup-id ~/.scripts/i3/scratchpads/terminal_scratchpad.sh; [instance="terminalScratchpadProcess"] scratchpad show, move position 60px 460px
+bindsym $mod+Shift+o exec ~/.scripts/i3/scratchpads/scratchpad.sh 'scratch-signal' 'signal-desktop'
+bindsym $mod+c exec ~/.scripts/i3/scratchpads/scratchpad.sh 'scratch-python' 'alacritty -e python3'
+bindsym $mod+w exec ~/.scripts/i3/scratchpads/scratchpad.sh 'scratch-terminal' "tabbed -r 2 -t '#AF87FF' -o '#26292c' alacritty --embed ''"
+bindsym $mod+n exec ~/.scripts/i3/scratchpads/scratchpad.sh 'scratch-ncspot' 'alacritty -e ncspot'
 
 #====================================================================================#
 # ===================================== Bar =========================================#
