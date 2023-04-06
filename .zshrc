@@ -86,6 +86,8 @@ alias vpnd='protonvpn-cli d'
 alias pm='pulsemixer'
 alias nf='neofetch'
 
+export UE_PATH="/mnt/data/unrealengine"
+
 # Expand ue4cli
 ue() {
 	ue4cli=$HOME/.local/bin/ue4
@@ -94,6 +96,14 @@ ue() {
     # cd to ue location
 	if [[ "$1" == "engine" ]]; then
 		cd $engine_path/Engine/Source
+    elif [[ "$1" == "build" ]]; then
+        $ue4cli build
+        if [ $? -eq 0 ]; then
+            notify-send --hint="int:success:1" --app-name="UE" "none" "Compiled ${PWD##*/}"
+
+        else
+            notify-send --hint="int:success:0" --app-name="UE" "none" "Failed to copmile ${PWD##*/}"
+        fi
     # Run project files generation, create a symlink for the compile database and fix-up the compile database
 	elif [[ "$1" == "gen" ]]; then
 		$ue4cli gen
