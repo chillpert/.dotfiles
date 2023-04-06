@@ -27,6 +27,9 @@ exec --no-startup-id fcitx5 -d &
 
 exec --no-startup-id syncthing &
 
+# Without the daemon running copying to clipboard won't work
+exec --no-startup-id flameshot &
+
 # exec --no-startup-id deadd-notification-center &
 
 exec --no-startup-id nm-applet &
@@ -55,10 +58,10 @@ for_window [class="^fzf-menu$"] fullscreen enable
 bindsym $mod+g exec --no-startup-id ~/.scripts/i3/controls/nextfind -nf '#FFFFFF' -sb '#af87ff' -sf '#FFFFFF' -nb '#262626' -i -fn 'VL PGothic-11.5' -l 10 -w 0 -p 'Jump to:'
 
 # Todo list
-bindsym $mod+Shift+t exec --no-startup-id ~/.scripts/dmenu/todo.sh
+# bindsym $mod+Shift+t exec --no-startup-id ~/.scripts/dmenu/todo.sh
 
 # Translate a word 
-bindsym $mod+Shift+s exec --no-startup-id ~/.scripts/dmenu/translate.sh
+# bindsym $mod+Shift+s exec --no-startup-id ~/.scripts/dmenu/translate.sh
 
 # Shutdown computer
 bindsym $mod+Shift+q exec --no-startup-id ~/.scripts/dmenu/confirm.sh "Shutdown?" "shutdown -h now"
@@ -178,11 +181,26 @@ bindsym $mod+less exec --no-startup-id playerctl previous
 # Lock screen
 bindsym --release $mod+x exec --no-startup-id slock
 
-# Scratchpads
+# Screenshots
+bindsym $mod+Shift+s exec --no-startup-id flameshot gui
 
-bindsym $mod+Shift+o exec ~/.scripts/i3/scratchpads/scratchpad.sh 'scratch-signal' 'signal-desktop'
+#====================================================================================#
+# ================================= Scratchpads =====================================#
+#====================================================================================#
+
+# Signal
+bindsym $mod+s exec ~/.scripts/i3/scratchpads/scratchpad.sh 'scratch-signal' 'signal-desktop'
+
+# rNote
+bindsym $mod+r exec ~/.scripts/i3/scratchpads/scratchpad.sh 'scratch-rnote' 'rnote ~/Documents/rNote/main-notes.rnote'
+
+# Calculator (python)
 bindsym $mod+c exec ~/.scripts/i3/scratchpads/scratchpad.sh 'scratch-python' 'alacritty -e python3'
+
+# Terminal (+tabbed)
 bindsym $mod+w exec ~/.scripts/i3/scratchpads/scratchpad.sh 'scratch-terminal' "tabbed -r 2 -t '#AF87FF' -o '#26292c' alacritty --embed ''"
+
+# Music (ncspot)
 bindsym $mod+n exec ~/.scripts/i3/scratchpads/scratchpad.sh 'scratch-ncspot' 'alacritty -e ncspot'
 
 #====================================================================================#
