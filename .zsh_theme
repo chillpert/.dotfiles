@@ -1,6 +1,8 @@
-source /usr/lib/zsh-git-prompt/zshrc.sh
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
 
 setopt prompt_subst
 precmd() { print -rP '%{$reset_color%} %F{15} %F{15}%~/%{$reset_color%}' }
 export PROMPT=' %{$reset_color%}%F{141}❯ %{$reset_color%}'
-RPROMPT='%{$reset_color%}$(git_super_status)%{$reset_color%}'
+RPROMPT='%{$reset_color%}$(parse_git_branch)%{$reset_color%}'
