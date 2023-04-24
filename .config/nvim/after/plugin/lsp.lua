@@ -44,14 +44,12 @@ cmp.setup({
         format = lspkind.cmp_format({
             mode = 'symbol_text',
             maxwidth = 50,
-
             menu = {
                 buffer = '[buf]',
                 nvim_lsp = '[lsp]',
                 vsnip = '[snip]',
                 path = '[path]',
             },
-
             before = function(entry, vim_item)
                 return vim_item
             end
@@ -94,7 +92,6 @@ cmp.setup({
                 fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
             end
         end, { 'i', 's' }),
-
         ['<C-k>'] = cmp.mapping(function()
             if cmp.visible() then
                 cmp.select_prev_item()
@@ -109,7 +106,7 @@ cmp.setup({
         { name = 'vsnip' },
         -- { name = 'nvim_lsp_document_symbol' }, -- Obsoleted by <leader>s
         { name = 'nvim_lsp_signature_help' },
-        { name = 'buffer', keyword_length = 5, max_item_count = 5 }, -- only display buffer sources after 5 characters
+        { name = 'buffer',                 keyword_length = 5, max_item_count = 5 }, -- only display buffer sources after 5 characters
         { name = 'path' },
     })
 })
@@ -121,7 +118,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 require 'lspconfig'.bashls.setup {}
 
 -- Lua
-require 'lspconfig'.sumneko_lua.setup {
+require 'lspconfig'.lua_ls.setup {
     settings = {
         Lua = {
             diagnostics = {
@@ -197,7 +194,6 @@ require 'clangd_extensions'.setup {
                 statement = "",
                 ["template argument"] = "",
             },
-
             kind_icons = {
                 Compound = "",
                 Recovery = "",
@@ -207,7 +203,6 @@ require 'clangd_extensions'.setup {
                 TemplateTemplateParm = "",
                 TemplateParamObject = "",
             },
-
             highlights = {
                 detail = "Comment",
             },
