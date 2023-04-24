@@ -62,7 +62,7 @@ gwa() {
 
 # For dotfiles
 config() {
-	pacman -Qqe > .packages
+	pacman -Qqe > ~/.packages
 	/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME "$@"
 }
 
@@ -103,6 +103,7 @@ ue() {
 
         else
             notify-send --hint="int:success:0" --app-name="UE" "none" "Failed to copmile ${PWD##*/}"
+            return 1
         fi
     # Run project files generation, create a symlink for the compile database and fix-up the compile database
 	elif [[ "$1" == "gen" ]]; then
