@@ -21,7 +21,8 @@ set_from_resource $background_color tabbed.normal_background #000000
 # Map wacom pen to left screen
 exec_always xsetwacom --set "Wacom One by Wacom M Pen stylus" MapToOutput HEAD-0
 
-exec_always --no-startup-id picom &
+exec_always --no-startup-id picom --experimental-backend &
+# exec_always --no-startup-id picom &
 
 exec --no-startup-id fcitx5 -d &
 
@@ -241,8 +242,13 @@ workspace_auto_back_and_forth yes
 # On start up, load noisetorch (@NOTE: Noisetorch has been compromised)
 # exec --no-startup-id noisetorch -i alsa_input.usb-Samson_Technologies_Samson_GoMic-00.analog-stereo
 
-# gaps inner 4
-# gaps outer 12
+gaps inner 4
+gaps outer 4
+
+# You can also use any non-zero value if you'd like to have a border
+for_window [class=".*"] border pixel 0
+# border_radius 5
+for_window [floating] border pixel 5
 
 #====================================================================================#
 # ================================== Commands =======================================#
@@ -255,5 +261,6 @@ for_window [instance="origin.exe"] floating enable
 exec_always --no-startup-id "feh --bg-scale --auto-reload --no-xinerama --randomize ~/Pictures/Wallpapers"
 
 assign [class="UnrealEditor"] $ws1
+assign [class="discord"] $ws6
 
 for_window [class="Yad" title="yad-calendar"] floating enable move left 756px, move up 440px
