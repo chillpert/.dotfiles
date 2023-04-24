@@ -10,7 +10,7 @@ I3_MARK=${1}
 LAUNCH_CMD=${2}
 
 scratchpad_show() {
-    i3-msg "[con_mark=${I3_MARK}]" scratchpad show, move position 60px 460px, resize set 1800 1000
+    i3-msg "[con_mark=${I3_MARK}]" scratchpad show, move position 170px 520px, resize set 1600 900
 }
 
 # try showing the scratchpad window
@@ -26,7 +26,7 @@ if ! scratchpad_show; then
     # Set a mark
     i3-msg mark ${I3_MARK}
 
-    i3-msg resize set 1800 1000
+    i3-msg resize set 1400 700
 
     # Move it to the scratchpad workspace
     i3-msg move scratchpad
