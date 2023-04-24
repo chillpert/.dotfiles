@@ -65,6 +65,7 @@ config() {
 	pacman -Qqe > ~/.packages
 	/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME "$@"
 }
+alias conf="config"
 
 alias vim="nvim"
 alias nv="nvim"

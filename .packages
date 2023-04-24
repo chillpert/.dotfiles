@@ -1,6 +1,7 @@
 adobe-source-han-sans-jp-fonts
 adobe-source-han-serif-jp-fonts
 alacritty
+alsa-utils
 android-tools
 anki
 autoconf
@@ -12,6 +13,7 @@ bison
 bluez
 bluez-utils
 breeze-gtk
+checkupdates-with-aur
 clang
 cloc
 cmake
@@ -21,6 +23,7 @@ ctags
 debugedit
 discord
 downgrade
+droidcam
 eam-git
 efibootmgr
 element-desktop
@@ -33,6 +36,7 @@ fcitx5-mozc
 fcitx5-qt
 feh
 firefox
+flameshot
 flex
 forgit-git
 fzf
@@ -49,7 +53,11 @@ go-mtpfs-git
 gparted
 groff
 grub
+gwe
 htop
+hunspell-de
+hunspell-en_gb
+hunspell-en_us
 i3-wm
 imagemagick
 j4-dmenu-desktop
@@ -69,6 +77,7 @@ m4
 make
 man-db
 mangohud
+microsoft-edge-beta-bin
 mon2cam-git
 mpv
 mtools
@@ -90,7 +99,7 @@ os-prober
 pacman-contrib
 paru
 patch
-picom
+picom-jonaburg-git
 pipewire-pulse
 pkgconf
 playerctl
@@ -100,8 +109,8 @@ pulsemixer
 python-i3ipc
 python-pip
 ripgrep
+rnote
 screenkey
-scrot
 signal-desktop
 simplescreenrecorder
 slock
@@ -116,12 +125,16 @@ teamspeak3
 texinfo
 the_silver_searcher
 thunderbird
+tiramisu-git
 ttf-dejavu
 ttf-font-icons
 ttf-meslo-nerd-font-powerlevel10k
 ttf-monoid-nerd
 ttf-vlgothic
+ueberzug
+unrar
 valgrind
+virtualbox-bin
 visual-studio-code-bin
 wget
 which
@@ -143,6 +156,5 @@ zip
 zsh
 zsh-autosuggestions
 zsh-completions
-zsh-git-prompt
 zsh-history-substring-search
 zsh-syntax-highlighting
