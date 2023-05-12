@@ -3,7 +3,7 @@ adobe-source-han-serif-jp-fonts
 alacritty
 alsa-utils
 android-tools
-anki
+anki-bin
 autoconf
 automake
 base
@@ -12,6 +12,7 @@ bat
 bison
 bluez
 bluez-utils
+boost
 breeze-gtk
 checkupdates-with-aur
 clang
@@ -23,7 +24,9 @@ ctags
 debugedit
 discord
 downgrade
+doxygen
 droidcam
+dunst
 eam-git
 efibootmgr
 element-desktop
@@ -55,6 +58,7 @@ groff
 grub
 gwe
 htop
+hugo
 hunspell-de
 hunspell-en_gb
 hunspell-en_us
@@ -77,7 +81,6 @@ m4
 make
 man-db
 mangohud
-microsoft-edge-beta-bin
 mon2cam-git
 mpv
 mtools
@@ -100,11 +103,11 @@ pacman-contrib
 paru
 patch
 picom-jonaburg-git
-pipewire-pulse
 pkgconf
 playerctl
 polybar
 protonvpn-cli
+pulseaudio
 pulsemixer
 python-i3ipc
 python-pip
@@ -138,6 +141,7 @@ virtualbox-bin
 visual-studio-code-bin
 wget
 which
+wine
 xclip
 xcursor-breeze
 xdg-user-dirs

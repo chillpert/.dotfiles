@@ -1,4 +1,4 @@
-# Author: github.com/chillpert
+#  Author: github.com/chillpert
 
 # Vim mode
 bindkey -v
@@ -19,6 +19,7 @@ fi
 # Youtube aliases
 alias yt='ytfzf --detach --subs=1 --sort -l -c youtube-subscriptions'
 alias yt-mp3='yt-dlp --extract-audio --audio-format mp3'
+alias yt-mp4='yt-dlp -S res,ext:mp4:m4a --recode mp4'
 
 # Basic Unix commands aliases
 alias ls='ls --group-directories-first -F --color'
@@ -99,13 +100,13 @@ ue() {
 		cd $engine_path/Engine/Source
     elif [[ "$1" == "build" ]]; then
         $ue4cli build
-        if [ $? -eq 0 ]; then
-            notify-send --hint="int:success:1" --app-name="UE" "none" "Compiled ${PWD##*/}"
-
-        else
-            notify-send --hint="int:success:0" --app-name="UE" "none" "Failed to copmile ${PWD##*/}"
-            return 1
-        fi
+        # if [ $? -eq 0 ]; then
+        #     notify-send --hint="int:success:1" --app-name="UE" "none" "Compiled ${PWD##*/}"
+        #
+        # else
+        #     notify-send --hint="int:success:0" --app-name="UE" "none" "Failed to compile ${PWD##*/}"
+        #     return 1
+        # fi
     # Run project files generation, create a symlink for the compile database and fix-up the compile database
 	elif [[ "$1" == "gen" ]]; then
 		$ue4cli gen

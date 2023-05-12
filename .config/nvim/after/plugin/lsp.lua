@@ -220,4 +220,7 @@ require 'clangd_extensions'.setup {
 require 'lspconfig'.cmake.setup {}
 
 -- Format on buffer save
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+local f = io.open(".clang-format", "r")
+if f ~= nil and io.close(f) then
+    vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+end

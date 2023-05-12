@@ -134,9 +134,9 @@ require('packer').startup(function(use)
         end,
         config = function()
             vim.g.mkdp_browser = 'firefox'
-            vim.g.mkdp_auto_start = 1
-            vim.g.mkdp_auto_open = 1
-            vim.g.mkdp_auto_close = 1
+            -- vim.g.mkdp_auto_start = 1
+            -- vim.g.mkdp_auto_open = 1
+            -- vim.g.mkdp_auto_close = 1
         end,
 
     })

@@ -1,6 +1,7 @@
 # Set up monitors
 nvidia-settings --load-config-only &
 nvidia-settings --assign CurrentMetaMode="HDMI-0: nvidia-auto-select +1920+0 {rotation=right, ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}, DVI-D-0: nvidia-auto-select +0+420 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}"
+# nvidia-settings --assign CurrentMetaMode="HDMI-0: nvidia-auto-select +0+0 {rotation=right, ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}, DVI-D-0: nvidia-auto-select +0+420 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}"
 
 # Consistent cursor size
 xrandr --dpi 96
@@ -10,6 +11,8 @@ Xcursor.size: 64
 # Disable mouse acceleration (because this desktop is not for soy gamers)
 xinput --set-prop 'Kingsis Peripherals ZOWIE Gaming mouse' 'libinput Accel Profile Enabled' 0
 xinput --set-prop 'Kingsis Peripherals ZOWIE Gaming mouse' 'libinput Accel Speed' -0.5
+xinput --set-prop 'Glorious Series One PRO Wireless' 'libinput Accel Speed' -0.8
+xinput --set-prop 'Glorious Series One PRO Wireless' 'libinput Accel Profile Enabled' 0 0 0
 
 # IBus fix
 # export GTK_IM_MODULE=ibus
@@ -21,3 +24,4 @@ xinput --set-prop 'Kingsis Peripherals ZOWIE Gaming mouse' 'libinput Accel Speed
 
 # WM
 exec i3
+# exec gnome-session
