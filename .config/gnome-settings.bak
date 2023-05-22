@@ -200,6 +200,11 @@ window-state=(700, 500, 26, 482)
 col-6-visible=true
 col-6-width=0
 
+[org/gnome/login-screen]
+enable-fingerprint-authentication=true
+enable-password-authentication=true
+enable-smartcard-authentication=false
+
 [org/gnome/mutter]
 dynamic-workspaces=false
 edge-tiling=false
