@@ -1,0 +1,503 @@
+[org/fedorahosted/background-logo-extension]
+logo-always-visible=true
+logo-position='bottom-right'
+
+[org/gnome/control-center]
+last-panel='sound'
+window-state=(822, 1, true)
+
+[org/gnome/desktop/app-folders]
+folder-children=['Utilities', 'YaST', '9aa7cfa1-97b4-49e0-a0c3-1ab58ef31c75', '2d7c4dfb-3d3f-4937-b9a5-ac77a5361095', '82152f98-6c95-4c10-b83f-86121b5145b0', 'd9d7ce0d-5ff9-4cdb-9b99-b2d87f628120']
+
+[org/gnome/desktop/app-folders/folders/2d7c4dfb-3d3f-4937-b9a5-ac77a5361095]
+apps=['com.valvesoftware.Steam.desktop', 'com.teamspeak.TeamSpeak.desktop']
+name='Internet'
+
+[org/gnome/desktop/app-folders/folders/82152f98-6c95-4c10-b83f-86121b5145b0]
+apps=['com.discordapp.Discord.desktop', 'im.riot.Riot.desktop', 'org.signal.Signal.desktop']
+name='Messengers'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/9aa7cfa1-97b4-49e0-a0c3-1ab58ef31c75]
+apps=['fedora.desktop', 'dev.desktop']
+name='Terminal'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop', 'org.fedoraproject.MediaWriter.desktop', 'yelp.desktop', 'org.gnome.TextEditor.desktop', 'gnome-system-monitor.desktop', 'htop.desktop', 'org.gnome.Tour.desktop', 'nvtop.desktop', 'nvidia-settings.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Settings.desktop', 'com.mattjakeman.ExtensionManager.desktop']
+categories=['X-GNOME-Utilities']
+excluded-apps=@as []
+name='X-GNOME-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/d9d7ce0d-5ff9-4cdb-9b99-b2d87f628120]
+apps=['org.gnome.Terminal.desktop', 'io.neovim.nvim.desktop']
+name='Develop'
+translate=false
+
+[org/gnome/desktop/background]
+color-shading-type='solid'
+picture-options='spanned'
+picture-uri='file:///var/home/n30/.local/share/backgrounds/2023-05-13-16-46-41-vestrahorn.jpg'
+picture-uri-dark='file:///var/home/n30/.local/share/backgrounds/2023-05-13-16-46-41-vestrahorn.jpg'
+primary-color='#000000000000'
+secondary-color='#000000000000'
+
+[org/gnome/desktop/calendar]
+show-weekdate=false
+
+[org/gnome/desktop/input-sources]
+current=uint32 0
+mru-sources=[('xkb', 'us'), ('ibus', 'anthy')]
+sources=[('xkb', 'us'), ('ibus', 'anthy')]
+xkb-options=@as []
+
+[org/gnome/desktop/interface]
+clock-show-seconds=false
+clock-show-weekday=false
+color-scheme='prefer-dark'
+enable-animations=false
+enable-hot-corners=false
+font-antialiasing='grayscale'
+font-hinting='slight'
+locate-pointer=false
+
+[org/gnome/desktop/notifications]
+application-children=['org-gnome-software', 'gnome-power-panel', 'org-gnome-terminal', 'org-gnome-nautilus', 'org-gnome-calendar', 'org-keepassxc-keepassxc', 'org-mozilla-thunderbird', 'firefox', 'org-signal-signal', 'xdg-desktop-portal-gnome', 'org-gnome-shell-extensions', 'com-spotify-client', 'org-gnome-extensions-desktop', 'me-kozec-syncthingtk', 'com-valvesoftware-steam', 'org-gnome-boxes', 'org-gnome-dejadup', 'com-mattjakeman-extensionmanager-desktop', 'org-mozilla-firefox', 'org-gnome-terminal-preferences', 'org-gnome-music', 'gnome-network-panel']
+
+[org/gnome/desktop/notifications/application/com-mattjakeman-extensionmanager-desktop]
+application-id='com.mattjakeman.ExtensionManager.desktop.desktop'
+
+[org/gnome/desktop/notifications/application/com-spotify-client]
+application-id='com.spotify.Client.desktop'
+
+[org/gnome/desktop/notifications/application/com-valvesoftware-steam]
+application-id='com.valvesoftware.Steam.desktop'
+
+[org/gnome/desktop/notifications/application/firefox]
+application-id='firefox.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-network-panel]
+application-id='gnome-network-panel.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
+
+[org/gnome/desktop/notifications/application/me-kozec-syncthingtk]
+application-id='me.kozec.syncthingtk.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-boxes]
+application-id='org.gnome.Boxes.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-calendar]
+application-id='org.gnome.Calendar.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-dejadup]
+application-id='org.gnome.DejaDup.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-extensions-desktop]
+application-id='org.gnome.Extensions.desktop.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-music]
+application-id='org.gnome.Music.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-shell-extensions]
+application-id='org.gnome.Shell.Extensions.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-terminal-preferences]
+application-id='org.gnome.Terminal.Preferences.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-terminal]
+application-id='org.gnome.Terminal.desktop'
+
+[org/gnome/desktop/notifications/application/org-keepassxc-keepassxc]
+application-id='org.keepassxc.KeePassXC.desktop'
+
+[org/gnome/desktop/notifications/application/org-mozilla-firefox]
+application-id='org.mozilla.firefox.desktop'
+
+[org/gnome/desktop/notifications/application/org-mozilla-thunderbird]
+application-id='org.mozilla.Thunderbird.desktop'
+
+[org/gnome/desktop/notifications/application/org-signal-signal]
+application-id='org.signal.Signal.desktop'
+
+[org/gnome/desktop/notifications/application/xdg-desktop-portal-gnome]
+application-id='xdg-desktop-portal-gnome.desktop'
+
+[org/gnome/desktop/peripherals/touchpad]
+two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/privacy]
+report-technical-problems=true
+
+[org/gnome/desktop/screensaver]
+color-shading-type='solid'
+picture-options='spanned'
+picture-uri='file:///var/home/n30/.local/share/backgrounds/2023-05-13-16-46-41-vestrahorn.jpg'
+primary-color='#000000000000'
+secondary-color='#000000000000'
+
+[org/gnome/desktop/search-providers]
+disabled=['firefox.desktop', 'org.gnome.Settings.desktop', 'org.gnome.Software.desktop', 'org.gnome.Nautilus.desktop']
+sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
+
+[org/gnome/desktop/wm/keybindings]
+close=['<Super>q']
+move-to-monitor-left=['<Shift><Super>h']
+move-to-monitor-right=['<Shift><Super>l']
+move-to-workspace-1=['<Super><Shift>1']
+move-to-workspace-10=['<Super><Shift>0']
+move-to-workspace-2=['<Super><Shift>2']
+move-to-workspace-3=['<Super><Shift>3']
+move-to-workspace-4=['<Super><Shift>4']
+move-to-workspace-5=['<Super><Shift>5']
+move-to-workspace-6=['<Super><Shift>6']
+move-to-workspace-7=['<Super><Shift>7']
+move-to-workspace-8=['<Super><Shift>8']
+move-to-workspace-9=['<Super><Shift>9']
+show-desktop=['<Shift><Super>d']
+switch-to-workspace-1=['<Super>1']
+switch-to-workspace-2=['<Super>2']
+switch-to-workspace-3=['<Super>3']
+switch-to-workspace-4=['<Super>4']
+switch-to-workspace-5=['<Super>5']
+switch-to-workspace-6=['<Super>6']
+switch-to-workspace-7=['<Super>7']
+switch-to-workspace-8=['<Super>8']
+switch-to-workspace-9=['<Super>9']
+switch-to-workspace-last=@as []
+toggle-fullscreen=['<Shift><Super>f']
+toggle-maximized=['<Super>f']
+
+[org/gnome/desktop/wm/preferences]
+button-layout='appmenu:close'
+num-workspaces=8
+workspace-names=['💻', '💻', '🦊', '☎️', '📒', '📫', '🎮', '🎸', '', '']
+
+[org/gnome/evolution-data-server]
+migrated=true
+
+[org/gnome/gnome-system-monitor]
+maximized=false
+network-total-in-bits=false
+show-dependencies=false
+show-whose-processes='user'
+window-state=(700, 500, 26, 482)
+
+[org/gnome/gnome-system-monitor/disktreenew]
+col-6-visible=true
+col-6-width=0
+
+[org/gnome/mutter]
+dynamic-workspaces=false
+edge-tiling=false
+overlay-key='Super_R'
+workspaces-only-on-primary=true
+
+[org/gnome/mutter/keybindings]
+toggle-tiled-left=['']
+toggle-tiled-right=['']
+
+[org/gnome/mutter/wayland/keybindings]
+restore-shortcuts=['']
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='list-view'
+migrated-gtk-settings=true
+search-filter-time-type='last_modified'
+search-view='list-view'
+
+[org/gnome/nautilus/window-state]
+initial-size=(1060, 786)
+maximized=true
+
+[org/gnome/portal/filechooser/com.discordapp.Discord]
+last-folder-path='/var/home/n30/Videos'
+
+[org/gnome/portal/filechooser/com.github.flxzt.rnote]
+last-folder-path='/var/home/n30/Documents'
+
+[org/gnome/portal/filechooser/com.obsproject.Studio]
+last-folder-path='/var/home/n30/Videos'
+
+[org/gnome/portal/filechooser/com.spotify.Client]
+last-folder-path='/var/home/n30/Syncthing'
+
+[org/gnome/portal/filechooser/com.valvesoftware.Steam]
+last-folder-path='/var/mnt/data/SteamLibrary'
+
+[org/gnome/portal/filechooser/net.ankiweb.Anki]
+last-folder-path='/var/home/n30/Downloads'
+
+[org/gnome/portal/filechooser/org.gnome.DejaDup]
+last-folder-path='/var/mnt/data/backups'
+
+[org/gnome/portal/filechooser/org.gnome.Evince]
+last-folder-path='/var/mnt/data/backups/Documents/Tabs/Anime Soundtracks & Openings'
+
+[org/gnome/portal/filechooser/org.keepassxc.KeePassXC]
+last-folder-path='/var/mnt/data/backups/Documents/Passwords'
+
+[org/gnome/portal/filechooser/org.mozilla.firefox]
+last-folder-path='/var/mnt/data/backups/before_moving_to_silverblue/Documents'
+
+[org/gnome/settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+help=@as []
+home=['<Super>e']
+logout=['<Shift><Super>e']
+mic-mute=['<Super>m']
+next=['<Super>period']
+play=['<Super>slash']
+previous=['<Super>comma']
+screensaver=['<Super>x']
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Shift><Super>Return'
+command='gnome-terminal'
+name='Vanilla Terminal'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Super>Return'
+command='gnome-terminal -- distrobox enter dev -- zsh'
+name='Dev Terminal'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
+binding='<Shift><Super>s'
+command='flatpak run org.flameshot.Flameshot gui'
+name='Flameshot'
+
+[org/gnome/shell]
+app-picker-layout=[{'d9d7ce0d-5ff9-4cdb-9b99-b2d87f628120': <{'position': <0>}>, 'Utilities': <{'position': <1>}>, '2d7c4dfb-3d3f-4937-b9a5-ac77a5361095': <{'position': <2>}>, '82152f98-6c95-4c10-b83f-86121b5145b0': <{'position': <3>}>, 'me.kozec.syncthingtk.desktop': <{'position': <4>}>, 'org.gnome.Boxes.desktop': <{'position': <5>}>, 'org.keepassxc.KeePassXC.desktop': <{'position': <6>}>, 'net.ankiweb.Anki.desktop': <{'position': <7>}>, 'io.mpv.Mpv.desktop': <{'position': <8>}>, 'com.github.flxzt.rnote.desktop': <{'position': <9>}>, 'org.gnome.Calendar.desktop': <{'position': <10>}>, 'org.gnome.Software.desktop': <{'position': <11>}>, 'com.spotify.Client.desktop': <{'position': <12>}>}]
+disable-user-extensions=false
+disabled-extensions=['mousefollowsfocus@matthes.biz', 'activitiesworkspacename@ahmafi.ir', 'space-bar@luchrioh', 'no-overview@fthx', 'impatience@gfxmonk.net', 'gnome-one-window-wonderland@jqno.nl', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'pop-shell@system76.com', 'forge@jmmaranan.com', 'overviewbackground@github.com.orbitcorrection', 'transparent-top-bar@ftpix.com', 'trayIconsReloaded@selfmade.pl', 'vim-altTab@kokong.info', 'Hide_Activities@shay.shayel.org', 'BingWallpaper@ineffable-gmail.com', 'background-logo@fedorahosted.org']
+enabled-extensions=['material-shell@papyelgringo', 'focus-follows-workspace@christopher.luebbemeier.gmail.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'workspaces-by-open-apps@favo02.github.com', 'just-perfection-desktop@just-perfection', 'simulate-switching-workspaces-on-active-monitor@micheledaros.com', 'openweather-extension@jenslody.de', 'fullscreen-avoider@noobsai.github.com']
+favorite-apps=['firefox.desktop', 'org.mozilla.Thunderbird.desktop', 'org.gnome.Nautilus.desktop']
+last-selected-power-profile='power-saver'
+welcome-dialog-last-shown-version='44.0'
+
+[org/gnome/shell/app-switcher]
+current-workspace-only=true
+
+[org/gnome/shell/extensions/auto-move-windows]
+application-list=['org.signal.Signal.desktop:4', 'firefox.desktop:3', 'com.valvesoftware.Steam.desktop:7', 'com.spotify.Client.desktop:8', 'org.mozilla.Thunderbird.desktop:6', 'im.riot.Riot.desktop:4', 'org.mozilla.firefox.desktop:3', 'com.github.flxzt.rnote.desktop:5', 'com.discordapp.Discord.desktop:5', 'org.gnome.Music.desktop:8']
+
+[org/gnome/shell/extensions/bingwallpaper]
+bing-json='[{"startdate":"20230513","fullstartdate":"202305132200","enddate":"20230514","url":"/th?id=OHR.OdocoileusVirginianus_DE-DE3260429830_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp","urlbase":"/th?id=OHR.OdocoileusVirginianus_DE-DE3260429830","copyright":"Weißwedelhirsch-Ricke und neugeborenes Kitz, Montana, USA (© Donald M. Jones/Minden Pictures)","copyrightlink":"https://www.bing.com/search?q=Wei%C3%9Fwedelhirsch&form=hpcapt&filters=HpDate%3a%2220230513_2200%22","title":"Fröhlichen Muttertag!","quiz":"/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20230513_OdocoileusVirginianus%22&FORM=HPQUIZ","wp":true,"hsh":"657a532b74ec413f14e7b59eb30171af","drk":1,"top":1,"bot":1,"hs":[]},{"startdate":"20230514","fullstartdate":"202305142200","enddate":"20230515","url":"/th?id=OHR.MorroJable_DE-DE3676958507_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp","urlbase":"/th?id=OHR.MorroJable_DE-DE3676958507","copyright":"Morro Jable und Playa del Matorral, Fuerteventura, Kanarische Inseln, Spanien (© Gavin Hellier/Getty Images)","copyrightlink":"https://www.bing.com/search?q=Fuerteventura+Kanarische+Inseln&form=hpcapt&filters=HpDate%3a%2220230514_2200%22","title":"Eine Insel an der sich Kulturen kreuzen","quiz":"/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20230514_MorroJable%22&FORM=HPQUIZ","wp":true,"hsh":"157ae62ea0471785623dc1b45f260bb2","drk":1,"top":1,"bot":1,"hs":[]},{"startdate":"20230515","fullstartdate":"202305152200","enddate":"20230516","url":"/th?id=OHR.AmericanWetlands_DE-DE4161765877_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp","urlbase":"/th?id=OHR.AmericanWetlands_DE-DE4161765877","copyright":"Kanu-Paddeln im Okefenokee National Wildlife Refuge, Georgia, USA (© Brad Beck/Tandem Stills + Motion)","copyrightlink":"https://www.bing.com/search?q=Das+Okefenokee+National+Wildlife+Refuge+in+den+Vereinigten+Staaten&form=hpcapt&filters=HpDate%3a%2220230515_2200%22","title":"Spiegelgewässer","quiz":"/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20230515_AmericanWetlands%22&FORM=HPQUIZ","wp":true,"hsh":"259df3966eb811d8fefb34922fd26b5a","drk":1,"top":1,"bot":1,"hs":[]},{"startdate":"20230516","fullstartdate":"202305162200","enddate":"20230517","url":"/th?id=OHR.CormorantBridge_DE-DE4541774493_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp","urlbase":"/th?id=OHR.CormorantBridge_DE-DE4541774493","copyright":"Natural Bridges State Park in Santa Cruz, Kalifornien (© Jim Patterson/Tandem Stills + Motion)","copyrightlink":"https://www.bing.com/search?q=Natural+Bridges+State+Park+Kalifornien&form=hpcapt&filters=HpDate%3a%2220230516_2200%22","title":"Das Fenster zum Ozean?","quiz":"/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20230516_CormorantBridge%22&FORM=HPQUIZ","wp":true,"hsh":"a4921dcc5faffd30e217def69f6dcde6","drk":1,"top":1,"bot":1,"hs":[]},{"startdate":"20230517","fullstartdate":"202305172200","enddate":"20230518","url":"/th?id=OHR.HoopoeFathersday_DE-DE8234010695_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp","urlbase":"/th?id=OHR.HoopoeFathersday_DE-DE8234010695","copyright":"Wiedehopf füttert seine Jungen nach der Exkursion, Biosphärenreservat Mittelelbe, Sachsen-Anhalt (© imageBROKER/Martin Demmel/GettyImages)","copyrightlink":"https://www.bing.com/search?q=Wiedehopf&form=hpcapt&filters=HpDate%3a%2220230517_2200%22","title":"Vater und Sohn","quiz":"/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20230517_HoopoeFathersday%22&FORM=HPQUIZ","wp":true,"hsh":"0512efddca485956c6d6cc2d8e2c7dc3","drk":1,"top":1,"bot":1,"hs":[]},{"startdate":"20230518","fullstartdate":"202305182200","enddate":"20230519","url":"/th?id=OHR.SumatranRhino_DE-DE8687965425_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp","urlbase":"/th?id=OHR.SumatranRhino_DE-DE8687965425","copyright":"Sumatra-Nashorn, Nationalpark Way Kambas, Indonesien (© Cyril Ruoso/Minden Pictures)","copyrightlink":"https://www.bing.com/search?q=Sumatra-Nashorn&form=hpcapt&filters=HpDate%3a%2220230518_2200%22","title":"Wie können wir gefährdeten Tieren helfen?","quiz":"/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20230518_SumatranRhino%22&FORM=HPQUIZ","wp":true,"hsh":"4f06cd5a5ec0e4c3d38d3ec1f1f83dab","drk":1,"top":1,"bot":1,"hs":[]},{"startdate":"20230519","fullstartdate":"202305192200","enddate":"20230520","url":"/th?id=OHR.EuropeanHoneybee_DE-DE0450050435_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp","urlbase":"/th?id=OHR.EuropeanHoneybee_DE-DE0450050435","copyright":"Europäische Honigbienen in Sheffield, England (© Deborah Vernon/Alamy)","copyrightlink":"https://www.bing.com/search?q=Honigbienen&form=hpcapt&filters=HpDate%3a%2220230519_2200%22","title":"Summ Summ Summ","quiz":"/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20230519_EuropeanHoneybee%22&FORM=HPQUIZ","wp":true,"hsh":"ba2709f335fc26287b54cf7e9a0181a0","drk":1,"top":1,"bot":1,"hs":[]},{"startdate":"20230520","fullstartdate":"202305202200","enddate":"20230521","url":"/th?id=OHR.BremenScienceMuseum_DE-DE0993762476_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp","urlbase":"/th?id=OHR.BremenScienceMuseum_DE-DE0993762476","copyright":"Universum Bremen, Science Center (© imageBROKER/Alamy Stock Photo)","copyrightlink":"https://www.bing.com/search?q=Universum+Bremen+Wikipedia&form=hpcapt&filters=HpDate%3a%2220230520_2200%22","title":"Die Zukunft ist heute","quiz":"/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20230520_BremenScienceMuseum%22&FORM=HPQUIZ","wp":false,"hsh":"133aa60eaf3cae397b4839b6b9fa7ff8","drk":1,"top":1,"bot":1,"hs":[]}]'
+download-folder='~/Pictures/BingWallpaper/'
+selected-image='current'
+state='{"maxlongdate":202305202200,"title":"Universum Bremen, Science Center","explanation":"Bing Wallpaper of the Day for 2023-05-20","copyright":"© imageBROKER/Alamy Stock Photo","longstartdate":"202305202200","imageinfolink":"https://www.bing.com/search?q=Universum+Bremen+Wikipedia&form=hpcapt&filters=HpDate%3a%2220230520_2200%22","imageURL":"https://www.bing.com/th?id=OHR.BremenScienceMuseum_DE-DE0993762476_UHD.jpg","filename":"/var/home/n30/Pictures/BingWallpaper/20230520-BremenScienceMuseum_DE-DE0993762476_UHD.jpg","favourite":false}'
+
+[org/gnome/shell/extensions/forge]
+auto-split-enabled=true
+css-last-update=uint32 37
+dnd-center-layout='tabbed'
+float-always-on-top-enabled=true
+focus-border-toggle=false
+preview-hint-enabled=true
+stacked-tiling-mode-enabled=true
+tabbed-tiling-mode-enabled=true
+tiling-mode-enabled=true
+window-gap-hidden-on-single=false
+window-gap-size=uint32 2
+workspace-skip-tile='7'
+
+[org/gnome/shell/extensions/just-perfection]
+accessibility-menu=true
+activities-button=false
+activities-button-icon-monochrome=true
+animation=0
+app-menu=false
+app-menu-icon=true
+app-menu-label=true
+background-menu=true
+clock-menu=true
+clock-menu-position=0
+controls-manager-spacing-size=0
+dash=true
+dash-icon-size=0
+double-super-to-appgrid=false
+gesture=true
+hot-corner=false
+keyboard-layout=true
+osd=true
+panel=true
+panel-arrow=true
+panel-corner-size=0
+panel-in-overview=true
+panel-notification-icon=true
+power-icon=true
+quick-settings=true
+ripple-box=true
+search=true
+show-apps-button=true
+startup-status=0
+switcher-popup-delay=false
+theme=false
+top-panel-position=0
+weather=true
+window-demands-attention-focus=false
+window-menu-take-screenshot-button=true
+window-picker-icon=true
+window-preview-caption=true
+window-preview-close-button=true
+workspace=true
+workspace-background-corner-size=0
+workspace-popup=true
+workspace-switcher-should-show=false
+workspaces-in-app-grid=true
+world-clock=true
+
+[org/gnome/shell/extensions/materialshell/layouts]
+default-layout='half'
+
+[org/gnome/shell/extensions/materialshell/theme]
+blur-background=false
+focus-effect='border'
+panel-opacity=102
+
+[org/gnome/shell/extensions/one-window-wonderland]
+gap-size=10
+
+[org/gnome/shell/extensions/openweather]
+center-forecast=true
+city='50.7213643,10.4510467>Schmalkalden, Landkreis Schmalkalden-Meiningen, Thüringen, 98574, Deutschland>0'
+days-forecast=4
+expand-forecast=true
+menu-alignment=73.295454545454547
+position-in-panel='right'
+position-index=0
+show-comment-in-forecast=true
+show-comment-in-panel=false
+show-text-in-panel=true
+translate-condition=false
+use-system-icons=true
+wind-direction=false
+
+[org/gnome/shell/extensions/pop-shell]
+active-hint=true
+active-hint-border-radius=uint32 13
+gap-inner=uint32 2
+gap-outer=uint32 2
+smart-gaps=true
+tile-by-default=true
+toggle-stacking=@as []
+toggle-stacking-global=@as []
+
+[org/gnome/shell/extensions/space-bar/behavior]
+position='left'
+smart-workspace-names=false
+
+[org/gnome/shell/extensions/space-bar/shortcuts]
+enable-move-to-workspace-shortcuts=true
+
+[org/gnome/shell/extensions/space-bar/state]
+workspace-names-map='{"org.gnome.Shell.Extensions":["1"],"gnome-extensions-app":["1"]}'
+
+[org/gnome/shell/extensions/trayIconsReloaded]
+icon-size=20
+
+[org/gnome/shell/extensions/workspaces-indicator-by-open-apps]
+apps-on-all-workspaces-indicator='R'
+panel-position='LEFT'
+reduce-inactive-apps-opacity=true
+round-indicators-border=false
+show-focused-app-indicator=false
+show-workspace-index=true
+
+[org/gnome/shell/keybindings]
+focus-active-notification=['<Super>n']
+switch-to-application-1=@as []
+switch-to-application-2=@as []
+switch-to-application-3=@as []
+switch-to-application-4=@as []
+switch-to-application-5=['']
+switch-to-application-6=['']
+switch-to-application-7=['']
+switch-to-application-8=['']
+switch-to-application-9=['']
+toggle-application-view=['<Super>a']
+toggle-message-tray=['<Shift><Super>n']
+toggle-overview=['<Super>d']
+
+[org/gnome/shell/weather]
+automatic-location=true
+locations=[<(uint32 2, <('Berlin', 'EDDT', true, [(0.91746141594945008, 0.23241968454167572)], [(0.91658875132345297, 0.23387411976724018)])>)>]
+
+[org/gnome/software]
+check-timestamp=int64 1684743250
+first-run=false
+flatpak-purge-timestamp=int64 1684750387
+update-notification-timestamp=int64 1683972246
+
+[org/gnome/system/location]
+enabled=false
+
+[org/gnome/terminal/legacy]
+theme-variant='dark'
+
+[org/gnome/terminal/legacy/keybindings]
+close-tab='<Primary>q'
+move-tab-left='disabled'
+move-tab-right='disabled'
+new-tab='<Primary><Shift>Return'
+next-tab='<Primary><Shift>l'
+prev-tab='<Primary><Shift>h'
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+audible-bell=false
+bold-is-bright=true
+default-size-columns=130
+default-size-rows=45
+font='DejaVuSansM Nerd Font Mono 11'
+palette=['rgb(23,20,33)', 'rgb(192,28,40)', 'rgb(38,162,105)', 'rgb(162,115,76)', 'rgb(18,72,139)', 'rgb(163,71,186)', 'rgb(42,161,179)', 'rgb(208,207,204)', 'rgb(94,92,100)', 'rgb(246,97,81)', 'rgb(51,209,122)', 'rgb(233,173,12)', 'rgb(42,123,222)', 'rgb(192,97,203)', 'rgb(51,199,222)', 'rgb(255,255,255)']
+use-system-font=false
+use-theme-colors=true
+visible-name='Default'
+
+[org/gnome/tweaks]
+show-extensions-notice=false
+
+[org/gtk/gtk4/settings/color-chooser]
+custom-colors=[(1.0, 0.96470588445663452, 0.42352941632270813, 1.0), (0.70588237047195435, 0.65490198135375977, 0.83921569585800171, 1.0), (0.9686274528503418, 0.63529413938522339, 0.16862745583057404, 1.0), (0.066666670143604279, 0.78039216995239258, 0.87843137979507446, 1.0), (0.92549020051956177, 0.36862745881080627, 0.36862745881080627, 1.0)]
+selected-color=(true, 1.0, 0.96470588445663452, 0.42352941632270813, 1.0)
+
+[org/gtk/gtk4/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=140
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+view-type='list'
+window-size=(859, 754)
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=true
+show-size-column=true
+show-type-column=true
+sidebar-width=157
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+window-position=(281, 580)
+window-size=(1231, 902)
