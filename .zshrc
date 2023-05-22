@@ -41,7 +41,7 @@ alias gl='git log -30 -a --graph --decorate --oneline'
 alias gr='git reset'
 alias gp='git pull'
 
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias config='dconf dump / > .config/gnome-settings.bak && /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Package manager aliases
 alias paru-S="paru -Slq | fzf --multi --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk \"{print \$2}\")' | xargs -ro paru -S"

@@ -29,3 +29,4 @@ unset rc
 alias db="distrobox"
 alias dev="distrobox enter dev -- zsh"
 alias nvim="flatpak run io.neovim.nvim"
+alias config='dconf dump / > .config/gnome-settings.bak && /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
