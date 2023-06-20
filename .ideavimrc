@@ -1,0 +1,72 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+" Space is leader
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Use relative line numbers and use the actual line number for the cursor line
+set relativenumber true
+set number
+
+" Fix clipboard
+set clipboard+=unnamed
+set clipboard+=ideaput 
+
+" Better search
+set smartcase
+
+" My personal maps from nvim
+nmap gcc <Action>(CommentByLineComment)
+nmap <leader>a <Action>(SearchEverywhere)
+nmap <leader>f <Action>(ActivateProjectToolWindow)
+nmap <leader>ca <Action>(ShowIntentionActions)
+nmap <leader>rn <Action>(RenameElement)
+nmap <leader>gs <Action>(SwitchHeaderSource)
+" nmap <leader>s <Action>(GotoSymbol)
+
+" Keep cursor centered
+nmap <C-d> <C-d>zz
+nmap <C-u> <C-u>zz
+
+" Center search results
+nmap n nzz
+nmap N Nzz
+
+keymap("n", "n", "nzz", opts)
+keymap("n", "N", "Nzz", opts)
+
+keymap("n", "<C-u>", "<C-u>zz", opts)
+nmap <leader>s <Action>(ActivateStructureToolWindow)
+nmap <leader>b <Action>(Switcher)
+nmap <leader>o <Action>(GotoFile)
+nmap <leader>hf <Action>(RecentFiles)
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)

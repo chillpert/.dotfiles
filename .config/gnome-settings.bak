@@ -290,7 +290,7 @@ last-folder-path='/var/home/n30/Downloads'
 last-folder-path='/var/home/n30/Pictures/Screenshots'
 
 [org/gnome/portal/filechooser/org.gnome.DejaDup]
-last-folder-path='/var/mnt/data/backups'
+last-folder-path='/var/home/n30/Downloads'
 
 [org/gnome/portal/filechooser/org.gnome.Evince]
 last-folder-path='/var/mnt/data/backups/Documents/Tabs/Anime Soundtracks & Openings'
@@ -572,7 +572,7 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-view-type='grid'
+view-type='list'
 window-size=(859, 754)
 
 [org/gtk/settings/file-chooser]
