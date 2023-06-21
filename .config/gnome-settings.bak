@@ -6,6 +6,15 @@ window-height=500
 window-is-maximized=false
 window-width=540
 
+[com/github/repsac-by/quake-mode]
+quake-mode-animation-time=0.14999999999999991
+
+[com/github/repsac-by/quake-mode/accelerators]
+quake-mode-accelerator-1=['<Super>s']
+
+[com/github/repsac-by/quake-mode/apps]
+app-1='org.signal.Signal.desktop'
+
 [org/fedorahosted/background-logo-extension]
 logo-always-visible=true
 logo-position='bottom-right'
@@ -15,7 +24,7 @@ last-panel='keyboard'
 window-state=(360, 101, true)
 
 [org/gnome/desktop/app-folders]
-folder-children=['Utilities', 'YaST', '9aa7cfa1-97b4-49e0-a0c3-1ab58ef31c75', '2d7c4dfb-3d3f-4937-b9a5-ac77a5361095', '82152f98-6c95-4c10-b83f-86121b5145b0', 'd9d7ce0d-5ff9-4cdb-9b99-b2d87f628120', '2129463b-322f-48b2-a40c-70d4942ddbc2', '215044d1-4f90-43e3-8068-4ed2fe68b949']
+folder-children=['Utilities', 'YaST', '9aa7cfa1-97b4-49e0-a0c3-1ab58ef31c75', '2d7c4dfb-3d3f-4937-b9a5-ac77a5361095', '82152f98-6c95-4c10-b83f-86121b5145b0', 'd9d7ce0d-5ff9-4cdb-9b99-b2d87f628120', '2129463b-322f-48b2-a40c-70d4942ddbc2', '215044d1-4f90-43e3-8068-4ed2fe68b949', '919a057d-b80e-4b7d-b170-34ac07a19084', '9189d724-07ea-47b9-a0e4-142881c46036', '9bfd4ded-e00e-4352-b7bc-abdfaba4cced']
 
 [org/gnome/desktop/app-folders/folders/2129463b-322f-48b2-a40c-70d4942ddbc2]
 apps=['nvidia-settings.desktop', 'nvtop.desktop']
@@ -23,13 +32,13 @@ name='Nvidia'
 translate=false
 
 [org/gnome/desktop/app-folders/folders/215044d1-4f90-43e3-8068-4ed2fe68b949]
-apps=['org.flameshot.Flameshot.desktop', 'io.exodus.Exodus.desktop', 'htop.desktop', 'me.kozec.syncthingtk.desktop', 'io.mpv.Mpv.desktop']
+apps=['org.flameshot.Flameshot.desktop', 'io.exodus.Exodus.desktop', 'htop.desktop', 'me.kozec.syncthingtk.desktop', 'org.keepassxc.KeePassXC.desktop', 'com.protonvpn.www.desktop', 'com.obsproject.Studio.desktop', 'net.ankiweb.Anki.desktop', 'org.gnome.Boxes.desktop']
 name='Misc'
 translate=false
 
 [org/gnome/desktop/app-folders/folders/2d7c4dfb-3d3f-4937-b9a5-ac77a5361095]
 apps=['com.valvesoftware.Steam.desktop', 'com.teamspeak.TeamSpeak.desktop']
-name='Games'
+name='Gaming'
 translate=false
 
 [org/gnome/desktop/app-folders/folders/82152f98-6c95-4c10-b83f-86121b5145b0]
@@ -37,13 +46,26 @@ apps=['com.discordapp.Discord.desktop', 'im.riot.Riot.desktop', 'org.signal.Sign
 name='Messengers'
 translate=false
 
+[org/gnome/desktop/app-folders/folders/9189d724-07ea-47b9-a0e4-142881c46036]
+apps=['com.spotify.Client.desktop', 'org.gnome.Music.desktop', 'io.mpv.Mpv.desktop']
+name='Sound & Video'
+
+[org/gnome/desktop/app-folders/folders/919a057d-b80e-4b7d-b170-34ac07a19084]
+apps=['org.libreoffice.LibreOffice.writer.desktop', 'com.github.flxzt.rnote.desktop', 'org.kde.krita.desktop', 'net.xmind.XMind.desktop', 'org.libreoffice.LibreOffice.desktop', 'org.libreoffice.LibreOffice.base.desktop', 'org.libreoffice.LibreOffice.calc.desktop', 'org.libreoffice.LibreOffice.draw.desktop', 'org.libreoffice.LibreOffice.impress.desktop', 'org.libreoffice.LibreOffice.math.desktop', 'org.gnome.gedit.desktop']
+name='Create'
+translate=false
+
 [org/gnome/desktop/app-folders/folders/9aa7cfa1-97b4-49e0-a0c3-1ab58ef31c75]
 apps=['fedora.desktop', 'dev.desktop']
 name='Terminal'
 translate=false
 
+[org/gnome/desktop/app-folders/folders/9bfd4ded-e00e-4352-b7bc-abdfaba4cced]
+apps=['firefox.desktop', 'org.mozilla.Thunderbird.desktop']
+name='Internet'
+
 [org/gnome/desktop/app-folders/folders/Utilities]
-apps=['org.gnome.baobab.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'yelp.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Tour.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Settings.desktop', 'com.mattjakeman.ExtensionManager.desktop', 'org.gnome.Logs.desktop']
+apps=['org.gnome.baobab.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'yelp.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Tour.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Settings.desktop', 'com.mattjakeman.ExtensionManager.desktop', 'org.gnome.Logs.desktop', 'ca.desrt.dconf-editor.desktop']
 categories=['X-GNOME-Utilities']
 excluded-apps=['io.github.trigg.discover_overlay.configure.desktop', 'nvtop.desktop', 'nvidia-settings.desktop', 'htop.desktop']
 name='X-GNOME-Utilities.directory'
@@ -62,8 +84,8 @@ translate=false
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///var/home/n30/.local/share/backgrounds/2023-05-13-16-46-41-vestrahorn.jpg'
-picture-uri-dark='file:///var/home/n30/.local/share/backgrounds/2023-05-13-16-46-41-vestrahorn.jpg'
+picture-uri='file:///var/home/n30/Firefox_wallpaper.png'
+picture-uri-dark='file:///var/home/n30/Firefox_wallpaper.png'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -85,6 +107,7 @@ enable-hot-corners=false
 font-antialiasing='grayscale'
 font-hinting='slight'
 locate-pointer=false
+monospace-font-name='Monospace 10'
 
 [org/gnome/desktop/notifications]
 application-children=['org-gnome-software', 'gnome-power-panel', 'org-gnome-terminal', 'org-gnome-nautilus', 'org-gnome-calendar', 'org-keepassxc-keepassxc', 'org-mozilla-thunderbird', 'firefox', 'org-signal-signal', 'xdg-desktop-portal-gnome', 'org-gnome-shell-extensions', 'com-spotify-client', 'org-gnome-extensions-desktop', 'me-kozec-syncthingtk', 'com-valvesoftware-steam', 'org-gnome-boxes', 'org-gnome-dejadup', 'com-mattjakeman-extensionmanager-desktop', 'org-mozilla-firefox', 'org-gnome-terminal-preferences', 'org-gnome-music', 'gnome-network-panel', 'net-ankiweb-anki', 'org-gnome-settings', 'jetbrains-rider', 'com-discordapp-discord']
@@ -235,6 +258,11 @@ window-state=(700, 500, 26, 482)
 col-6-visible=true
 col-6-width=0
 
+[org/gnome/login-screen]
+enable-fingerprint-authentication=false
+enable-password-authentication=true
+enable-smartcard-authentication=false
+
 [org/gnome/mutter]
 dynamic-workspaces=false
 edge-tiling=true
@@ -250,6 +278,7 @@ restore-shortcuts=['']
 
 [org/gnome/nautilus/icon-view]
 captions=['size', 'date_modified', 'starred']
+default-zoom-level='small'
 
 [org/gnome/nautilus/list-view]
 default-zoom-level='small'
@@ -259,7 +288,7 @@ use-tree-view=true
 default-folder-viewer='list-view'
 migrated-gtk-settings=true
 search-filter-time-type='last_modified'
-search-view='icon-view'
+search-view='list-view'
 
 [org/gnome/nautilus/window-state]
 initial-size=(816, 542)
@@ -290,7 +319,7 @@ last-folder-path='/var/home/n30/Downloads'
 last-folder-path='/var/home/n30/Pictures/Screenshots'
 
 [org/gnome/portal/filechooser/org.gnome.DejaDup]
-last-folder-path='/var/home/n30/Downloads'
+last-folder-path='/var/home/n30/.local/share/fonts'
 
 [org/gnome/portal/filechooser/org.gnome.Evince]
 last-folder-path='/var/mnt/data/backups/Documents/Tabs/Anime Soundtracks & Openings'
@@ -325,7 +354,7 @@ name='Vanilla Terminal'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
 binding='<Super>Return'
-command='gnome-terminal -- distrobox enter dev -- zsh'
+command='gnome-terminal --profile=Dev'
 name='Dev Terminal'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
@@ -334,11 +363,11 @@ command='flatpak run org.flameshot.Flameshot gui'
 name='Flameshot'
 
 [org/gnome/shell]
-app-picker-layout=[{'d9d7ce0d-5ff9-4cdb-9b99-b2d87f628120': <{'position': <0>}>, 'Utilities': <{'position': <1>}>, '2d7c4dfb-3d3f-4937-b9a5-ac77a5361095': <{'position': <2>}>, '82152f98-6c95-4c10-b83f-86121b5145b0': <{'position': <3>}>, '2129463b-322f-48b2-a40c-70d4942ddbc2': <{'position': <4>}>, '215044d1-4f90-43e3-8068-4ed2fe68b949': <{'position': <5>}>, 'org.gnome.Software.desktop': <{'position': <6>}>, 'org.gnome.Boxes.desktop': <{'position': <7>}>, 'org.gnome.Music.desktop': <{'position': <8>}>, 'org.keepassxc.KeePassXC.desktop': <{'position': <9>}>, 'net.ankiweb.Anki.desktop': <{'position': <10>}>, 'com.github.flxzt.rnote.desktop': <{'position': <11>}>, 'com.spotify.Client.desktop': <{'position': <12>}>, 'com.obsproject.Studio.desktop': <{'position': <13>}>, 'com.protonvpn.www.desktop': <{'position': <14>}>}]
+app-picker-layout=[{'d9d7ce0d-5ff9-4cdb-9b99-b2d87f628120': <{'position': <0>}>, 'Utilities': <{'position': <1>}>, '919a057d-b80e-4b7d-b170-34ac07a19084': <{'position': <2>}>, '2d7c4dfb-3d3f-4937-b9a5-ac77a5361095': <{'position': <3>}>, '82152f98-6c95-4c10-b83f-86121b5145b0': <{'position': <4>}>, '2129463b-322f-48b2-a40c-70d4942ddbc2': <{'position': <5>}>, '215044d1-4f90-43e3-8068-4ed2fe68b949': <{'position': <6>}>, '9189d724-07ea-47b9-a0e4-142881c46036': <{'position': <7>}>, '9bfd4ded-e00e-4352-b7bc-abdfaba4cced': <{'position': <8>}>, 'org.gnome.Software.desktop': <{'position': <9>}>}]
 disable-user-extensions=false
-disabled-extensions=['mousefollowsfocus@matthes.biz', 'activitiesworkspacename@ahmafi.ir', 'space-bar@luchrioh', 'no-overview@fthx', 'impatience@gfxmonk.net', 'gnome-one-window-wonderland@jqno.nl', 'pop-shell@system76.com', 'forge@jmmaranan.com', 'overviewbackground@github.com.orbitcorrection', 'transparent-top-bar@ftpix.com', 'vim-altTab@kokong.info', 'Hide_Activities@shay.shayel.org', 'BingWallpaper@ineffable-gmail.com', 'background-logo@fedorahosted.org', 'focus-follows-workspace@christopher.luebbemeier.gmail.com', 'smart-auto-move@khimaros.com', 'trayIconsReloaded@selfmade.pl']
+disabled-extensions=['mousefollowsfocus@matthes.biz', 'activitiesworkspacename@ahmafi.ir', 'space-bar@luchrioh', 'no-overview@fthx', 'impatience@gfxmonk.net', 'gnome-one-window-wonderland@jqno.nl', 'pop-shell@system76.com', 'forge@jmmaranan.com', 'overviewbackground@github.com.orbitcorrection', 'transparent-top-bar@ftpix.com', 'vim-altTab@kokong.info', 'Hide_Activities@shay.shayel.org', 'BingWallpaper@ineffable-gmail.com', 'background-logo@fedorahosted.org', 'focus-follows-workspace@christopher.luebbemeier.gmail.com', 'smart-auto-move@khimaros.com', 'trayIconsReloaded@selfmade.pl', 'quake-mode@repsac-by.github.com']
 enabled-extensions=['material-shell@papyelgringo', 'workspaces-by-open-apps@favo02.github.com', 'just-perfection-desktop@just-perfection', 'simulate-switching-workspaces-on-active-monitor@micheledaros.com', 'fullscreen-avoider@noobsai.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'openweather-extension@jenslody.de', 'unite@hardpixel.eu', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com']
-favorite-apps=['firefox.desktop', 'org.mozilla.Thunderbird.desktop', 'org.gnome.Nautilus.desktop']
+favorite-apps=['org.gnome.Nautilus.desktop']
 last-selected-power-profile='power-saver'
 welcome-dialog-last-shown-version='44.0'
 
@@ -516,9 +545,9 @@ automatic-location=true
 locations=[<(uint32 2, <('Berlin', 'EDDT', true, [(0.91746141594945008, 0.23241968454167572)], [(0.91658875132345297, 0.23387411976724018)])>)>]
 
 [org/gnome/software]
-check-timestamp=int64 1687247410
+check-timestamp=int64 1687332400
 first-run=false
-flatpak-purge-timestamp=int64 1687255007
+flatpak-purge-timestamp=int64 1687339537
 update-notification-timestamp=int64 1687075289
 
 [org/gnome/system/location]
@@ -536,15 +565,21 @@ next-tab='<Primary><Shift>l'
 prev-tab='<Primary><Shift>h'
 
 [org/gnome/terminal/legacy/profiles:]
-list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '101a3d62-e46c-4b11-8907-9e8bdf719ad5']
+default='5cb40614-9426-4630-8699-673615f5e6ff'
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '101a3d62-e46c-4b11-8907-9e8bdf719ad5', '5cb40614-9426-4630-8699-673615f5e6ff']
 
 [org/gnome/terminal/legacy/profiles:/:101a3d62-e46c-4b11-8907-9e8bdf719ad5]
 visible-name='Vanilla'
 
+[org/gnome/terminal/legacy/profiles:/:5cb40614-9426-4630-8699-673615f5e6ff]
+custom-command='distrobox-enter -n ue -- zsh'
+use-custom-command=true
+visible-name='Default'
+
 [org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 audible-bell=false
 bold-is-bright=true
-custom-command='distrobox-enter -n dev -- zsh'
+custom-command='distrobox-enter -n ue -- zsh'
 default-size-columns=130
 default-size-rows=45
 font='DejaVuSansM Nerd Font Mono 10'

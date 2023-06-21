@@ -234,11 +234,14 @@ source ~/.zsh_theme
 zstyle ':completion:*' menu select
 
 # Plugins
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
-source /usr/share/zsh/plugins/forgit-git/forgit.plugin.zsh
+# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+# source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
+# source /usr/share/zsh/plugins/forgit-git/forgit.plugin.zsh
+
+source ~/.antidote/antidote.zsh
+antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
@@ -249,8 +252,8 @@ HISTSIZE=2000
 HISTFILE=~/.zsh_history
 
 # FZF
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/shell/key-bindings.zsh
+# source /usr/share/fzf/shell/completion.zsh
 
 # Use silver_searcher by default
 if type ag &> /dev/null; then
@@ -261,7 +264,7 @@ fi
 export FZF_ALT_C_COMMAND="rg --files --null | xargs -0 dirname | uniq | sort -u"
 
 # Disable filthy caps lock! (requires xorg-setxkbmap)
-setxkbmap -option ctrl:nocaps
+# setxkbmap -option ctrl:nocaps
 
 # Fix for ICU UE5 mismatch
 export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
