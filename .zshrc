@@ -40,6 +40,8 @@ alias ga='git add'
 alias gl='git log -30 -a --graph --decorate --oneline'
 alias gr='git reset'
 alias gp='git pull'
+alias gwt='git worktree'
+alias grb='git rebase'
 
 alias config='dconf dump / > .config/gnome-settings.bak && /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
@@ -56,7 +58,7 @@ alias vpnd='protonvpn-cli d'
 alias pm='pulsemixer'
 alias nf='neofetch'
 
-export UE_PATH="/mnt/data/unrealengine"
+export UE_PATH="/var/home/n30/Documents/Unreal Engine/5.2.0/"
 
 # Expand ue4cli
 ue() {
@@ -233,13 +235,7 @@ source ~/.zsh_theme
 # Autocompletion with an arrow-key driven interface
 zstyle ':completion:*' menu select
 
-# Plugins
-# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-# source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
-# source /usr/share/zsh/plugins/forgit-git/forgit.plugin.zsh
-
+# Zsh Plugins
 source ~/.antidote/antidote.zsh
 antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
@@ -247,13 +243,14 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # History
-SAVEHIST=2000  
-HISTSIZE=2000
-HISTFILE=~/.zsh_history
+export SAVEHIST=2000  
+export HISTSIZE=2000
+export HISTFILE=~/.zsh_history
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
 
 # FZF
 source /usr/share/fzf/shell/key-bindings.zsh
-# source /usr/share/fzf/shell/completion.zsh
 
 # Use silver_searcher by default
 if type ag &> /dev/null; then
@@ -263,11 +260,14 @@ fi
 # Use rg by default
 export FZF_ALT_C_COMMAND="rg --files --null | xargs -0 dirname | uniq | sort -u"
 
-# Disable filthy caps lock! (requires xorg-setxkbmap)
-# setxkbmap -option ctrl:nocaps
-
 # Fix for ICU UE5 mismatch
 export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
 
 # Icons for LF
 export LF_ICONS="`cat $HOME/.config/lf/LF_ICONS`"
+
+# Helpers for flashing QMK keyboard
+alias qmk-flash-left="qmk flash -kb ferris/sweep_choc_mbuk -km chillpert -bl uf2-split-left -e CONVERT_TO=elite_pi"
+alias qmk-flash-right="qmk flash -kb ferris/sweep_choc_mbuk -km chillpert -bl uf2-split-left -e CONVERT_TO=elite_pi"
+alias qmk-compile="qmk compile -kb ferris/sweep_choc_mbuk -km chillpert"
+alias qmk-chillpert="cd ~/qmk_firmware/keyboards/ferris/keymaps/chillpert/ && nvim ."

@@ -23,6 +23,7 @@ set clipboard+=unnamed
 set clipboard+=ideaput 
 
 " Better search
+set ignorecase
 set smartcase
 
 " My personal maps from nvim
@@ -50,6 +51,9 @@ nmap <leader>s <Action>(ActivateStructureToolWindow)
 nmap <leader>b <Action>(Switcher)
 nmap <leader>o <Action>(GotoFile)
 nmap <leader>hf <Action>(RecentFiles)
+
+" Peek definitions
+map <leader>pd <Action>(QuickImplementations)
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
