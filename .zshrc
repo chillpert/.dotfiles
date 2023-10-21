@@ -22,7 +22,7 @@ alias yt-mp3='yt-dlp --extract-audio --audio-format mp3'
 alias yt-mp4='yt-dlp -S res,ext:mp4:m4a --recode mp4'
 
 # Basic Unix commands aliases
-alias ls='ls --group-directories-first -F --color'
+alias ls='ls -F --group-directories-first --color'
 alias grep='grep --color=auto'
 alias rm='rm -i'
 alias df='df -h'
@@ -30,12 +30,14 @@ alias c='clear'
 
 # Git commands aliases
 alias gs='git status'
+alias gsw='git switch'
 alias gb='git branch'
 alias gd='git diff'
 alias gf='git fetch'
 alias gc='git commit'
-alias gch='git checkout'
+alias gco='git checkout'
 alias gcp='git cherry-pick'
+alias grs='git diff --name-only | fzf --multi --preview "git diff --color {}" | xargs -I {} git restore {}'
 alias ga='git add'
 alias gl='git log -30 -a --graph --decorate --oneline'
 alias gr='git reset'
@@ -122,7 +124,6 @@ up () {
     fi
 }
 
-# Extract common file formats (by Derek Taylor)
 SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
 
@@ -134,6 +135,7 @@ function compress {
     fi
 }
 
+# Extract common file formats (by Derek Taylor)
 function extract {
 	if [ -z "$1" ]; then
         # Display usage if no parameters given
@@ -256,6 +258,10 @@ source /usr/share/fzf/shell/key-bindings.zsh
 if type ag &> /dev/null; then
     export FZF_DEFAULT_COMMAND='ag -p ~/.gitignore -g ""'
 fi
+
+export FZF_CTRL_T_OPTS="
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
 # Use rg by default
 export FZF_ALT_C_COMMAND="rg --files --null | xargs -0 dirname | uniq | sort -u"
