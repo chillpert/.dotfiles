@@ -60,7 +60,7 @@ alias vpnd='protonvpn-cli d'
 alias pm='pulsemixer'
 alias nf='neofetch'
 
-export UE_PATH="/var/home/n30/Documents/Unreal Engine/5.2.0/"
+export UE_PATH="/var/home/n30/Repos/unrealengine/"
 
 # Expand ue4cli
 ue() {
