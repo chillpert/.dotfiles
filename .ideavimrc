@@ -33,6 +33,7 @@ nmap <leader>f <Action>(ActivateProjectToolWindow)
 nmap <leader>ca <Action>(ShowIntentionActions)
 nmap <leader>rn <Action>(RenameElement)
 nmap <leader>gs <Action>(SwitchHeaderSource)
+nmap <leader>ge <Action>(ReSharperGotoNextErrorInSolution)
 " nmap <leader>s <Action>(GotoSymbol)
 
 " Keep cursor centered
