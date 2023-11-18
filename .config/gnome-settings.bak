@@ -90,12 +90,12 @@ name='Nvidia'
 translate=false
 
 [org/gnome/desktop/app-folders/folders/215044d1-4f90-43e3-8068-4ed2fe68b949]
-apps=['org.flameshot.Flameshot.desktop', 'io.exodus.Exodus.desktop', 'htop.desktop', 'me.kozec.syncthingtk.desktop', 'org.keepassxc.KeePassXC.desktop', 'com.protonvpn.www.desktop', 'com.obsproject.Studio.desktop', 'net.ankiweb.Anki.desktop', 'org.gnome.Boxes.desktop', 'org.gnome.World.PikaBackup.desktop', 'org.gnome.Calculator.desktop', 'io.freetubeapp.FreeTube.desktop', 'org.gnome.clocks.desktop']
+apps=['org.flameshot.Flameshot.desktop', 'io.exodus.Exodus.desktop', 'htop.desktop', 'me.kozec.syncthingtk.desktop', 'org.keepassxc.KeePassXC.desktop', 'com.protonvpn.www.desktop', 'com.obsproject.Studio.desktop', 'net.ankiweb.Anki.desktop', 'org.gnome.Boxes.desktop', 'org.gnome.World.PikaBackup.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.clocks.desktop']
 name='Misc'
 translate=false
 
 [org/gnome/desktop/app-folders/folders/2d7c4dfb-3d3f-4937-b9a5-ac77a5361095]
-apps=['com.valvesoftware.Steam.desktop', 'com.teamspeak.TeamSpeak.desktop', 'io.gdevs.GDLauncher.desktop']
+apps=['bazzite-arch-steam.desktop', 'bazzite-arch-net.lutris.Lutris.desktop', 'bazzite-arch-protontricks.desktop', 'bazzite-arch.desktop', 'com.usebottles.bottles.desktop', 'com.teamspeak.TeamSpeak.desktop']
 name='Gaming'
 translate=false
 
@@ -119,7 +119,7 @@ name='Terminal'
 translate=false
 
 [org/gnome/desktop/app-folders/folders/9bfd4ded-e00e-4352-b7bc-abdfaba4cced]
-apps=['firefox.desktop', 'org.mozilla.Thunderbird.desktop', 'com.microsoft.EdgeDev.desktop']
+apps=['firefox.desktop', 'org.mozilla.Thunderbird.desktop', 'com.microsoft.EdgeDev.desktop', 'io.freetubeapp.FreeTube.desktop']
 name='Internet'
 
 [org/gnome/desktop/app-folders/folders/Utilities]
@@ -135,7 +135,7 @@ name='suse-yast.directory'
 translate=true
 
 [org/gnome/desktop/app-folders/folders/d9d7ce0d-5ff9-4cdb-9b99-b2d87f628120]
-apps=['org.gnome.Terminal.desktop', 'io.neovim.nvim.desktop', 'jetbrains-rider.desktop', 'rider.desktop', 'jetbrains-toolbox.desktop', 'io.github.achetagames.epic_asset_manager.desktop', 'arch.desktop', 'ue.desktop', 'dev.desktop', 'jetbrains-rider-fedora.desktop', 'io.github.shiftey.Desktop.desktop', 'com.epicgames.UnrealEngineEditor.desktop', 'com.epicgames.UnrealEngine.desktop']
+apps=['org.gnome.Terminal.desktop', 'io.neovim.nvim.desktop', 'jetbrains-rider.desktop', 'rider.desktop', 'jetbrains-toolbox.desktop', 'io.github.achetagames.epic_asset_manager.desktop', 'arch.desktop', 'ue.desktop', 'dev.desktop', 'jetbrains-rider-fedora.desktop', 'io.github.shiftey.Desktop.desktop', 'com.epicgames.UnrealEngineEditor.desktop', 'com.epicgames.UnrealEngine.desktop', 'jetbrains-rider-8f71c15a-0275-4a21-9461-39e446b6a155.desktop', 'jetbrains-clion-nova-320784ff-a0d2-4283-b0ef-b0c8d3ec0f30.desktop', 'com.github.amezin.ddterm.desktop']
 name='Develop'
 translate=false
 
@@ -169,7 +169,7 @@ monospace-font-name='Monospace 10'
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-software', 'gnome-power-panel', 'org-gnome-terminal', 'org-gnome-nautilus', 'org-gnome-calendar', 'org-keepassxc-keepassxc', 'org-mozilla-thunderbird', 'firefox', 'org-signal-signal', 'xdg-desktop-portal-gnome', 'org-gnome-shell-extensions', 'com-spotify-client', 'org-gnome-extensions-desktop', 'me-kozec-syncthingtk', 'com-valvesoftware-steam', 'org-gnome-boxes', 'org-gnome-dejadup', 'com-mattjakeman-extensionmanager-desktop', 'org-mozilla-firefox', 'org-gnome-terminal-preferences', 'org-gnome-music', 'gnome-network-panel', 'net-ankiweb-anki', 'org-gnome-settings', 'jetbrains-rider', 'com-discordapp-discord', 'org-flameshot-flameshot', 'org-gnome-clocks', 'jetbrains-toolbox', 'io-freetubeapp-freetube', 'com-github-flxzt-rnote', 'jetbrains-rider-fedora', 'org-gnome-gedit', 'org-gnome-world-pikabackup', 'org-gnome-baobab', 'io-mpv-mpv']
+application-children=['org-gnome-software', 'gnome-power-panel', 'org-gnome-terminal', 'org-gnome-nautilus', 'org-gnome-calendar', 'org-keepassxc-keepassxc', 'org-mozilla-thunderbird', 'firefox', 'org-signal-signal', 'xdg-desktop-portal-gnome', 'org-gnome-shell-extensions', 'com-spotify-client', 'org-gnome-extensions-desktop', 'me-kozec-syncthingtk', 'com-valvesoftware-steam', 'org-gnome-boxes', 'org-gnome-dejadup', 'com-mattjakeman-extensionmanager-desktop', 'org-mozilla-firefox', 'org-gnome-terminal-preferences', 'org-gnome-music', 'gnome-network-panel', 'net-ankiweb-anki', 'org-gnome-settings', 'jetbrains-rider', 'com-discordapp-discord', 'org-flameshot-flameshot', 'org-gnome-clocks', 'jetbrains-toolbox', 'io-freetubeapp-freetube', 'com-github-flxzt-rnote', 'jetbrains-rider-fedora', 'org-gnome-gedit', 'org-gnome-world-pikabackup', 'org-gnome-baobab', 'io-mpv-mpv', 'com-usebottles-bottles']
 show-banners=true
 
 [org/gnome/desktop/notifications/application/com-discordapp-discord]
@@ -183,6 +183,9 @@ application-id='com.mattjakeman.ExtensionManager.desktop.desktop'
 
 [org/gnome/desktop/notifications/application/com-spotify-client]
 application-id='com.spotify.Client.desktop'
+
+[org/gnome/desktop/notifications/application/com-usebottles-bottles]
+application-id='com.usebottles.bottles.desktop'
 
 [org/gnome/desktop/notifications/application/com-valvesoftware-steam]
 application-id='com.valvesoftware.Steam.desktop'
@@ -354,7 +357,7 @@ col-6-visible=true
 col-6-width=0
 
 [org/gnome/login-screen]
-enable-fingerprint-authentication=false
+enable-fingerprint-authentication=true
 enable-password-authentication=true
 enable-smartcard-authentication=false
 
@@ -404,6 +407,9 @@ last-folder-path='/var/home/n30/Videos'
 
 [org/gnome/portal/filechooser/com.spotify.Client]
 last-folder-path='/var/home/n30/Syncthing'
+
+[org/gnome/portal/filechooser/com.usebottles.bottles]
+last-folder-path='/var/home/n30/Downloads/Marmortal_Fhaesirs_Pride'
 
 [org/gnome/portal/filechooser/com.valvesoftware.Steam]
 last-folder-path='/var/home/n30/Downloads/Marmortal_Fhaesirs_Pride'
@@ -495,7 +501,7 @@ name='Flameshot'
 sleep-inactive-ac-type='nothing'
 
 [org/gnome/shell]
-app-picker-layout=[{'d9d7ce0d-5ff9-4cdb-9b99-b2d87f628120': <{'position': <0>}>, 'Utilities': <{'position': <1>}>, '919a057d-b80e-4b7d-b170-34ac07a19084': <{'position': <2>}>, '2d7c4dfb-3d3f-4937-b9a5-ac77a5361095': <{'position': <3>}>, '82152f98-6c95-4c10-b83f-86121b5145b0': <{'position': <4>}>, '2129463b-322f-48b2-a40c-70d4942ddbc2': <{'position': <5>}>, '215044d1-4f90-43e3-8068-4ed2fe68b949': <{'position': <6>}>, '9189d724-07ea-47b9-a0e4-142881c46036': <{'position': <7>}>, '9bfd4ded-e00e-4352-b7bc-abdfaba4cced': <{'position': <8>}>, 'org.gnome.Software.desktop': <{'position': <9>}>, 'jetbrains-rider-8f71c15a-0275-4a21-9461-39e446b6a155.desktop': <{'position': <10>}>, 'com.github.amezin.ddterm.desktop': <{'position': <11>}>}]
+app-picker-layout=[{'d9d7ce0d-5ff9-4cdb-9b99-b2d87f628120': <{'position': <0>}>, 'Utilities': <{'position': <1>}>, '919a057d-b80e-4b7d-b170-34ac07a19084': <{'position': <2>}>, '2d7c4dfb-3d3f-4937-b9a5-ac77a5361095': <{'position': <3>}>, '82152f98-6c95-4c10-b83f-86121b5145b0': <{'position': <4>}>, '2129463b-322f-48b2-a40c-70d4942ddbc2': <{'position': <5>}>, '215044d1-4f90-43e3-8068-4ed2fe68b949': <{'position': <6>}>, '9189d724-07ea-47b9-a0e4-142881c46036': <{'position': <7>}>, '9bfd4ded-e00e-4352-b7bc-abdfaba4cced': <{'position': <8>}>, 'org.gnome.Software.desktop': <{'position': <9>}>}]
 disable-user-extensions=false
 disabled-extensions=['mousefollowsfocus@matthes.biz', 'activitiesworkspacename@ahmafi.ir', 'space-bar@luchrioh', 'no-overview@fthx', 'impatience@gfxmonk.net', 'overviewbackground@github.com.orbitcorrection', 'vim-altTab@kokong.info', 'Hide_Activities@shay.shayel.org', 'BingWallpaper@ineffable-gmail.com', 'trayIconsReloaded@selfmade.pl', 'quake-mode@repsac-by.github.com', 'this.simple-indication-of-workspaces@azate.email', 'pop-shell@system76.com', 'focus-follows-workspace@christopher.luebbemeier.gmail.com', 'pop-launcher-super-key@ManeLippert', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'weatherornot@somepaulo.github.io', 'window-list@gnome-shell-extensions.gcampax.github.com', 'background-logo@fedorahosted.org', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'transparent-top-bar@ftpix.com', 'compiz-windows-effect@hermes83.github.com']
 enabled-extensions=['material-shell@papyelgringo', 'simulate-switching-workspaces-on-active-monitor@micheledaros.com', 'fullscreen-avoider@noobsai.github.com', 'unite@hardpixel.eu', 'smart-auto-move@khimaros.com', 'openweather-extension@jenslody.de', 'appindicatorsupport@rgcjonas.gmail.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'just-perfection-desktop@just-perfection', 'workspaces-by-open-apps@favo02.github.com', 'ddterm@amezin.github.com', 'InternetSpeedMeter@alshakib.dev', 'gnome-one-window-wonderland@jqno.nl', 'forge@jmmaranan.com', 'maximize-lonely-window@MrShuster']
@@ -510,7 +516,7 @@ current-workspace-only=true
 tray-pos='right'
 
 [org/gnome/shell/extensions/auto-move-windows]
-application-list=['com.discordapp.Discord.desktop:5', 'im.riot.Riot.desktop:4', 'firefox.desktop:3', 'io.freetubeapp.FreeTube.desktop:3', 'io.github.shiftey.Desktop.desktop:2', 'jetbrains-toolbox.desktop:2', 'org.gnome.Music.desktop:8', 'jetbrains-rider-fedora.desktop:2', 'org.signal.Signal.desktop:4', 'com.spotify.Client.desktop:8', 'org.mozilla.Thunderbird.desktop:6', 'com.epicgames.UnrealEngineEditor.desktop:1', 'com.epicgames.UnrealEngine.desktop:1', 'com.epicgames.UnrealVersionSelector.desktop:1', 'com.valvesoftware.Steam.desktop:7']
+application-list=['com.discordapp.Discord.desktop:5', 'im.riot.Riot.desktop:4', 'firefox.desktop:3', 'io.freetubeapp.FreeTube.desktop:3', 'io.github.shiftey.Desktop.desktop:2', 'jetbrains-toolbox.desktop:2', 'org.gnome.Music.desktop:8', 'jetbrains-rider-fedora.desktop:2', 'org.signal.Signal.desktop:4', 'com.spotify.Client.desktop:8', 'org.mozilla.Thunderbird.desktop:6', 'com.epicgames.UnrealEngineEditor.desktop:1', 'com.epicgames.UnrealEngine.desktop:1', 'com.epicgames.UnrealVersionSelector.desktop:1', 'bazzite-arch-steam.desktop:7']
 
 [org/gnome/shell/extensions/bingwallpaper]
 bing-json='[{"startdate":"20230513","fullstartdate":"202305132200","enddate":"20230514","url":"/th?id=OHR.OdocoileusVirginianus_DE-DE3260429830_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp","urlbase":"/th?id=OHR.OdocoileusVirginianus_DE-DE3260429830","copyright":"Weißwedelhirsch-Ricke und neugeborenes Kitz, Montana, USA (© Donald M. Jones/Minden Pictures)","copyrightlink":"https://www.bing.com/search?q=Wei%C3%9Fwedelhirsch&form=hpcapt&filters=HpDate%3a%2220230513_2200%22","title":"Fröhlichen Muttertag!","quiz":"/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20230513_OdocoileusVirginianus%22&FORM=HPQUIZ","wp":true,"hsh":"657a532b74ec413f14e7b59eb30171af","drk":1,"top":1,"bot":1,"hs":[]},{"startdate":"20230514","fullstartdate":"202305142200","enddate":"20230515","url":"/th?id=OHR.MorroJable_DE-DE3676958507_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp","urlbase":"/th?id=OHR.MorroJable_DE-DE3676958507","copyright":"Morro Jable und Playa del Matorral, Fuerteventura, Kanarische Inseln, Spanien (© Gavin Hellier/Getty Images)","copyrightlink":"https://www.bing.com/search?q=Fuerteventura+Kanarische+Inseln&form=hpcapt&filters=HpDate%3a%2220230514_2200%22","title":"Eine Insel an der sich Kulturen kreuzen","quiz":"/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20230514_MorroJable%22&FORM=HPQUIZ","wp":true,"hsh":"157ae62ea0471785623dc1b45f260bb2","drk":1,"top":1,"bot":1,"hs":[]},{"startdate":"20230515","fullstartdate":"202305152200","enddate":"20230516","url":"/th?id=OHR.AmericanWetlands_DE-DE4161765877_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp","urlbase":"/th?id=OHR.AmericanWetlands_DE-DE4161765877","copyright":"Kanu-Paddeln im Okefenokee National Wildlife Refuge, Georgia, USA (© Brad Beck/Tandem Stills + Motion)","copyrightlink":"https://www.bing.com/search?q=Das+Okefenokee+National+Wildlife+Refuge+in+den+Vereinigten+Staaten&form=hpcapt&filters=HpDate%3a%2220230515_2200%22","title":"Spiegelgewässer","quiz":"/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20230515_AmericanWetlands%22&FORM=HPQUIZ","wp":true,"hsh":"259df3966eb811d8fefb34922fd26b5a","drk":1,"top":1,"bot":1,"hs":[]},{"startdate":"20230516","fullstartdate":"202305162200","enddate":"20230517","url":"/th?id=OHR.CormorantBridge_DE-DE4541774493_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp","urlbase":"/th?id=OHR.CormorantBridge_DE-DE4541774493","copyright":"Natural Bridges State Park in Santa Cruz, Kalifornien (© Jim Patterson/Tandem Stills + Motion)","copyrightlink":"https://www.bing.com/search?q=Natural+Bridges+State+Park+Kalifornien&form=hpcapt&filters=HpDate%3a%2220230516_2200%22","title":"Das Fenster zum Ozean?","quiz":"/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20230516_CormorantBridge%22&FORM=HPQUIZ","wp":true,"hsh":"a4921dcc5faffd30e217def69f6dcde6","drk":1,"top":1,"bot":1,"hs":[]},{"startdate":"20230517","fullstartdate":"202305172200","enddate":"20230518","url":"/th?id=OHR.HoopoeFathersday_DE-DE8234010695_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp","urlbase":"/th?id=OHR.HoopoeFathersday_DE-DE8234010695","copyright":"Wiedehopf füttert seine Jungen nach der Exkursion, Biosphärenreservat Mittelelbe, Sachsen-Anhalt (© imageBROKER/Martin Demmel/GettyImages)","copyrightlink":"https://www.bing.com/search?q=Wiedehopf&form=hpcapt&filters=HpDate%3a%2220230517_2200%22","title":"Vater und Sohn","quiz":"/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20230517_HoopoeFathersday%22&FORM=HPQUIZ","wp":true,"hsh":"0512efddca485956c6d6cc2d8e2c7dc3","drk":1,"top":1,"bot":1,"hs":[]},{"startdate":"20230518","fullstartdate":"202305182200","enddate":"20230519","url":"/th?id=OHR.SumatranRhino_DE-DE8687965425_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp","urlbase":"/th?id=OHR.SumatranRhino_DE-DE8687965425","copyright":"Sumatra-Nashorn, Nationalpark Way Kambas, Indonesien (© Cyril Ruoso/Minden Pictures)","copyrightlink":"https://www.bing.com/search?q=Sumatra-Nashorn&form=hpcapt&filters=HpDate%3a%2220230518_2200%22","title":"Wie können wir gefährdeten Tieren helfen?","quiz":"/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20230518_SumatranRhino%22&FORM=HPQUIZ","wp":true,"hsh":"4f06cd5a5ec0e4c3d38d3ec1f1f83dab","drk":1,"top":1,"bot":1,"hs":[]},{"startdate":"20230519","fullstartdate":"202305192200","enddate":"20230520","url":"/th?id=OHR.EuropeanHoneybee_DE-DE0450050435_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp","urlbase":"/th?id=OHR.EuropeanHoneybee_DE-DE0450050435","copyright":"Europäische Honigbienen in Sheffield, England (© Deborah Vernon/Alamy)","copyrightlink":"https://www.bing.com/search?q=Honigbienen&form=hpcapt&filters=HpDate%3a%2220230519_2200%22","title":"Summ Summ Summ","quiz":"/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20230519_EuropeanHoneybee%22&FORM=HPQUIZ","wp":true,"hsh":"ba2709f335fc26287b54cf7e9a0181a0","drk":1,"top":1,"bot":1,"hs":[]},{"startdate":"20230520","fullstartdate":"202305202200","enddate":"20230521","url":"/th?id=OHR.BremenScienceMuseum_DE-DE0993762476_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp","urlbase":"/th?id=OHR.BremenScienceMuseum_DE-DE0993762476","copyright":"Universum Bremen, Science Center (© imageBROKER/Alamy Stock Photo)","copyrightlink":"https://www.bing.com/search?q=Universum+Bremen+Wikipedia&form=hpcapt&filters=HpDate%3a%2220230520_2200%22","title":"Die Zukunft ist heute","quiz":"/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20230520_BremenScienceMuseum%22&FORM=HPQUIZ","wp":false,"hsh":"133aa60eaf3cae397b4839b6b9fa7ff8","drk":1,"top":1,"bot":1,"hs":[]}]'
@@ -757,9 +763,9 @@ locations=[<(uint32 2, <('Berlin', 'EDDT', true, [(0.91746141594945008, 0.232419
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1700036292
+check-timestamp=int64 1700297073
 first-run=false
-flatpak-purge-timestamp=int64 1700042986
+flatpak-purge-timestamp=int64 1700216607
 install-timestamp=int64 1697353546
 update-notification-timestamp=int64 1697441286
 
