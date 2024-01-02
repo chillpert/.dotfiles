@@ -238,6 +238,12 @@ source ~/.zsh_theme
 zstyle ':completion:*' menu select
 
 # Zsh Plugins
+
+# Install Antidote
+if ! [ -d ~/.antidote/ ]; then
+    git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-$HOME}/.antidote
+fi
+
 source ~/.antidote/antidote.zsh
 antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
@@ -252,7 +258,9 @@ setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
 
 # FZF
-source /usr/share/fzf/shell/key-bindings.zsh
+if ! source /usr/share/fzf/shell/key-bindings.zsh; then
+    echo "Please install fzf"
+fi
 
 # Use silver_searcher by default
 if type ag &> /dev/null; then
