@@ -28,7 +28,7 @@ unset rc
 
 alias db="distrobox"
 alias dev="distrobox enter dev -- zsh"
-alias config='dconf dump / > .config/gnome-settings.bak && /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias c="clear"
 
 function compress {
