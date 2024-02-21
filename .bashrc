@@ -12,9 +12,6 @@ then
 fi
 export PATH
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
 	for rc in ~/.bashrc.d/*; do
@@ -26,15 +23,8 @@ fi
 
 unset rc
 
-alias db="distrobox"
-alias dev="distrobox enter dev -- zsh"
+alias db='distrobox'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias c="clear"
-
-function compress {
-    if [ -z "$2" ]; then
-        echo "Usage: compress <path/file_name> <path/out_file_name>"
-    else
-        ffmpeg -i "$1" -vcodec libx264 -crf 28 "$2"
-    fi
-}
+alias c='clear'
+alias gs='git status'
+alias docker='podman'

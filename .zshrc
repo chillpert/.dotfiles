@@ -17,7 +17,6 @@ if [[ -o login ]] ; then
 fi
 
 # Youtube aliases
-alias yt='ytfzf --detach --subs=1 --sort -l -c youtube-subscriptions'
 alias yt-mp3='yt-dlp --extract-audio --audio-format mp3'
 alias yt-mp4='yt-dlp -S res,ext:mp4:m4a --recode mp4'
 
@@ -47,18 +46,9 @@ alias grb='git rebase'
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-# Package manager aliases
-alias paru-S="paru -Slq | fzf --multi --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk \"{print \$2}\")' | xargs -ro paru -S"
-alias paru-R="paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rns"
-alias paru-Re="paru -Qeq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rns"
-alias paru-Q="paru -Qeq | fzf --multi --preview 'paru -Qi {1}'"
-alias cu='checkupdates'
-
 # Application aliases
-alias vpnc='protonvpn-cli c -f'
-alias vpnd='protonvpn-cli d'
-alias pm='pulsemixer'
-alias nf='neofetch'
+alias dnf='dnf5'
+alias vim='nvim'
 
 export UE_PATH="/var/home/n30/Repos/unrealengine/"
 
@@ -97,12 +87,6 @@ alias ur='ue build && ue run'
 
 alias ue4='echo Please use ue instead.'
 alias ue5='echo Please use ue instead.'
-
-file_manager=lf
-
-# Personal aliases
-alias guitar='$file_manager /mnt/data/backups/Documents/Tabs'
-alias games='$file_manager /mnt/data/SteamLibrary/steamapps/common'
 
 # Navigation (by Derek Taylor)
 up () {
@@ -186,39 +170,8 @@ IFS=$SAVEIFS
 # Reduce prompt padding on right side
 ZLE_RPROMPT_INDENT=0
 
-# Unreal Engine loading time fix
-export GLIBC_TUNABLES=glibc.rtld.dynamic_sort=2
-
-# Executables in home
-export PATH=$PATH:~/.local/bin
-
-# Add cargo bins to path
-export PATH=$PATH:~/.cargo/bin
-
 # Set default editor
 export EDITOR=nvim
-
-# Set default terminal emulator
-export TERMINAL=alacritty
-
-# Fcitx
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export SDL_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-
-# XDG directories
-export XDG_DATA_HOME=~/.local/share
-export XDG_STATE_HOME=~/.local/state
-export XDG_CONFIG_HOME=~/.config
-export XDG_DESKTOP_DIR=~/Desktop
-export XDG_DOCUMENTS_DIR=~/Documents
-export XDG_DOWNLOAD_DIR=~/Downloads
-export XDG_MUSIC_DIR=~/Music
-export XDG_PICTURES_DIR=~/Pictures
-export XDG_PUBLICSHARE_DIR=~/Public
-export XDG_TEMPLATES_DIR=~/Templates
-export XDG_VIDEOS_DIR=~/Videos
 
 # Fix left and right arrow keys
 bindkey "^[[1;5C" forward-word
@@ -258,9 +211,10 @@ setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
 
 # FZF
-if ! source /usr/share/fzf/shell/key-bindings.zsh; then
+if ! source /usr/share/fzf/shell/key-bindings.zsh > /dev/null 2>&1 && ! source /usr/share/doc/fzf/examples/key-bindings.zsh > /dev/null 2>&1; then
     echo "Please install fzf"
 fi
+
 
 # Use silver_searcher by default
 if type ag &> /dev/null; then
