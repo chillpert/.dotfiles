@@ -3,6 +3,11 @@
 " You can find a list of commands here: https://jb.gg/h38q75
 " Find more examples here: https://jb.gg/share-ideavimrc
 
+" Enable 'IdeaVim: Track Action IDs'
+
+" Source file like this:
+" :source ~/.ideavimrc
+
 " Space is leader
 nnoremap <SPACE> <Nop>
 let mapleader=" "
@@ -75,3 +80,12 @@ Plug 'tpope/vim-commentary'
 
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
+
+"nmap ,c :action GotoClass<CR>
+"nmap <C-p> :action GotoClass<CR>
+nmap <C-p> <Action>(GotoFile)
+nmap <C-s> <Action>(GotoSymbol)
+
+nmap <leader>ge <Action>(ReSharperGotoNextErrorInSolution)
+"nmap <leader>ge <Action>(ReSharperGotoPrevErrorInSolution)
+
