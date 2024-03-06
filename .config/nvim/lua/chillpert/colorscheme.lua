@@ -54,3 +54,9 @@ vim.cmd [[hi NormalFloat guibg=#4d5154]]
 
 -- Gitsigns to match monokai
 vim.cmd [[hi GitSignsChange guifg=#ae81ff guibg=#262626 gui=bold ctermfg=59 ctermbg=black cterm=bold]]
+
+-- Keep spell checking font color the same but keep red line below (improves readability)
+vim.cmd([[
+  hi clear SpellBad
+  hi SpellBad cterm=underline gui=undercurl guisp=red
+]])
