@@ -74,10 +74,15 @@ function setup_zsh() {
         git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-$HOME}/.antidote
     fi
     
-    # Load Antidote plugins
-    source ~/.antidote/antidote.zsh
-    antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins
-    
+    zsh_plugins=${ZDOTDIR:-$HOME}/.zsh_plugins
+    if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
+        (
+        source ~/.antidote/antidote.zsh
+        antidote bundle <${zsh_plugins}.txt >${zsh_plugins}.zsh
+    )
+    fi
+    source ${zsh_plugins}.zsh
+
     bindkey '^[[A' history-substring-search-up
     bindkey '^[[B' history-substring-search-down
     
@@ -90,17 +95,11 @@ function setup_fzf() {
     source /usr/share/doc/fzf/examples/key-bindings.zsh
     source /usr/share/doc/fzf/examples/completion.zsh
 
-    # Use silver_searcher by default
-    if type ag &> /dev/null; then
-        export FZF_DEFAULT_COMMAND='ag -p ~/.gitignore -g ""'
+    if type rg &> /dev/null; then
+        export FZF_DEFAULT_COMMAND='rg --files --hidden -L --max-depth 3 --follow'
+        export FZF_CTRL_T_COMMAND='rg --files --hidden -L --max-depth 3 --follow'
+        export FZF_ALT_C_COMMAND='rg --hidden --files --null -L --max-depth 3 | xargs -0 dirname | sort -u'
     fi
-
-    # Use rg by default
-    # @todo find a working command
-    #export FZF_ALT_C_COMMAND="rg --files --null | xargs -0 dirname | uniq | sort -u"
-    #@todo find a working command
-    #export FZF_ALT_C_COMMAND='rg --files --hidden --follow --no-ignore-vcs'
-    #export FZF_ALT_C_COMMAND='ag --hidden --ignore --gitignore -G ./'
     
     # FZF everything
     of() {
@@ -111,16 +110,6 @@ function setup_fzf() {
 }
 
 function setup_inputs() {
-    # Fix for delete key
-    tput smkx
-    
-    # Fix left and right arrow keys
-    bindkey "^[[1;5C" forward-word
-    bindkey "^[[1;5D" backward-word
-    
-    # Fix delete keys
-    bindkey "^[[3~" delete-char
-
     # Vim mode
     bindkey -v
 }
