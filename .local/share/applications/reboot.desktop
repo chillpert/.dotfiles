@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Reboot
-Terminal=false
-Exec=~/.scripts/dmenu/confirm.sh "Reboot?" "reboot"

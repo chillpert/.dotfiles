@@ -1,3 +1,0 @@
-use_nerdfont = true
-repeat = "playlist"
-library_tabs = [ "tracks", "albums", "playlists" ]

@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Shutdown
-Terminal=false
-Exec=~/.scripts/dmenu/confirm.sh "Shutdown?" "shutdown -h now"
