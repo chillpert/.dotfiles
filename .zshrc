@@ -51,6 +51,9 @@ function setup_exports() {
     
     # Add cargo bins to path
     export PATH=$PATH:~/.cargo/bin
+
+    # Add snaps to path
+    export PATH="$PATH:/snap/bin"
     
     # Set default editor
     export EDITOR=nvim
