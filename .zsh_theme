@@ -3,6 +3,6 @@ parse_git_branch() {
 }
 
 setopt prompt_subst
-precmd() { print -rP '%{$reset_color%} 💫 %~%f %{$reset_color%}' }
+precmd() { print -rP '%{$reset_color%}  %~%f %{$reset_color%}' }
 export PROMPT=' %{$reset_color%}%F{141}❯ %{$reset_color%}'
 RPROMPT='%{$reset_color%}$(parse_git_branch)%{$reset_color%}'
