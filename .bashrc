@@ -24,7 +24,7 @@ fi
 unset rc
 
 # Basic Unix commands aliases
-alias ls='ls -1 -F --group-directories-first --color'
+alias ls='ls -1 -F --group-directories-first --color --ignore="*NTUSER*" --ignore="*ntuser*" --ignore="dotTraceSnapshots" --ignore="SendTo" --ignore="My Documents" --ignore="Start Menu" --ignore="Templates" --ignore="PrintHood" --ignore="Cookies" --ignore="Contacts" --ignore="Favorites" --ignore="Links" --ignore="ansel" --ignore="NetHood" --ignore="Recent" --ignore="Application Data" --ignore="Local Settings" --ignore="Saved Games"'
 alias grep='grep --color=auto'
 alias rm='rm -i'
 alias c='clear'
@@ -51,6 +51,9 @@ alias nvimc='cd ~/Repos/chillpert.nvim/ && nvim init.lua'
 alias yt-mp3='yt-dlp --extract-audio --audio-format mp3'
 alias yt-mp4='yt-dlp -S res,ext:mp4:m4a --recode mp4'
 alias vim='nvim'
+
+# Dotfiles
+alias config='/mingw64/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Custom git add
 ga() {
@@ -136,13 +139,5 @@ fi
 if command -v rg 2>&1 >/dev/null; then
     export FZF_DEFAULT_COMMAND='rg --files --hidden -L --max-depth 3 --follow'
     export FZF_CTRL_T_COMMAND='rg --files --hidden -L --follow'
-    # @note Did not work with rg in Git Bash for Windows
-    #export FZF_ALT_C_COMMAND='rg --hidden --null -L --max-depth 3 | xargs -0 dirname | sort -u'
-    export FZF_ALT_C_COMMAND='find . -mindepth 1 -maxdepth 3 -type d -not -path '*/\.git/*''
-fi
-
-# @note Why did ~/ not work here?
-if [ ! -e 'C:\Users\chillpert\.ignore' ]; then
-    echo "Create '.ignore' file for ripgrep in home directory."
-    echo ".git" > '~/.ignore'
+    export FZF_ALT_C_COMMAND="find . -maxdepth 3 -type d ! -path '*/.*' | grep -v -f <(grep -v '^#' .ignore | grep -v '^$');"
 fi

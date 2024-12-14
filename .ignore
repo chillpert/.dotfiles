@@ -1,1 +1,6 @@
-.git
+.git/
+.cache/
+.nuget/
+.codeium/
+.dotfiles/
+Saved Games/
