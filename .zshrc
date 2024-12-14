@@ -6,7 +6,7 @@
 
 # For dotfiles
 config() {
-	/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME "$@"
+    /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME "$@"
 }
 
 # On WSL2 file system speed with /mnt/c/ is slow; this is a workaround
@@ -18,7 +18,7 @@ function setup_aliases() {
     # Youtube aliases
     alias yt-mp3='yt-dlp --extract-audio --audio-format mp3'
     alias yt-mp4='yt-dlp -S res,ext:mp4:m4a --recode mp4'
-    
+
     # Basic Unix commands aliases
     alias ls='ls --group-directories-first -F --color'
     alias cdp='f(){ cd "$@"; ls; }; f'
@@ -26,7 +26,7 @@ function setup_aliases() {
     alias rm='rm -i'
     alias df='df -h'
     alias c='clear'
-    
+
     # Git commands aliases
     alias gs='git status'
     alias gsw='git switch'
@@ -48,49 +48,52 @@ function setup_aliases() {
 function setup_exports() {
     # Executables in home
     export PATH=$PATH:~/.local/bin
-    
+
     # Add cargo bins to path
     export PATH=$PATH:~/.cargo/bin
 
     # Add snaps to path
     export PATH="$PATH:/snap/bin"
-    
+
     # Set default editor
     export EDITOR=nvim
+
+    # XDG base directories
+    export XDG_CACHE_HOME=$HOME/.cache
+
+    # Fix for opening browser in WSL
+    if grep -q WSL /proc/version; then
+        export BROWSER="wslview"
+    fi
 }
 
 function setup_zsh() {
-    # Enable autocompletion
-    autoload -Uz compinit
-    compinit
-
-    # Prompt theme
-    source ~/.zsh_theme
-
     # History
     SAVEHIST=2000  
     HISTSIZE=2000
     HISTFILE=~/.zsh_history
 
-    # Install Antidote
-    if ! [ -d ~/.antidote/ ]; then
-        git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-$HOME}/.antidote
+    # Install antidote zsh manager
+    if ! [ -e /usr/share/zsh-antidote/antidote.zsh ]; then
+        sudo apt-get install zsh-antidote
     fi
-    
-    zsh_plugins=${ZDOTDIR:-$HOME}/.zsh_plugins
-    if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
-        (
-        source ~/.antidote/antidote.zsh
-        antidote bundle <${zsh_plugins}.txt >${zsh_plugins}.zsh
-    )
-    fi
-    source ${zsh_plugins}.zsh
+
+    source /usr/share/zsh-antidote/antidote.zsh
+    antidote load ~/.zsh_plugins.txt
 
     bindkey '^[[A' history-substring-search-up
     bindkey '^[[B' history-substring-search-down
-    
+
     # Autocompletion with an arrow-key driven interface
     zstyle ':completion:*' menu select
+
+    # Enable autocompletion
+    autoload -Uz compinit
+    compinit
+
+    # Prompt theme
+    # autoload -U promptinit; promptinit
+    source $HOME/.zsh_theme
 }
 
 function setup_fzf() {
@@ -103,12 +106,12 @@ function setup_fzf() {
         export FZF_CTRL_T_COMMAND='rg --files --hidden -L --max-depth 3 --follow'
         export FZF_ALT_C_COMMAND='rg --hidden --files --null -L --max-depth 3 | xargs -0 dirname | sort -u'
     fi
-    
+
     # FZF everything
     of() {
-    	cd ~/
-    	fzf | xargs xdg-open
-    	cd -
+        cd ~/
+        fzf | xargs xdg-open
+        cd -
     }
 }
 
@@ -130,61 +133,61 @@ function compress {
 }
 
 function extract {
-	if [ -z "$1" ]; then
+    if [ -z "$1" ]; then
         # Display usage if no parameters given
-       	echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
-       	echo "       extract <path/file_name_1.ext> [path/file_name_2.ext] [path/file_name_3.ext]"
+        echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
+        echo "       extract <path/file_name_1.ext> [path/file_name_2.ext] [path/file_name_3.ext]"
     else
-       	for n in "$@"
-       	do
-       	  	if [ -f "$n" ] ; then
-       	  	    case "${n%,}" in
-       	  	      	*.cbt|*.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar)
-						tar xvf "$n" ;;
-       	  	      	*.lzma) 
-						unlzma ./"$n" ;;
-       	  	      	*.bz2) 
-						bunzip2 ./"$n" ;;
-       	  	      	*.cbr|*.rar) 
-						unrar x -ad ./"$n" ;;
-       	  	      	*.gz) 
-						gunzip ./"$n" ;;
-       	  	      	*.cbz|*.epub|*.zip) 
-						unzip ./"$n" ;;
-       	  	      	*.z) 
-						uncompress ./"$n" ;;
-       	  	      	*.7z|*.arj|*.cab|*.cb7|*.chm|*.deb|*.dmg|*.iso|*.lzh|*.msi|*.pkg|*.rpm|*.udf|*.wim|*.xar)
-       	  	      	    7z x ./"$n" ;;
-       	  	      	*.xz)        
-						unxz ./"$n" ;;
-       	  	      	*.exe)
-				       cabextract ./"$n" ;;
-       	  	      	*.cpio)      
-						cpio -id < ./"$n" ;;
-       	  	      	*)
-       	  	      		echo "extract: '$n' - unknown archive method"
-       	  	      	    return 1
-       	  	      	    ;;
-       	  			esac
-       	  	else
-       	  	    	echo "'$n' - file does not exist"
-       	  	    	return 1
-       		fi
-		done
-	fi
+        for n in "$@"
+        do
+            if [ -f "$n" ] ; then
+                case "${n%,}" in
+                    *.cbt|*.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar)
+                        tar xvf "$n" ;;
+                    *.lzma) 
+                        unlzma ./"$n" ;;
+                    *.bz2) 
+                        bunzip2 ./"$n" ;;
+                    *.cbr|*.rar) 
+                        unrar x -ad ./"$n" ;;
+                    *.gz) 
+                        gunzip ./"$n" ;;
+                    *.cbz|*.epub|*.zip) 
+                        unzip ./"$n" ;;
+                    *.z) 
+                        uncompress ./"$n" ;;
+                    *.7z|*.arj|*.cab|*.cb7|*.chm|*.deb|*.dmg|*.iso|*.lzh|*.msi|*.pkg|*.rpm|*.udf|*.wim|*.xar)
+                        7z x ./"$n" ;;
+                    *.xz)        
+                        unxz ./"$n" ;;
+                    *.exe)
+                        cabextract ./"$n" ;;
+                    *.cpio)      
+                        cpio -id < ./"$n" ;;
+                    *)
+                        echo "extract: '$n' - unknown archive method"
+                        return 1
+                        ;;
+                esac
+            else
+                echo "'$n' - file does not exist"
+                return 1
+            fi
+        done
+    fi
 }
 
 IFS=$SAVEIFS
 
 # Suspend process toggle (https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fancy-ctrl-z)
 fancy-ctrl-z () {
-  if [[ $#BUFFER -eq 0 ]]; then
+if [[ $#BUFFER -eq 0 ]]; then
     BUFFER="fg"
     zle accept-line -w
-  else
+else
     zle push-input -w
     zle clear-screen -w
-  fi
+fi
 }
 
 zle -N fancy-ctrl-z
@@ -206,7 +209,7 @@ up () {
 
     # perform cd. Show error if cd fails
     if ! cd "$d"; then
-    	echo "Couldn't go up $limit dirs.";
+        echo "Couldn't go up $limit dirs.";
     fi
 }
 
