@@ -1,0 +1,97 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+" Enable 'IdeaVim: Track Action IDs'
+
+" Source file like this:
+" :source ~/.ideavimrc
+
+" Space is leader
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Use relative line numbers and use the actual line number for the cursor line
+set relativenumber true
+set number
+
+" Fix clipboard
+set clipboard+=unnamed
+set clipboard+=ideaput 
+
+" Better search
+set ignorecase
+set smartcase
+
+" My personal maps from nvim
+nmap gcc <Action>(CommentByLineComment)
+nmap <leader>a <Action>(SearchEverywhere)
+nmap <leader>f <Action>(ActivateProjectToolWindow)
+
+nmap <leader>c <Action>(ActivateCommitToolWindow)
+"nmap <leader>ca <Action>(ShowIntentionActions) " This is the same as Ctrl + .
+
+nmap <leader>rn <Action>(RenameElement)
+
+nmap <leader>gs <Action>(SwitchHeaderSource)
+nmap <leader>gg <Action>(ActivateVersionControlToolWindow)
+nmap <leader>gc <Action>(ActivateCommitToolWindow)
+
+nmap <leader>ge <Action>(ReSharperGotoNextErrorInSolution)
+nmap <leader>gE <Action>(ReSharperGotoNextErrorInSolution)
+
+nmap <leader>s <Action>(ActivateStructureToolWindow)
+nmap <leader>b <Action>(RecentFiles)
+nmap <leader>o <Action>(GotoFile)
+
+map <C-j> <Action>(ActivateTerminalToolWindow)
+
+" Peek definitions
+map <leader>pd <Action>(QuickImplementations)
+
+" Switcher, MaximizeToolWindow, ActivateBuildToolWindow
+" GotoClass, GotoFile, GotoSymbol
+nmap <C-p> <Action>(GotoFile)
+nmap <C-s> <Action>(GotoSymbol)
+" nmap <leader>s <Action>(GotoSymbol)
+
+" Keep cursor centered
+nmap <C-d> <C-d>zz
+nmap <C-u> <C-u>zz
+
+" Center search results
+nmap n nzz
+nmap N Nzz
+
+keymap("n", "n", "nzz", opts)
+keymap("n", "N", "Nzz", opts)
+
+keymap("n", "<C-u>", "<C-u>zz", opts)
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround' " use cs'` to change 'hi' to `hi`
+
+"set which-key
+"set notimeout
+"set timeoutlen=5000
+
+"https://stackoverflow.com/questions/29834788/ctrlt-ctrlo-not-working-right
+nmap <C-o> :action Back<CR>
+nmap <C-i> :action Forward<CR>
+
