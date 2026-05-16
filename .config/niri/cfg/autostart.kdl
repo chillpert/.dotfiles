@@ -2,4 +2,9 @@
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
 
     spawn-sh-at-startup "qs -c noctalia-shell"
-    spawn-sh-at-startup "easyeffects --gapplication-service"
+    spawn-at-startup "easyeffects --service-mode --hide-window"
+    spawn-at-startup "spotify"
+    spawn-at-startup "signal-desktop"
+    spawn-at-startup "firefox"
+    spawn-at-startup "zeditor"
+    spawn-at-startup "discord" // @todo Apparently breaks

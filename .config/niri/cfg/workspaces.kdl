@@ -74,6 +74,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id="jetbrains-rider"
+    open-on-workspace "code"
+}
+
+window-rule {
     match app-id="robloxstudiobeta.exe"
     open-on-workspace "main"
     // match is-floating=true

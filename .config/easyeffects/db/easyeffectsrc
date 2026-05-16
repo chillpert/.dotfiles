@@ -8,5 +8,6 @@ visiblePage=pluginsPage
 visiblePlugin=equalizer#0
 
 [Window]
+autostartOnLogin=true
 height=1378
 width=2528
