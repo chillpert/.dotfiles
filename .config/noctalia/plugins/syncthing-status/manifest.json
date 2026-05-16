@@ -1,0 +1,31 @@
+{
+  "id": "syncthing-status",
+  "name": "Syncthing Status",
+  "version": "1.0.1",
+  "minNoctaliaVersion": "4.4.0",
+  "author": "Pir0c0pter0",
+  "license": "MIT",
+  "repository": "https://github.com/noctalia-dev/noctalia-plugins",
+  "description": "Theme-aware Syncthing status plugin with bar and panel integration",
+  "tags": ["Bar", "Panel", "System", "Utility"],
+  "entryPoints": {
+    "main": "Main.qml",
+    "barWidget": "BarWidget.qml",
+    "panel": "Panel.qml",
+    "settings": "Settings.qml"
+  },
+  "dependencies": {
+    "plugins": []
+  },
+  "metadata": {
+    "defaultSettings": {
+      "enabled": true,
+      "apiUrl": "",
+      "apiKey": "",
+      "configPath": "",
+      "verifyTls": false,
+      "pollIntervalMs": 10000,
+      "folderIds": []
+    }
+  }
+}

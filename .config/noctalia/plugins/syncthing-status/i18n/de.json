@@ -1,0 +1,78 @@
+{
+    "state": {
+        "idle": "Synchronisiert",
+        "syncing": "Synchronisierung",
+        "paused": "Pausiert",
+        "disconnected": "Getrennt",
+        "offline": "Offline",
+        "unauthorized": "Nicht autorisiert",
+        "error": "Fehler",
+        "unconfigured": "Nicht konfiguriert",
+        "disabled": "Deaktiviert"
+    },
+    "summary": {
+        "disabled": "Plugin-Abfrage ist deaktiviert",
+        "idle-devices": "{connected}/{configured} Geräte verbunden",
+        "idle-no-devices": "Keine entfernten Geräte konfiguriert",
+        "syncing-items": "{count} Elemente ausstehend",
+        "syncing-folders": "{count} Ordner aktiv",
+        "paused": "Alle überwachten Ordner sind pausiert",
+        "disconnected": "Keine entfernten Geräte verbunden",
+        "offline": "Syncthing GUI/API ist nicht erreichbar",
+        "unauthorized": "Syncthing hat den API key abgelehnt",
+        "error": "Syncthing hat Ordner- oder Systemfehler gemeldet",
+        "unconfigured": "GUI URL/API key festlegen oder auf config.xml verweisen"
+    },
+    "bar": {
+        "enable": "Syncthing Status aktivieren",
+        "disable": "Syncthing Status deaktivieren",
+        "refresh": "Jetzt aktualisieren",
+        "settings": "Einstellungen",
+        "tooltip": "Syncthing - {state}\n{summary}"
+    },
+    "panel": {
+        "title": "Syncthing",
+        "refresh": "Aktualisieren",
+        "devices": "Geräte",
+        "folders": "Ordner",
+        "pending": "Ausstehend",
+        "no-folders": "Keine überwachten Ordner",
+        "details": "Details",
+        "recent-errors": "Letzte Fehler",
+        "last-check-info": "Letzte Prüfung: {value}",
+        "url-info": "GUI URL: {value}",
+        "config-path-info": "Konfigurationspfad: {value}",
+        "api-source-info": "API key Quelle: {value}",
+        "folder-state": "{state} ({count} Elemente)"
+    },
+    "settings": {
+        "enabled": "Plugin aktivieren",
+        "enabled-desc": "Syncthing regelmäßig abfragen und Status in der Leiste/im Panel anzeigen",
+        "url": "GUI URL",
+        "url-desc": "Optional. Leer lassen für automatische Erkennung aus Syncthing config.xml",
+        "api-key": "API key",
+        "api-key-desc": "Optional. Leer lassen, um den Schlüssel aus config.xml zu lesen",
+        "config-path": "Konfigurationspfad",
+        "config-path-desc": "Optionaler Pfad zur Syncthing config.xml für automatische Erkennung",
+        "verify-tls": "TLS-Zertifikate überprüfen",
+        "verify-tls-desc": "Nur aktivieren, wenn Ihr Syncthing-HTTPS-Zertifikat vertrauenswürdig ist",
+        "poll-interval-label": "Abfrageintervall: {value}s",
+        "poll-interval-desc": "Wie oft das Plugin den Syncthing-Status aktualisiert",
+        "folders": "Überwachte Ordner",
+        "folders-desc": "Wenn keine ausgewählt sind, überwacht das Plugin alle konfigurierten Ordner",
+        "no-folders": "Noch keine Ordner geladen. Speichern und aktualisieren, sobald Syncthing erreichbar ist.",
+        "save": "Speichern",
+        "saved": "Gespeichert",
+        "refresh": "Jetzt aktualisieren",
+        "status": "Aktueller Status",
+        "url-info": "URL: {value}",
+        "api-source-info": "API: {value}",
+        "about": "Über",
+        "developer": "Entwickelt von Pir0c0pter0"
+    },
+    "source": {
+        "manual": "Manuell",
+        "config": "Config.xml",
+        "none": "Nicht verfügbar"
+    }
+}

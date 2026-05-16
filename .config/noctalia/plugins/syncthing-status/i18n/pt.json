@@ -1,0 +1,78 @@
+{
+    "state": {
+        "idle": "Sincronizado",
+        "syncing": "Sincronizando",
+        "paused": "Pausado",
+        "disconnected": "Desconectado",
+        "offline": "Offline",
+        "unauthorized": "Nao autorizado",
+        "error": "Erro",
+        "unconfigured": "Nao configurado",
+        "disabled": "Desativado"
+    },
+    "summary": {
+        "disabled": "Polling do plugin esta desativado",
+        "idle-devices": "{connected}/{configured} dispositivos conectados",
+        "idle-no-devices": "Nenhum dispositivo remoto configurado",
+        "syncing-items": "{count} itens pendentes",
+        "syncing-folders": "{count} pastas ativas",
+        "paused": "Todas as pastas monitoradas estao pausadas",
+        "disconnected": "Nenhum dispositivo remoto conectado",
+        "offline": "GUI/API do Syncthing esta inacessivel",
+        "unauthorized": "Syncthing rejeitou a API key",
+        "error": "Syncthing reportou erros de pasta ou sistema",
+        "unconfigured": "Defina GUI URL/API key ou aponte para o config.xml"
+    },
+    "bar": {
+        "enable": "Ativar Syncthing Status",
+        "disable": "Desativar Syncthing Status",
+        "refresh": "Atualizar agora",
+        "settings": "Configuracoes",
+        "tooltip": "Syncthing - {state}\n{summary}"
+    },
+    "panel": {
+        "title": "Syncthing",
+        "refresh": "Atualizar",
+        "devices": "Dispositivos",
+        "folders": "Pastas",
+        "pending": "Pendente",
+        "no-folders": "Nenhuma pasta monitorada",
+        "details": "Detalhes",
+        "recent-errors": "Erros recentes",
+        "last-check-info": "Ultima checagem: {value}",
+        "url-info": "GUI URL: {value}",
+        "config-path-info": "Caminho do config: {value}",
+        "api-source-info": "Origem da API key: {value}",
+        "folder-state": "{state} ({count} itens)"
+    },
+    "settings": {
+        "enabled": "Ativar plugin",
+        "enabled-desc": "Consulta o Syncthing periodicamente e expoe status no bar/painel",
+        "url": "GUI URL",
+        "url-desc": "Opcional. Deixe vazio para autodetectar pelo config.xml do Syncthing",
+        "api-key": "API key",
+        "api-key-desc": "Opcional. Deixe vazio para ler a chave do config.xml",
+        "config-path": "Caminho do config",
+        "config-path-desc": "Caminho opcional para o config.xml do Syncthing para autodeteccao",
+        "verify-tls": "Verificar certificados TLS",
+        "verify-tls-desc": "Ative apenas se o certificado HTTPS do Syncthing for confiavel",
+        "poll-interval-label": "Intervalo de consulta: {value}s",
+        "poll-interval-desc": "Com que frequencia o plugin atualiza o status do Syncthing",
+        "folders": "Pastas monitoradas",
+        "folders-desc": "Se nenhuma for selecionada o plugin monitora todas as pastas configuradas",
+        "no-folders": "Nenhuma pasta carregada ainda. Salve e atualize quando o Syncthing estiver acessivel.",
+        "save": "Salvar",
+        "saved": "Salvo",
+        "refresh": "Atualizar agora",
+        "status": "Status atual",
+        "url-info": "URL: {value}",
+        "api-source-info": "API: {value}",
+        "about": "Sobre",
+        "developer": "Desenvolvido por Pir0c0pter0"
+    },
+    "source": {
+        "manual": "Manual",
+        "config": "Config.xml",
+        "none": "Indisponivel"
+    }
+}

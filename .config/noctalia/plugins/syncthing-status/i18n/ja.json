@@ -1,0 +1,78 @@
+{
+    "state": {
+        "idle": "同期済み",
+        "syncing": "同期中",
+        "paused": "一時停止",
+        "disconnected": "切断",
+        "offline": "オフライン",
+        "unauthorized": "認証エラー",
+        "error": "エラー",
+        "unconfigured": "未設定",
+        "disabled": "無効"
+    },
+    "summary": {
+        "disabled": "プラグインのポーリングは無効です",
+        "idle-devices": "{connected}/{configured} 台のデバイスが接続中",
+        "idle-no-devices": "リモートデバイスが設定されていません",
+        "syncing-items": "{count} 件のアイテムが保留中",
+        "syncing-folders": "{count} 個のフォルダが同期中",
+        "paused": "監視中のすべてのフォルダが一時停止しています",
+        "disconnected": "接続されているリモートデバイスがありません",
+        "offline": "Syncthing GUI/API に到達できません",
+        "unauthorized": "Syncthing が API key を拒否しました",
+        "error": "Syncthing がフォルダまたはシステムエラーを報告しました",
+        "unconfigured": "GUI URL/API key を設定するか、config.xml のパスを指定してください"
+    },
+    "bar": {
+        "enable": "Syncthing Status を有効化",
+        "disable": "Syncthing Status を無効化",
+        "refresh": "今すぐ更新",
+        "settings": "設定",
+        "tooltip": "Syncthing - {state}\n{summary}"
+    },
+    "panel": {
+        "title": "Syncthing",
+        "refresh": "更新",
+        "devices": "デバイス",
+        "folders": "フォルダ",
+        "pending": "保留中",
+        "no-folders": "監視中のフォルダはありません",
+        "details": "詳細",
+        "recent-errors": "最近のエラー",
+        "last-check-info": "最終確認: {value}",
+        "url-info": "GUI URL: {value}",
+        "config-path-info": "設定ファイルパス: {value}",
+        "api-source-info": "API key のソース: {value}",
+        "folder-state": "{state}（{count} アイテム）"
+    },
+    "settings": {
+        "enabled": "プラグインを有効化",
+        "enabled-desc": "Syncthing を定期的にポーリングし、バー/パネルにステータスを表示します",
+        "url": "GUI URL",
+        "url-desc": "省略可。空欄にすると Syncthing の config.xml から自動検出します",
+        "api-key": "API key",
+        "api-key-desc": "省略可。空欄にすると config.xml からキーを読み取ります",
+        "config-path": "設定ファイルパス",
+        "config-path-desc": "自動検出用の Syncthing config.xml へのパス（省略可）",
+        "verify-tls": "TLS 証明書を検証",
+        "verify-tls-desc": "Syncthing の HTTPS 証明書が信頼済みの場合のみ有効にしてください",
+        "poll-interval-label": "ポーリング間隔: {value}秒",
+        "poll-interval-desc": "プラグインが Syncthing のステータスを更新する頻度",
+        "folders": "監視フォルダ",
+        "folders-desc": "未選択の場合、設定されたすべてのフォルダを監視します",
+        "no-folders": "フォルダがまだ読み込まれていません。Syncthing が到達可能になったら保存して更新してください。",
+        "save": "保存",
+        "saved": "保存しました",
+        "refresh": "今すぐ更新",
+        "status": "現在のステータス",
+        "url-info": "URL: {value}",
+        "api-source-info": "API: {value}",
+        "about": "このプラグインについて",
+        "developer": "Pir0c0pter0 が開発"
+    },
+    "source": {
+        "manual": "手動",
+        "config": "Config.xml",
+        "none": "利用不可"
+    }
+}

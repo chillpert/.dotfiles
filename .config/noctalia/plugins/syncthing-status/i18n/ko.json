@@ -1,0 +1,78 @@
+{
+    "state": {
+        "idle": "동기화 완료",
+        "syncing": "동기화 중",
+        "paused": "일시 중지",
+        "disconnected": "연결 끊김",
+        "offline": "오프라인",
+        "unauthorized": "인증 실패",
+        "error": "오류",
+        "unconfigured": "미설정",
+        "disabled": "비활성화됨"
+    },
+    "summary": {
+        "disabled": "플러그인 폴링이 비활성화되어 있습니다",
+        "idle-devices": "{connected}/{configured} 기기 연결됨",
+        "idle-no-devices": "구성된 원격 기기가 없습니다",
+        "syncing-items": "{count}개 항목 대기 중",
+        "syncing-folders": "{count}개 폴더 동기화 중",
+        "paused": "모니터링 중인 모든 폴더가 일시 중지되었습니다",
+        "disconnected": "연결된 원격 기기가 없습니다",
+        "offline": "Syncthing GUI/API에 접근할 수 없습니다",
+        "unauthorized": "Syncthing이 API key를 거부했습니다",
+        "error": "Syncthing이 폴더 또는 시스템 오류를 보고했습니다",
+        "unconfigured": "GUI URL/API key를 설정하거나 config.xml 경로를 지정하세요"
+    },
+    "bar": {
+        "enable": "Syncthing Status 활성화",
+        "disable": "Syncthing Status 비활성화",
+        "refresh": "지금 새로고침",
+        "settings": "설정",
+        "tooltip": "Syncthing - {state}\n{summary}"
+    },
+    "panel": {
+        "title": "Syncthing",
+        "refresh": "새로고침",
+        "devices": "기기",
+        "folders": "폴더",
+        "pending": "대기 중",
+        "no-folders": "모니터링 중인 폴더 없음",
+        "details": "상세 정보",
+        "recent-errors": "최근 오류",
+        "last-check-info": "마지막 확인: {value}",
+        "url-info": "GUI URL: {value}",
+        "config-path-info": "설정 파일 경로: {value}",
+        "api-source-info": "API key 출처: {value}",
+        "folder-state": "{state} ({count}개 항목)"
+    },
+    "settings": {
+        "enabled": "플러그인 활성화",
+        "enabled-desc": "Syncthing을 주기적으로 폴링하여 바/패널에 상태를 표시합니다",
+        "url": "GUI URL",
+        "url-desc": "선택 사항. 비워두면 Syncthing config.xml에서 자동 감지합니다",
+        "api-key": "API key",
+        "api-key-desc": "선택 사항. 비워두면 config.xml에서 키를 읽습니다",
+        "config-path": "설정 파일 경로",
+        "config-path-desc": "자동 감지를 위한 Syncthing config.xml 경로 (선택 사항)",
+        "verify-tls": "TLS 인증서 검증",
+        "verify-tls-desc": "Syncthing HTTPS 인증서가 신뢰할 수 있는 경우에만 활성화하세요",
+        "poll-interval-label": "폴링 간격: {value}초",
+        "poll-interval-desc": "플러그인이 Syncthing 상태를 갱신하는 주기",
+        "folders": "모니터링 폴더",
+        "folders-desc": "선택하지 않으면 구성된 모든 폴더를 모니터링합니다",
+        "no-folders": "아직 폴더가 로드되지 않았습니다. Syncthing에 접근 가능해지면 저장 후 새로고침하세요.",
+        "save": "저장",
+        "saved": "저장됨",
+        "refresh": "지금 새로고침",
+        "status": "현재 상태",
+        "url-info": "URL: {value}",
+        "api-source-info": "API: {value}",
+        "about": "정보",
+        "developer": "Pir0c0pter0 개발"
+    },
+    "source": {
+        "manual": "수동",
+        "config": "Config.xml",
+        "none": "사용 불가"
+    }
+}

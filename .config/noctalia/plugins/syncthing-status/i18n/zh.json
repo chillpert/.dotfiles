@@ -1,0 +1,78 @@
+{
+    "state": {
+        "idle": "已同步",
+        "syncing": "同步中",
+        "paused": "已暂停",
+        "disconnected": "已断开",
+        "offline": "离线",
+        "unauthorized": "未授权",
+        "error": "错误",
+        "unconfigured": "未配置",
+        "disabled": "已禁用"
+    },
+    "summary": {
+        "disabled": "插件轮询已禁用",
+        "idle-devices": "{connected}/{configured} 台设备已连接",
+        "idle-no-devices": "未配置远程设备",
+        "syncing-items": "{count} 个项目待同步",
+        "syncing-folders": "{count} 个文件夹同步中",
+        "paused": "所有监控的文件夹均已暂停",
+        "disconnected": "没有已连接的远程设备",
+        "offline": "无法访问 Syncthing GUI/API",
+        "unauthorized": "Syncthing 拒绝了 API key",
+        "error": "Syncthing 报告了文件夹或系统错误",
+        "unconfigured": "请设置 GUI URL/API key 或指定 config.xml 路径"
+    },
+    "bar": {
+        "enable": "启用 Syncthing Status",
+        "disable": "禁用 Syncthing Status",
+        "refresh": "立即刷新",
+        "settings": "设置",
+        "tooltip": "Syncthing - {state}\n{summary}"
+    },
+    "panel": {
+        "title": "Syncthing",
+        "refresh": "刷新",
+        "devices": "设备",
+        "folders": "文件夹",
+        "pending": "待处理",
+        "no-folders": "没有监控的文件夹",
+        "details": "详情",
+        "recent-errors": "最近的错误",
+        "last-check-info": "上次检查：{value}",
+        "url-info": "GUI URL：{value}",
+        "config-path-info": "配置文件路径：{value}",
+        "api-source-info": "API key 来源：{value}",
+        "folder-state": "{state}（{count} 个项目）"
+    },
+    "settings": {
+        "enabled": "启用插件",
+        "enabled-desc": "定期轮询 Syncthing 并在栏/面板中显示状态",
+        "url": "GUI URL",
+        "url-desc": "可选。留空则从 Syncthing 的 config.xml 自动检测",
+        "api-key": "API key",
+        "api-key-desc": "可选。留空则从 config.xml 读取密钥",
+        "config-path": "配置文件路径",
+        "config-path-desc": "用于自动检测的 Syncthing config.xml 路径（可选）",
+        "verify-tls": "验证 TLS 证书",
+        "verify-tls-desc": "仅在 Syncthing 的 HTTPS 证书受信任时启用",
+        "poll-interval-label": "轮询间隔：{value}秒",
+        "poll-interval-desc": "插件刷新 Syncthing 状态的频率",
+        "folders": "监控的文件夹",
+        "folders-desc": "如果未选择任何文件夹，插件将监控所有已配置的文件夹",
+        "no-folders": "尚未加载文件夹。请在 Syncthing 可访问时保存并刷新。",
+        "save": "保存",
+        "saved": "已保存",
+        "refresh": "立即刷新",
+        "status": "当前状态",
+        "url-info": "URL：{value}",
+        "api-source-info": "API：{value}",
+        "about": "关于",
+        "developer": "由 Pir0c0pter0 开发"
+    },
+    "source": {
+        "manual": "手动",
+        "config": "Config.xml",
+        "none": "不可用"
+    }
+}

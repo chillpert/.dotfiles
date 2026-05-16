@@ -1,0 +1,78 @@
+{
+    "state": {
+        "idle": "Синхронизировано",
+        "syncing": "Синхронизация",
+        "paused": "Приостановлено",
+        "disconnected": "Отключено",
+        "offline": "Не в сети",
+        "unauthorized": "Не авторизован",
+        "error": "Ошибка",
+        "unconfigured": "Не настроено",
+        "disabled": "Отключено"
+    },
+    "summary": {
+        "disabled": "Опрос плагина отключён",
+        "idle-devices": "{connected}/{configured} устройств подключено",
+        "idle-no-devices": "Удалённые устройства не настроены",
+        "syncing-items": "{count} элементов в ожидании",
+        "syncing-folders": "{count} папок активно",
+        "paused": "Все отслеживаемые папки приостановлены",
+        "disconnected": "Нет подключённых удалённых устройств",
+        "offline": "Syncthing GUI/API недоступен",
+        "unauthorized": "Syncthing отклонил API key",
+        "error": "Syncthing сообщил об ошибках папок или системы",
+        "unconfigured": "Укажите GUI URL/API key или путь к config.xml"
+    },
+    "bar": {
+        "enable": "Включить Syncthing Status",
+        "disable": "Отключить Syncthing Status",
+        "refresh": "Обновить сейчас",
+        "settings": "Настройки",
+        "tooltip": "Syncthing - {state}\n{summary}"
+    },
+    "panel": {
+        "title": "Syncthing",
+        "refresh": "Обновить",
+        "devices": "Устройства",
+        "folders": "Папки",
+        "pending": "В ожидании",
+        "no-folders": "Нет отслеживаемых папок",
+        "details": "Подробности",
+        "recent-errors": "Недавние ошибки",
+        "last-check-info": "Последняя проверка: {value}",
+        "url-info": "GUI URL: {value}",
+        "config-path-info": "Путь к конфигурации: {value}",
+        "api-source-info": "Источник API key: {value}",
+        "folder-state": "{state} ({count} элементов)"
+    },
+    "settings": {
+        "enabled": "Включить плагин",
+        "enabled-desc": "Периодически опрашивать Syncthing и отображать статус в панели",
+        "url": "GUI URL",
+        "url-desc": "Необязательно. Оставьте пустым для автоопределения из config.xml Syncthing",
+        "api-key": "API key",
+        "api-key-desc": "Необязательно. Оставьте пустым для чтения ключа из config.xml",
+        "config-path": "Путь к конфигурации",
+        "config-path-desc": "Необязательный путь к config.xml Syncthing для автоопределения",
+        "verify-tls": "Проверять сертификаты TLS",
+        "verify-tls-desc": "Включайте только если HTTPS-сертификат Syncthing является доверенным",
+        "poll-interval-label": "Интервал опроса: {value}с",
+        "poll-interval-desc": "Как часто плагин обновляет статус Syncthing",
+        "folders": "Отслеживаемые папки",
+        "folders-desc": "Если ничего не выбрано, плагин отслеживает все настроенные папки",
+        "no-folders": "Папки ещё не загружены. Сохраните и обновите, когда Syncthing станет доступен.",
+        "save": "Сохранить",
+        "saved": "Сохранено",
+        "refresh": "Обновить сейчас",
+        "status": "Текущий статус",
+        "url-info": "URL: {value}",
+        "api-source-info": "API: {value}",
+        "about": "О плагине",
+        "developer": "Разработано Pir0c0pter0"
+    },
+    "source": {
+        "manual": "Вручную",
+        "config": "Config.xml",
+        "none": "Недоступно"
+    }
+}
