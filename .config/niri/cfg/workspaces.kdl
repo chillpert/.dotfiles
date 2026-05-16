@@ -1,0 +1,146 @@
+workspace "main" { // Unreal, Unity, Roblox Studio
+    layout {
+        // center-focused-column "always"
+        // default-column-width { proportion 1.0; }
+    }
+}
+
+workspace "code" { // Zed, VSCode, Rider
+    layout {
+        center-focused-column "always"
+        default-column-width { proportion 1.0; }
+    }
+}
+
+workspace "browse" { // Firefox
+    layout {
+        // center-focused-column "always"
+        default-column-width { proportion 1.0; }
+    }
+}
+
+workspace "messenger" { // Signal
+    layout {
+        center-focused-column "always"
+        default-column-width { proportion 0.7; }
+    }
+}
+
+workspace "comms" { // Discord, Slack
+    layout {
+        center-focused-column "always"
+        default-column-width { proportion 0.9; }
+    }
+}
+
+workspace "misc" { // KeepassXC
+}
+
+workspace "term" {
+}
+
+workspace "music" {
+    layout {
+        center-focused-column "always"
+        default-column-width { proportion 0.8; }
+    }
+}
+
+workspace "mail" {
+    layout {
+        center-focused-column "always"
+        default-column-width { proportion 0.8; }
+    }
+}
+
+workspace "gaming" {
+    layout {
+        center-focused-column "always"
+        default-column-width { proportion 1.0; }
+    }
+}
+
+// Use `niri msg pick-window` to get add-id
+//
+
+// window-rule {
+//     match app-id="robloxstudiobeta.exe"
+//     open-on-workspace "main"
+// }
+
+window-rule {
+    match app-id="org.vinegarhq.Vinegar"
+    open-on-workspace "main"
+}
+
+window-rule {
+    match app-id="robloxstudiobeta.exe"
+    open-on-workspace "main"
+    // match is-floating=true
+    // open-maximized true
+    // open-floating true
+    // default-floating-position x=0 y=0 relative-to="center"
+    // match is-floating=true
+    // match is-window-cast-target=true
+    // default-column-width { fixed 1200; }
+    // open-maximized true
+    // open-maximized-to-edges true
+
+    // Anchor to the top edge of the screen.
+    // default-floating-position x=0 y=0 relative-to="top"
+    // Half of the screen high.
+    // default-window-height { proportion 0.5; }
+    // 80% of the screen wide.
+    // default-column-width { proportion 0.8; }
+}
+
+window-rule {
+    match app-id="signal"
+    open-on-workspace "messenger"
+}
+
+window-rule {
+    match app-id="firefox"
+    open-on-workspace "browse"
+}
+
+window-rule {
+    match app-id="dev.zed.Zed"
+    open-on-workspace "code"
+}
+
+window-rule {
+    match app-id="Spotify"
+    open-on-workspace "music"
+}
+
+window-rule {
+    match app-id="org.keepassxc.KeePassXC"
+    open-on-workspace "misc"
+}
+
+window-rule {
+    match app-id="discord"
+    open-on-workspace "comms"
+}
+
+window-rule {
+    match app-id="Slack"
+    open-on-workspace "comms"
+}
+
+window-rule {
+    match app-id="zoom"
+    open-on-workspace "comms"
+}
+
+window-rule {
+    match app-id="Alacritty"
+    exclude app-id="AlacrittyHere"
+    open-on-workspace "term"
+}
+
+window-rule {
+    match app-id="org.mozilla.Thunderbird"
+    open-on-workspace "mail"
+}
