@@ -71,11 +71,20 @@ workspace "gaming" {
 window-rule {
     match app-id="org.vinegarhq.Vinegar"
     open-on-workspace "main"
+    open-focused false
 }
 
 window-rule {
     match app-id="jetbrains-rider"
     open-on-workspace "code"
+    open-focused false
+}
+
+window-rule {
+    match app-id="UnrealEditor"
+    open-on-workspace "main"
+    open-maximized true
+    open-focused false
 }
 
 window-rule {
@@ -122,6 +131,7 @@ window-rule {
 window-rule {
     match app-id="org.keepassxc.KeePassXC"
     open-on-workspace "misc"
+    open-focused true
 }
 
 window-rule {
@@ -137,6 +147,11 @@ window-rule {
 window-rule {
     match app-id="zoom"
     open-on-workspace "comms"
+}
+
+window-rule {
+    match app-id="cef" // Grayjay
+    open-on-workspace "mail"
 }
 
 window-rule {

@@ -7,7 +7,7 @@
   "noctalia": true,
   "toast": true,
   "desktopTip": true,
-  "hideOnEmpty": false,
+  "hideOnEmpty": true,
   "refreshTimer": true,
   "refreshInterval": 120,
   "iconName": "arrow-big-down-lines",

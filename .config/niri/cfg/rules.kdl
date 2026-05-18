@@ -18,6 +18,11 @@
        open-on-workspace "gaming"
     }
 
+    window-rule {
+        match app-id="steam"
+        open-on-workspace "gaming"
+    }
+
     layer-rule {
         match namespace="^noctalia-wallpaper*"
         place-within-backdrop true

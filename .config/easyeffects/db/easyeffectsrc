@@ -1,5 +1,8 @@
 [StreamInputs]
 inputDevice=alsa_input.usb-Samson_Technologies_Samson_GoMic-00.analog-stereo
+plugins=rnnoise#0
+visiblePage=pluginsPage
+visiblePlugin=rnnoise#0
 
 [StreamOutputs]
 outputDevice=alsa_output.usb-GuangZhou_FiiO_Electronics_Co._Ltd_FiiO_K5_Pro-00.analog-stereo
@@ -10,4 +13,6 @@ visiblePlugin=equalizer#0
 [Window]
 autostartOnLogin=true
 height=1378
-width=2528
+visiblePage=inputPage
+visiblePipeWirePage=modulesPage
+width=1256
